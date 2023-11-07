@@ -24385,46 +24385,23 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </device>
 </devices>
 </deviceset>
-<deviceset name="12PF" prefix="C" uservalue="yes">
-<description>&lt;h3&gt;12pF ceramic capacitors&lt;/h3&gt;
+<deviceset name="9.1PF" prefix="C">
+<description>&lt;h3&gt;9.1pF ceramic capacitors&lt;/h3&gt;
 &lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="CAP" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-0603-50V-5%" package="0603">
+<device name="-0402-TIGHT" package="0402-TIGHT">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="CAP-09137" constant="no"/>
-<attribute name="VALUE" value="12pF" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="-0402-50V-5%" package="0402">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CAP-14665" constant="no"/>
-<attribute name="VALUE" value="12pF" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="-0402T-50V-5%" package="0402-TIGHT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CAP-14665" constant="no"/>
-<attribute name="VALUE" value="12pF" constant="no"/>
+<attribute name="MOUSER_PART" value="609-500R07S9R1CV4T"/>
+<attribute name="PROD_ID" value="CAP-15278"/>
+<attribute name="VALUE" value="9.1pF"/>
 </technology>
 </technologies>
 </device>
@@ -29526,8 +29503,8 @@ Diode with low voltage drop</description>
 <part name="U$1" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
 <part name="GND18" library="SparkFun-PowerSymbols" deviceset="GND" device="" value="GND_24"/>
 <part name="GND19" library="SparkFun-PowerSymbols" deviceset="GND" device="" value="GND_32"/>
-<part name="C10" library="SparkFun-Capacitors" deviceset="12PF" device="-0402T-50V-5%" value="12pF"/>
-<part name="C9" library="SparkFun-Capacitors" deviceset="12PF" device="-0402T-50V-5%" value="12pF"/>
+<part name="C10" library="SparkFun-Capacitors" deviceset="9.1PF" device="-0402-TIGHT" value="9.1pF"/>
+<part name="C9" library="SparkFun-Capacitors" deviceset="9.1PF" device="-0402-TIGHT" value="9.1pF"/>
 <part name="SUPPLYTIE3" library="SparkFun_Thing_Plus_RA6M5" deviceset="2PT_GND_TIE" device="SMALL"/>
 <part name="SUPPLYTIE2" library="SparkFun_Thing_Plus_RA6M5" deviceset="2PT_GND_TIE" device="SMALL"/>
 <part name="GND20" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>

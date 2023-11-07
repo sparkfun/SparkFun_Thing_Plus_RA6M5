@@ -3042,15 +3042,17 @@ These are the minimums &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabili
 <attribute name="PROD_ID" value="XTAL-13062" x="6.79" y="38.13" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="VALUE" x="6.0524875" y="37.3924875" size="0.6096" layer="27" font="vector" ratio="20" rot="R315" align="top-center"/>
 </element>
-<element name="C10" library="SparkFun-Capacitors" package="0402-TIGHT" value="12pF" x="7.2" y="40.2" smashed="yes" rot="R315">
+<element name="C10" library="SparkFun-Capacitors" package="0402-TIGHT" value="9.1pF" x="7.2" y="40.2" smashed="yes" rot="R315">
+<attribute name="MOUSER_PART" value="609-500R07S9R1CV4T" x="7.2" y="40.2" size="1.778" layer="27" rot="R315" display="off"/>
 <attribute name="NAME" x="7.597396875" y="40.597396875" size="0.6096" layer="25" font="vector" ratio="20" rot="R315" align="bottom-center"/>
-<attribute name="PROD_ID" value="CAP-14665" x="7.2" y="40.2" size="1.778" layer="27" rot="R315" display="off"/>
-<attribute name="VALUE" x="6.80260625" y="39.80260625" size="0.6096" layer="27" font="vector" ratio="20" rot="R315" align="top-center"/>
+<attribute name="PROD_ID" value="CAP-15278" x="7.2" y="40.2" size="1.778" layer="27" rot="R315" display="off"/>
+<attribute name="VALUE" value="9.1pF" x="6.80260625" y="39.80260625" size="0.6096" layer="27" font="vector" ratio="20" rot="R315" align="top-center"/>
 </element>
-<element name="C9" library="SparkFun-Capacitors" package="0402-TIGHT" value="12pF" x="8.8" y="38.6" smashed="yes" rot="R135">
+<element name="C9" library="SparkFun-Capacitors" package="0402-TIGHT" value="9.1pF" x="8.8" y="38.6" smashed="yes" rot="R135">
+<attribute name="MOUSER_PART" value="609-500R07S9R1CV4T" x="8.8" y="38.6" size="1.778" layer="27" rot="R135" display="off"/>
 <attribute name="NAME" x="8.40260625" y="38.202603125" size="0.6096" layer="25" font="vector" ratio="20" rot="R135" align="bottom-center"/>
-<attribute name="PROD_ID" value="CAP-14665" x="8.8" y="38.6" size="1.778" layer="27" rot="R135" display="off"/>
-<attribute name="VALUE" x="9.197396875" y="38.99739375" size="0.6096" layer="27" font="vector" ratio="20" rot="R135" align="top-center"/>
+<attribute name="PROD_ID" value="CAP-15278" x="8.8" y="38.6" size="1.778" layer="27" rot="R135" display="off"/>
+<attribute name="VALUE" value="9.1pF" x="9.197396875" y="38.99739375" size="0.6096" layer="27" font="vector" ratio="20" rot="R135" align="top-center"/>
 </element>
 <element name="SUPPLYTIE3" library="SparkFun_Thing_Plus_RA6M5" package="2PT_GND_TIE_SMALL" value="2PT_GND_TIESMALL" x="11.514" y="30.75" smashed="yes" rot="R90"/>
 <element name="SUPPLYTIE2" library="SparkFun_Thing_Plus_RA6M5" package="2PT_GND_TIE_SMALL" value="2PT_GND_TIESMALL" x="9.444" y="31.4" smashed="yes" rot="R90"/>
