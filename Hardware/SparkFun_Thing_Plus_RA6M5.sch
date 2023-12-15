@@ -27094,6 +27094,36 @@ Exposes the minimal pins needed to implement a USB 2.x legacy device.</descripti
 <wire x1="10.16" y1="12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
 <text x="-10.16" y="13.462" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <text x="-10.16" y="-15.24" size="1.778" layer="96" font="vector">&gt;VALUE</text>
+<wire x1="-6.35" y1="8.255" x2="-6.35" y2="6.985" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="6.985" x2="-6.35" y2="5.715" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="5.715" x2="-4.445" y2="6.985" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="6.985" x2="-6.35" y2="8.255" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="8.255" x2="-4.445" y2="6.985" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="6.985" x2="-4.445" y2="5.715" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="6.985" x2="-7.62" y2="6.985" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="1.905" x2="-6.35" y2="0.635" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="0.635" x2="-6.35" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="-0.635" x2="-4.445" y2="0.635" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="0.635" x2="-6.35" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="1.905" x2="-4.445" y2="0.635" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="0.635" x2="-4.445" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="-6.35" y1="0.635" x2="-7.62" y2="0.635" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="6.985" x2="0" y2="6.985" width="0.254" layer="94"/>
+<wire x1="0" y1="6.985" x2="0" y2="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="0.635" x2="0" y2="-3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-3.175" x2="7.62" y2="-3.175" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="7.62" y="-2.54"/>
+<vertex x="7.62" y="-3.81"/>
+<vertex x="8.89" y="-3.175"/>
+</polygon>
+<wire x1="-4.445" y1="0.635" x2="0" y2="0.635" width="0.254" layer="94"/>
+<text x="-5.08" y="3.81" size="1.27" layer="94" font="vector" align="center">IDEAL</text>
+<wire x1="1.27" y1="8.255" x2="5.08" y2="8.255" width="0.254" layer="94"/>
+<wire x1="5.08" y1="8.255" x2="5.08" y2="4.445" width="0.254" layer="94"/>
+<wire x1="5.08" y1="4.445" x2="8.89" y2="4.445" width="0.254" layer="94"/>
+<text x="3.175" y="9.525" size="1.27" layer="94" font="vector" align="center">V1</text>
+<text x="6.985" y="3.175" size="1.27" layer="94" font="vector" align="center">V2</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -27394,7 +27424,10 @@ If designing 4-layer board, make sure to select the variant &lt;strong&gt;_4-LAY
 <connect gate="J1" pin="VBUS" pad="VBUS1 VBUS2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-14122"/>
+<attribute name="VALUE" value="USB Female Type C Connector" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -29362,14 +29395,14 @@ Switches electrical signals</description>
 <part name="C7" library="SparkFun-Capacitors" deviceset="DNP" device="-0402-TIGHT_NO_CREAM" value="DNP"/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="DNP" device="-0402-TIGHT_NO_CREAM" value="DNP"/>
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
-<part name="C4" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
-<part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
-<part name="C2" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
-<part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
-<part name="C11" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
+<part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
+<part name="C4" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
+<part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
+<part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
+<part name="C11" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
 <part name="GND28" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C12" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
+<part name="C12" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
 <part name="GND29" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND23" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="FB1" library="SparkFun-Coils" deviceset="FERRITE_BEAD-120_OHM" device="-0402T" value="120-OHM"/>
@@ -29443,14 +29476,14 @@ Switches electrical signals</description>
 <part name="SUPPLY39" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND44" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY40" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
+<part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
 <part name="TP2" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
-<part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
+<part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
 <part name="TP4" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3" value="TEST-POINT3"/>
-<part name="TP5" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
-<part name="TP6" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
-<part name="TP7" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
-<part name="TP8" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
+<part name="TP5" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
+<part name="TP6" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
+<part name="TP7" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
+<part name="TP8" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5" value="TEST-POINT3X5"/>
 <part name="H3" library="SparkFun-Hardware" deviceset="STAND-OFF" device="TIGHT"/>
 <part name="H4" library="SparkFun-Hardware" deviceset="STAND-OFF" device="TIGHT"/>
 <part name="U8" library="SparkFun_Thing_Plus_RA6M5" deviceset="IDEAL_DIODE_DUAL_LM66200" device="" value="LM66200"/>
@@ -29470,8 +29503,8 @@ Switches electrical signals</description>
 <part name="R13" library="SparkFun-Resistors" deviceset="1KOHM" device="-0402T-1/16W-1%" value="1k"/>
 <part name="C24" library="SparkFun-Capacitors" deviceset="47UF" device="" value="47uF/6.3V"/>
 <part name="GND50" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="C25" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
-<part name="C26" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-6.3V-10%-X7R" value="0.1uF"/>
+<part name="C25" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
+<part name="C26" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
 <part name="C27" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0402T-16V-10%" value="1.0uF"/>
 <part name="U$5" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
 <part name="U$6" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
@@ -29484,7 +29517,7 @@ Switches electrical signals</description>
 <part name="C28" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402T-16V-10%" value="0.1uF"/>
 <part name="GND51" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY45" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
-<part name="TP9" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
+<part name="TP9" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3" value="TEST-POINT3"/>
 <part name="SUPPLY46" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="RST" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1"/>
 <part name="FB2" library="SparkFun-Coils" deviceset="FERRITE_BEAD-120_OHM" device="-0402T" value="120-OHM"/>
@@ -31037,6 +31070,15 @@ R_PROG=4.7k : I_CHG=213mA</text>
 5.5V max in</text>
 <wire x1="195.58" y1="134.62" x2="195.58" y2="200.66" width="0.1524" layer="97" style="longdash"/>
 <text x="149.86" y="53.34" size="2.54" layer="94" font="vector" align="center">SD Card Power Switch</text>
+<text x="63.5" y="222.504" size="1.778" layer="97" font="vector" ratio="15">USB diff calculations:</text>
+<text x="63.5" y="221.742" size="1.524" layer="97" font="vector" align="top-left">Cu Thickness (1 oz.): 0.035mm
+Board Thickness: 1.6mm
+Er (3313): 4.1
+Trace Width: 0.16mm
+Space: 0.22mm
+Dielectric Thickness: 0.0994mm
+Target Impedance: 90 Ohm
+Actual Impedance: 89.980 Ohm</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
