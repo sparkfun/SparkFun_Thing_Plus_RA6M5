@@ -1,0 +1,13 @@
+panel size, 84x83mm
+PCB thickness, 1.6mm
+number of layers, 6
+material, TG155
+soldermask color, Red
+silkscreen color, White
+oz copper, 1oz
+finish, ENIG
+stencils, top+bottom
+pcs per panel, 3
+min trace width, 0.1200mm / 0.0047in
+min drill size, 0.2000mm / 0.0079in
+filename to layer stackup 1/2/3/4/5/6: GTL, GL2, GL3, GL4, GL5, GBL
