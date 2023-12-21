@@ -31079,6 +31079,7 @@ Space: 0.22mm
 Dielectric Thickness: 0.0994mm
 Target Impedance: 90 Ohm
 Actual Impedance: 89.980 Ohm</text>
+<text x="381" y="182.88" size="1.778" layer="97" font="vector" align="top-center">Address 0x36</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0" smashed="yes"/>
