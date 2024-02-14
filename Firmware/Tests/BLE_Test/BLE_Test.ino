@@ -7,8 +7,8 @@ void setup() {
 
     Serial.println("BLE AT Commands Test:");
 
-    Serial1.begin(57600);
-    while(!Serial1){delay(100);};
+    Serial2.begin(57600);
+    while(!Serial2){delay(100);};
 
     Serial.println("Began Serial1.");
     Serial.println();
@@ -19,10 +19,11 @@ void setup() {
 
 void loop() {
     if (Serial.available()) {        // If anything comes in Serial (USB),
-        Serial1.write(Serial.read());  // read it and send it out Serial1 (pins 0 & 1)
+
+        Serial2.write(Serial.read());  // read it and send it out Serial2 (BLE device)
     }
 
-    if (Serial1.available()) {       // If anything comes in Serial1 (pins 0 & 1)
-        Serial.write(Serial1.read());  // read it and send it out Serial (USB)
+    if (Serial2.available()) {       // If anything comes in Serial2 (BLE device)
+        Serial.write(Serial2.read());  // read it and send it out Serial (USB)
     }
 }
