@@ -102,7 +102,7 @@ class CodelessCentralDevice : public CodelessBase
                 Serial.println("[DBG] - parsePipeData() - Losing first part of string.");
                 #endif
                 uint8_t truncateLen = inputString.length() - MAX_STRING_LENGTH;
-                inputString.remove(0,truncateLen);
+                rawString = inputString.substring(truncateLen);
             }
             else
             {
