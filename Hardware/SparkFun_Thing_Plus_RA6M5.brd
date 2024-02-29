@@ -11140,73 +11140,91 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="2.59" y="0.53"/>
 </polygon>
 </package>
-<package name="#_VA#0">
+<package name="#_VR#0">
 <polygon width="0.01" layer="21">
 <vertex x="0.61" y="0.68"/>
 <vertex x="0.34" y="0.68"/>
 <vertex x="0.34" y="0.61"/>
-<vertex x="0.34" y="-0.68"/>
+<vertex x="0.34" y="-0.67"/>
 <vertex x="0.4" y="-0.68"/>
-<vertex x="3.66" y="-0.68"/>
-<vertex x="3.14" y="-0.42"/>
-<vertex x="3.07" y="-0.46"/>
-<vertex x="3.01" y="-0.47"/>
-<vertex x="2.96" y="-0.44"/>
-<vertex x="2.9" y="-0.31"/>
-<vertex x="2.87" y="-0.26"/>
-<vertex x="2.53" y="-0.26"/>
-<vertex x="2.49" y="-0.31"/>
-<vertex x="2.43" y="-0.43"/>
-<vertex x="2.38" y="-0.47"/>
-<vertex x="2.32" y="-0.46"/>
-<vertex x="2.25" y="-0.42"/>
-<vertex x="2.22" y="-0.37"/>
-<vertex x="2.23" y="-0.32"/>
-<vertex x="2.26" y="-0.25"/>
-<vertex x="2.58" y="0.42"/>
-<vertex x="2.63" y="0.47"/>
-<vertex x="2.69" y="0.49"/>
-<vertex x="2.75" y="0.48"/>
-<vertex x="2.8" y="0.43"/>
-<vertex x="3.15" y="-0.31"/>
-<vertex x="3.17" y="-0.37"/>
-<vertex x="3.14" y="-0.42"/>
-<vertex x="3.66" y="-0.68"/>
-<vertex x="3.69" y="-0.64"/>
-<vertex x="3.69" y="0.64"/>
-<vertex x="3.66" y="0.68"/>
+<vertex x="3.45" y="-0.68"/>
+<vertex x="3.48" y="-0.65"/>
+<vertex x="3.48" y="0.64"/>
+<vertex x="3.45" y="0.68"/>
 <vertex x="0.68" y="0.68"/>
 <vertex x="1.06" y="0.43"/>
-<vertex x="1.12" y="0.47"/>
+<vertex x="1.13" y="0.47"/>
 <vertex x="1.19" y="0.49"/>
 <vertex x="1.24" y="0.45"/>
 <vertex x="1.27" y="0.41"/>
-<vertex x="1.5" y="-0.12"/>
+<vertex x="1.51" y="-0.12"/>
 <vertex x="1.53" y="-0.15"/>
 <vertex x="1.81" y="0.46"/>
 <vertex x="1.87" y="0.49"/>
 <vertex x="1.93" y="0.47"/>
 <vertex x="1.98" y="0.44"/>
 <vertex x="2.01" y="0.39"/>
+<vertex x="2.25" y="0.41"/>
+<vertex x="2.27" y="0.46"/>
+<vertex x="2.33" y="0.49"/>
+<vertex x="2.41" y="0.49"/>
+<vertex x="2.61" y="0.49"/>
+<vertex x="2.67" y="0.49"/>
+<vertex x="2.74" y="0.47"/>
+<vertex x="2.8" y="0.45"/>
+<vertex x="2.86" y="0.4"/>
+<vertex x="2.91" y="0.36"/>
+<vertex x="2.95" y="0.3"/>
+<vertex x="2.97" y="0.24"/>
+<vertex x="2.99" y="0.18"/>
+<vertex x="2.99" y="0.1"/>
+<vertex x="2.97" y="0.04"/>
+<vertex x="2.95" y="-0.02"/>
+<vertex x="2.91" y="-0.08"/>
+<vertex x="2.9" y="-0.12"/>
+<vertex x="2.95" y="-0.25"/>
+<vertex x="2.97" y="-0.3"/>
+<vertex x="2.99" y="-0.37"/>
+<vertex x="2.97" y="-0.42"/>
+<vertex x="2.9" y="-0.46"/>
+<vertex x="2.84" y="-0.47"/>
+<vertex x="2.78" y="-0.44"/>
+<vertex x="2.72" y="-0.28"/>
+<vertex x="2.67" y="-0.2"/>
+<vertex x="2.53" y="-0.2"/>
+<vertex x="2.48" y="-0.22"/>
+<vertex x="2.48" y="-0.35"/>
+<vertex x="2.47" y="-0.42"/>
+<vertex x="2.43" y="-0.46"/>
+<vertex x="2.35" y="-0.47"/>
+<vertex x="2.28" y="-0.45"/>
+<vertex x="2.25" y="-0.41"/>
+<vertex x="2.25" y="-0.34"/>
+<vertex x="2.25" y="0.41"/>
+<vertex x="2.01" y="0.39"/>
 <vertex x="2" y="0.33"/>
-<vertex x="1.97" y="0.27"/>
 <vertex x="1.64" y="-0.4"/>
 <vertex x="1.6" y="-0.45"/>
-<vertex x="1.54" y="-0.47"/>
+<vertex x="1.53" y="-0.47"/>
 <vertex x="1.47" y="-0.46"/>
-<vertex x="1.42" y="-0.42"/>
+<vertex x="1.42" y="-0.41"/>
 <vertex x="1.06" y="0.31"/>
 <vertex x="1.04" y="0.38"/>
 <vertex x="1.06" y="0.43"/>
 <vertex x="0.68" y="0.68"/>
 </polygon>
 <polygon width="0.01" layer="21">
-<vertex x="2.69" y="0.11"/>
-<vertex x="2.63" y="-0.01"/>
-<vertex x="2.61" y="-0.07"/>
-<vertex x="2.75" y="-0.07"/>
-<vertex x="2.76" y="-0.03"/>
-<vertex x="2.7" y="0.09"/>
+<vertex x="2.49" y="0.03"/>
+<vertex x="2.63" y="0.03"/>
+<vertex x="2.69" y="0.04"/>
+<vertex x="2.74" y="0.08"/>
+<vertex x="2.76" y="0.15"/>
+<vertex x="2.73" y="0.21"/>
+<vertex x="2.68" y="0.25"/>
+<vertex x="2.61" y="0.26"/>
+<vertex x="2.54" y="0.26"/>
+<vertex x="2.48" y="0.25"/>
+<vertex x="2.48" y="0.05"/>
 </polygon>
 </package>
 </packages>
@@ -11931,7 +11949,7 @@ These are the rules &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilitie
 <attribute name="VALUE" x="13.376" y="16.05" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
 </element>
 <element name="U$73" library="output" package="#USRBTN#0" value="" x="12.5" y="16.15" smashed="yes" rot="R90"/>
-<element name="U$53" library="output" package="#_VA#0" value="" x="21.45" y="19.05" smashed="yes" rot="MR0"/>
+<element name="U$53" library="output" package="#_VR#0" value="" x="21.45" y="19.05" smashed="yes" rot="MR0"/>
 </elements>
 <signals>
 <signal name="V_BATT" class="4">
