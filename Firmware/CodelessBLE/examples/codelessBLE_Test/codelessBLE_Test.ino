@@ -1,12 +1,10 @@
 #include <codelessBLE.h>
 
-#include <Arduino.h>
-
 CodelessBase myBLE;
 
 void setup()
 {
-    Serial.begin(57600);
+    Serial.begin(DEFAULT_CODELESS_BAUD_RATE);
     while(!Serial){delay(100);};
     Serial.println("Begin BLE Demo.");
 
@@ -23,6 +21,8 @@ void setup()
     Serial.println("Reset complete.");
     Serial.println("Getting device address...");
     Serial.print(myBLE.sendCommand("AT+BDADDR"));
+
+    Serial.println("Send commands to the BLE device, ending with \\n.");
 }
 
 void loop()

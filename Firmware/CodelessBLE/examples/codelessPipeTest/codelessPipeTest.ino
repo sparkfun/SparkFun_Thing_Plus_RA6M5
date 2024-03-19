@@ -1,3 +1,10 @@
+/**
+ * @file codelessPipeTest.ino
+ * @brief This file contains the code for testing the pipe data parsing 
+ *        functionality.
+ * 
+ */
+
 #include <codelessBLECentral.h>
 
 CodelessCentralDevice myBLECentral;
@@ -9,7 +16,7 @@ void setup()
 {
     pinMode(LED_BUILTIN, OUTPUT);
 
-    Serial.begin(57600);
+    Serial.begin(DEFAULT_CODELESS_BAUD_RATE);
     while(!Serial){delay(100);};
     Serial.println("Begin BLE pipe data test.");
 
@@ -31,9 +38,9 @@ void setup()
     Serial.print("Parsed: ");
     Serial.println(test);
     Serial.println("Vector became:");
-    for(size_t i=0; i<vec.size(); ++i)
+    for(size_t i=0; i<testvec.size(); ++i)
     {
-        Serial.println(vec[i]);
+        Serial.println(testvec[i]);
     }
     Serial.println("End of test. Cue the blinken lights.");
 }

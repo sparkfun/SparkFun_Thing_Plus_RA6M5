@@ -8,10 +8,20 @@
 class CodelessPeripheralDevice : public CodelessBase
 {
     public:
+        /**
+         * @brief Constructs a CodelessPeripheralDevice object.
+         * 
+         * @param serial The UART object to use for communication.
+         */
         CodelessPeripheralDevice(UART& serial = Serial2) : CodelessBase(serial)
         {
         }
 
+        /**
+         * @brief Sets up the default configuration for the peripheral device.
+         * 
+         * @return true if the setup is successful, false otherwise.
+         */
         virtual bool setupDefault(void) override
         {
             bool retval = false;
@@ -21,23 +31,16 @@ class CodelessPeripheralDevice : public CodelessBase
                 reset();
 
                 #ifdef CODELESS_DBG
-                Serial.println(
+                Serial.print(sendCommand("AT+ADVSTOP"));
+                #else
+                sendCommand("AT+ADVSTOP");
                 #endif
-                sendCommand("AT+ADVSTOP")
-                #ifdef CODELESS_DBG
-                )
-                #endif
-                ;
 
                 #ifdef CODELESS_DBG
-                Serial.println(
+                Serial.print(sendCommand("AT+ADVSTART"));
+                #else
+                sendCommand("AT+ADVSTART");
                 #endif
-                sendCommand("AT+ADVSTART")
-                #ifdef CODELESS_DBG
-                )
-                #endif
-                ;
-
 
                 retval = true;     
             }

@@ -12,10 +12,20 @@
 class CodelessCentralDevice : public CodelessBase
 {
     public:
+        /**
+         * @brief Constructs a CodelessCentralDevice object.
+         * 
+         * @param serial The UART object to use for communication.
+         */
         CodelessCentralDevice(UART& serial = Serial2) : CodelessBase(serial)
         {
         }
 
+        /**
+         * @brief Sets up the default configuration for the central device.
+         * 
+         * @return True if the setup was successful, false otherwise.
+         */
         virtual bool setupDefault(void) override
         {
             bool retval = false;
@@ -24,21 +34,16 @@ class CodelessCentralDevice : public CodelessBase
             {
                 reset();
                 #ifdef CODELESS_DBG
-                Serial.println(
+                Serial.print(sendCommand("AT+ADVSTOP"));
+                #else
+                sendCommand("AT+ADVSTOP");
                 #endif
-                sendCommand("AT+ADVSTOP")
+
                 #ifdef CODELESS_DBG
-                )
+                Serial.print(sendCommand("AT+CENTRAL"));
+                #else
+                sendCommand("AT+CENTRAL");
                 #endif
-                ;
-                #ifdef CODELESS_DBG
-                Serial.println(
-                #endif
-                sendCommand("AT+CENTRAL")
-                #ifdef CODELESS_DBG
-                )
-                #endif
-                ;
 
                 retval = true;     
             }
@@ -46,6 +51,13 @@ class CodelessCentralDevice : public CodelessBase
             return retval;
         }
 
+        /**
+         * @brief Connects to a peripheral device with the specified address and address type.
+         * 
+         * @param address The address of the peripheral device.
+         * @param type The address type (PUBLIC or RANDOM).
+         * @return True if the connection was successful, false otherwise.
+         */
         bool connectToPeripheral(String& address, CodelessAddrType type = PUBLIC)
         {
             bool retval = false;
@@ -61,19 +73,23 @@ class CodelessCentralDevice : public CodelessBase
             if(_connected)
             {
                 #ifdef CODELESS_DBG
-                Serial.println(
+                Serial.print(sendCommand(commandToSend));
+                #else
+                sendCommand(commandToSend);
                 #endif
-                sendCommand(commandToSend)
-                #ifdef CODELESS_DBG
-                )
-                #endif
-                ;
                 retval = true;
             }
 
             return retval;
         }
 
+        /**
+         * @brief Parses the pipe data from the input string and stores it in a vector.
+         * 
+         * @param inputString The input string containing the pipe data.
+         * @param vec The vector to store the parsed data.
+         * @return True if the parsing was successful, false otherwise.
+         */
         bool parsePipeData(const String& inputString, std::vector<String>& vec)
         {
             _status = CODELESS_ERROR;

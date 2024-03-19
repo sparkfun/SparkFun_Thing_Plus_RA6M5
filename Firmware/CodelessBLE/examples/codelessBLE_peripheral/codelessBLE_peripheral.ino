@@ -1,3 +1,20 @@
+/**
+ * @file codelessBLE_peripheral.ino
+ * @brief This file contains the code for a BLE peripheral device that 
+ * communicates with a BME280 sensor.
+ * 
+ * The code sets up a BLE peripheral device using the CodelessBLEPeripheral 
+ * class and establishes a connection with the onboard BLE coprocessor. It 
+ * also initializes a BME280 sensor and reads temperature, humidity, and 
+ * pressure values from it. The sensor data is then sent to the connected BLE 
+ * central device periodically.
+ * 
+ * The code handles the connection and disconnection events from the BLE device
+ * and prints the received data to the Serial monitor.
+ * 
+ * This code is intended to be used with the SparkFun Thing Plus - RA6M5 
+ * development board.
+ */
 #include <codelessBLEPeripheral.h>
 #include <Wire.h>
 #include "SparkFunBME280.h"
@@ -16,7 +33,7 @@ void setup()
     digitalWrite(LED_BUILTIN, HIGH);
 
     Serial.begin(57600);
-    // while(!Serial){delay(100);};
+    // while(!Serial){delay(100);}; // Uncomment during testing and needing a serial connection.
     Serial.println("Begin BLE Peripheral Demo.");
 
     #if defined(CODELESS_DBG)
@@ -61,10 +78,6 @@ void loop()
             Serial.print(myBLEPeripheral.sendCommand(printstring));
             digitalWrite(LED_BUILTIN, LOW);
         }
-    }
-    // if (Serial.available()) {        // If anything comes in Serial (USB),
-    //     Serial.print(myBLEPeripheral.sendCommand(Serial.readString()));  // read, then command BLE, write response back to Serial.
-    // }
 
     if (myBLEPeripheral.available()) {       // If anything comes in Serial2 (BLE device)
         String localstring = myBLEPeripheral.readOutput();
@@ -90,8 +103,6 @@ void loop()
             }
         }
         Serial.print(localstring);
-        
-        // Serial.print(myBLEPeripheral.readOutput());  // read it and send it out Serial (USB)
     }
     if(reset_loop && bleConnected)
     {

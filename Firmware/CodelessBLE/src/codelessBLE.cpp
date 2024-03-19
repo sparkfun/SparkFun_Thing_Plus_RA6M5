@@ -1,23 +1,29 @@
 #include "codelessBLE.h"
 
-void CodelessBase::connect(uint32_t baudRate, uint16_t config)
+bool CodelessBase::begin(uint32_t baudRate, uint16_t config)
 {
     #ifdef CODELESS_DBG
-    Serial.println("[DBG] - Begin connect().");
+    Serial.println("[DBG] - Begin begin().");
     #endif
     _serialPort->begin(baudRate, config);
 
-    #ifdef CODELESS_DBG
     if(!_serialPort)
     {
+        #ifdef CODELESS_DBG
         Serial.println("Could not start serial port.");
+        #endif
+        _status = CODELESS_ERROR;
+        _connected = false;
+        return false;
     }
-    #endif
+
     _status = CODELESS_OK;
     _connected = true;
+    
+    return true;
 }
 
-void CodelessBase::disconnect(void)
+void CodelessBase::end(void)
 {
     #ifdef CODELESS_DBG
     Serial.println("[DBG] - Begin end().");
@@ -50,69 +56,78 @@ String CodelessBase::sendCommand(const String& cmd, const uint16_t timeout_in_s)
     _reply_string = "";
     _status = CODELESS_ERROR;
 
-    if(_connected)
+    if(!_connected)
     {
-        if(cmd.startsWith("|"))
+        #ifdef CODELESS_DBG
+        Serial.println("[DBG] - Not connected. Returning.");
+        #endif
+        return _reply_string;
+    }
+
+    // Check if the command is a serial passthrough string
+    if(cmd.startsWith("|"))
+    {
+        #ifdef CODELESS_DBG
+        Serial.println("[DBG] - starts with | - Setting reply_expected to false.");
+        #endif
+        reply_expected = false;
+    }
+    if(cmd.endsWith("\r"))
+    {
+        cmdToWrite = cmd;
+    }
+    else
+    {
+        cmdToWrite = cmd+"\r";
+    }
+    _serialPort->print(cmdToWrite);
+    delayMicroseconds(100);
+    if(!reply_expected)
+    {
+        _status = CODELESS_OK;
+        return _reply_string;
+    }
+    
+    _reply_received = false;
+
+    while(!_reply_received)
+    {
+        if(_serialPort->available())
         {
-            #ifdef CODELESS_DBG
-            Serial.println("[DBG] - starts with | - Setting reply_expected to false.");
-            #endif
-            reply_expected = false;
+            _reply_string+=_serialPort->readString();
+            elapsed_time = millis() - start_time;
+            if(elapsed_time > timeout_in_s*1000)
+            {
+                #ifdef CODELESS_DBG
+                Serial.println("[DBG] - sendCommand - while - Timeout occurred.");
+                Serial.print("[DBG] - sendCommand - while - _reply_string: ");
+                Serial.println(_reply_string);
+                #endif
+                _status = CODELESS_ERROR;
+                return _reply_string;
+            }
         }
-        if(cmd.endsWith("\r"))
+        if(_reply_string.endsWith("OK\r\n") || _reply_string.endsWith("ERROR\r\n") || _reply_string.endsWith("+READY\r\n"))
         {
-            cmdToWrite = cmd;
+            _reply_received = true;
         }
         else
         {
-            cmdToWrite = cmd+"\r";
-        }
-        _serialPort->print(cmdToWrite);
-        delayMicroseconds(100);
-        if(reply_expected)
-        {
-            _reply_received = false;
-
-            while(!_reply_received)
+            delayMicroseconds(100);
+            elapsed_time = millis() - start_time;
+            if(elapsed_time > timeout_in_s*1000 )
             {
-                if(_serialPort->available())
-                {
-                    _reply_string+=_serialPort->readString();
-                    elapsed_time = millis() - start_time;
-                    if(elapsed_time > timeout_in_s*1000)
-                    {
-                        #ifdef CODELESS_DBG
-                        Serial.println("[DBG] - sendCommand - while - Timeout occurred.");
-                        Serial.print("[DBG] - sendCommand - while - _reply_string: ");
-                        Serial.println(_reply_string);
-                        #endif
-                        _status = CODELESS_ERROR;
-                        return _reply_string;
-                    }
-                }
-                if(_reply_string.endsWith("OK\r\n") || _reply_string.endsWith("ERROR\r\n") || _reply_string.endsWith("+READY\r\n"))
-                {
-                    _reply_received = true;
-                }
-                else
-                {
-                    delayMicroseconds(100);
-                    elapsed_time = millis() - start_time;
-                    if(elapsed_time > timeout_in_s*1000 )
-                    {
-                        #ifdef CODELESS_DBG
-                        Serial.println("[DBG] - sendCommand - else - Timeout occurred.");
-                        Serial.print("[DBG] - sendCommand - else - _reply_string: ");
-                        Serial.println(_reply_string);
-                        #endif
-                        _status = CODELESS_ERROR;
-                        return _reply_string;
-                    }
-                }
+                #ifdef CODELESS_DBG
+                Serial.println("[DBG] - sendCommand - else - Timeout occurred.");
+                Serial.print("[DBG] - sendCommand - else - _reply_string: ");
+                Serial.println(_reply_string);
+                #endif
+                _status = CODELESS_ERROR;
+                return _reply_string;
             }
         }
-        _status = CODELESS_OK;
     }
+    _status = CODELESS_OK;
 
     return _reply_string;
 }
@@ -267,11 +282,8 @@ void CodelessBase::reset(void)
 {
     #ifdef CODELESS_DBG
     Serial.println("[DBG] - Begin reset().");
-    Serial.print(
+    Serial.print(sendCommand("ATR"));
+    #else
+    sendCommand("ATR");
     #endif
-    sendCommand("ATR")
-    #ifdef CODELESS_DBG
-    )
-    #endif
-    ;
 }
