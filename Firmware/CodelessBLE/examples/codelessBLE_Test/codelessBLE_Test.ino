@@ -12,7 +12,7 @@ void setup()
     Serial.println("CODELESS_DBG defined.");
     #endif
 
-    myBLE.connect();
+    myBLE.begin();
     while(!Serial2){delay(100);};
     Serial.println("Connected to BLE coprocessor.");
 

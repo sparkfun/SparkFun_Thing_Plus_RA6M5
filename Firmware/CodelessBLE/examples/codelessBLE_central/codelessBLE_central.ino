@@ -63,7 +63,7 @@ void setup()
     myOLED.text(x0, y0, hello);
     myOLED.display();
 
-    myBLECentral.connect();
+    myBLECentral.begin();
     while(!Serial2){delay(100);};
     Serial.println("Connected to BLE coprocessor.");
 

@@ -50,7 +50,7 @@ void setup()
 
     Serial.println("Connected to BME280.");
 
-    myBLEPeripheral.connect();
+    myBLEPeripheral.begin();
     while(!Serial2){delay(100);};
     Serial.println("Connected to BLE coprocessor.");
 
@@ -79,38 +79,39 @@ void loop()
             digitalWrite(LED_BUILTIN, LOW);
         }
 
-    if (myBLEPeripheral.available()) {       // If anything comes in Serial2 (BLE device)
-        String localstring = myBLEPeripheral.readOutput();
-        if(!bleConnected)
-        {
-            if(localstring.endsWith("+CONNECTED\r\n"))
+        if (myBLEPeripheral.available()) {       // If anything comes in Serial2 (BLE device)
+            String localstring = myBLEPeripheral.readOutput();
+            if(!bleConnected)
             {
-                #ifdef CODELESS_DBG
-                Serial.println("[DBG] - outloop - Got connected output.");
-                #endif
-                bleConnected = true;
+                if(localstring.endsWith("+CONNECTED\r\n"))
+                {
+                    #ifdef CODELESS_DBG
+                    Serial.println("[DBG] - outloop - Got connected output.");
+                    #endif
+                    bleConnected = true;
+                }
             }
-        }
-        
-        if(bleConnected)
-        {
-            if(localstring.endsWith("+DISCONNECTED\r\n"))
+            
+            if(bleConnected)
             {
-                #ifdef CODELESS_DBG
-                Serial.println("[DBG] - outloop - Got disconnected output.");
-                #endif
-                bleConnected = false;
+                if(localstring.endsWith("+DISCONNECTED\r\n"))
+                {
+                    #ifdef CODELESS_DBG
+                    Serial.println("[DBG] - outloop - Got disconnected output.");
+                    #endif
+                    bleConnected = false;
+                }
             }
+            Serial.print(localstring);
         }
-        Serial.print(localstring);
-    }
-    if(reset_loop && bleConnected)
-    {
-        reset_loop = false;
-        #ifdef CODELESS_DBG
-        Serial.println();
-        Serial.println("Resetting loop");
-        #endif
-        loop_start_time = millis();
-    }
+        if(reset_loop && bleConnected)
+        {
+            reset_loop = false;
+            #ifdef CODELESS_DBG
+            Serial.println();
+            Serial.println("Resetting loop");
+            #endif
+            loop_start_time = millis();
+        }
+    }  
 }
