@@ -9,7 +9,6 @@
 #include <cstdint>
 #include <vector>
 #include <string>
-// #include "ThingPlusSDCardBlockDevice.h"
 #include "SDCardBlockDevice.h"
 #include "FATFileSystem.h"
 
@@ -33,9 +32,6 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
   delay(100);
-
-  // Enable SD Card Power
-  digitalWrite(SD_NEN, LOW);
 
   digitalWrite(LED_BUILTIN, LOW);
   delay(500);
