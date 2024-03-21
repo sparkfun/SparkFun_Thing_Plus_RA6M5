@@ -1,0 +1,41 @@
+#########################################################
+# Syntax Coloring Map for TODO: Add name                #
+#########################################################
+# Class
+#########################################################
+
+CodelessBase                KEYWORD1
+CodelessCentralDevice       KEYWORD1
+CodelessPeripheralDevice    KEYWORD1
+
+#########################################################
+# Methods and Functions
+#########################################################
+
+connect KEYWORD2
+disconnect KEYWORD2
+sendCommand KEYWORD2
+readOutput KEYWORD2
+connected KEYWORD2
+available KEYWORD2
+reset KEYWORD2
+setupDefault KEYWORD2
+connectToPeripheral KEYWORD2
+
+#########################################################
+# Constants
+#########################################################
+
+
+
+#########################################################
+# Enums
+#########################################################
+
+CodelessStatus KEYWORD3
+CodelessAddrType KEYWORD3
+
+#########################################################
+# Structs
+#########################################################
+
