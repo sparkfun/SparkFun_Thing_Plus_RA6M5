@@ -7,7 +7,9 @@ This folder should contain the images for the product documentation
 * `sfe_logo_sq.png` - SparkFun flame logo (favicon)
 
 ## Directory
+* `graphical_datasheet` - Files for graphical datasheet
 * `hookup_guide` - Images for the hookup guide pages
+* `qr_code` - QR code images
 
 ## QR Codes
 * [QR code generator](https://qrgenerator.org/)

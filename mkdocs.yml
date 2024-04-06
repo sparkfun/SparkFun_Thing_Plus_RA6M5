@@ -1,6 +1,6 @@
 # Documentation page information
 site_name: SparkFun RA6M5 Thing Plus Hookup Guide
-site_description: Hookup guide for the RA6M5 Thing Plus
+site_description: The product manual for the RA6M5 Thing Plus from SparkFun Electronics
 site_url: https://sparkfun.github.io/SparkFun_Thing_Plus_RA6M5
 site_author: SparkFun Electronics
 
@@ -15,22 +15,20 @@ copyright:
 edit_uri: blob/main/docs/
 
 
-
 # Configuration for webpage theme
 theme:
   # Theme: https://squidfunk.github.io/mkdocs-material/
   name: material
-
+  custom_dir: overrides # Personalized changes to the theme
 
   # Icon in Browser Tab (must be a square image - i.e. 32x32 pixels)
   favicon: img/sfe_logo_sq.png
-
 
   # Page Font
   font:
     text: Roboto
     code: Roboto Mono
-  
+
 
   # Features to Include (ref. theme documentation)
   features:
@@ -43,6 +41,7 @@ theme:
     # Enable "view source" and "edit this page" buttons
     - content.action.edit
     # - content.action.view
+    - content.tooltips
 
     # Enable Navigation buttons in the footer (i.e. previous/next)
     - navigation.footer
@@ -56,7 +55,7 @@ theme:
 
     # Keeps tabs visible in the header when scrolling
     - navigation.tabs.sticky
-    
+  
     # Adds pop-up button just below the header (when the user starts to scroll up)
     # Allows users to easily jump to the beginning of the page
     - navigation.top
@@ -135,11 +134,6 @@ theme:
       link: octicons/link-16
 
 
-  # Adds overrides for icons, html, etc.
-  custom_dir: overrides
-
-
-
 # Included MkDocs plugins
 # Add the installation of any new plugins to the ./github/workflows/mkdocs.yml file also
 plugins:
@@ -166,10 +160,10 @@ plugins:
 
   # Add git authors at the bottom of the page
   - git-authors
-  
+
   # Enables use of Git submodules and larger code base
   - monorepo
-  
+
   # Enables improved security for external links
   - privacy:
       # Disables cache mechanism, so that external assets can be updated during rebuilds
@@ -182,7 +176,7 @@ plugins:
       # Provide domains for assets that are retrieved from external sites
       assets_include:
         - https://docs.sparkfun.com/*
-      
+  
       # External links open in a new tab
       links_attr_map:
         target: _blank
@@ -213,7 +207,7 @@ markdown_extensions:
   # Adds support for syntax highlighting of code blocks
   - pymdownx.highlight:
       anchor_linenums: true
-  
+
   # Adds support for syntax highlighting of inline code blocks
   - pymdownx.inlinehilite
 
@@ -225,13 +219,21 @@ markdown_extensions:
       url_timeout: 0
       url_request_headers: {}
       dedent_subsections: True
-  
+
+      # Adds support for glossary of abbreviations
+      auto_append:
+        - glossary-sparkfun.md
+        # - https://raw.githubusercontent.com/santaimpersonator/git-test/main/glossary-sparkfun.md
+        # - glossary-local.md
+
   # Allows embedding of code blocks in other elements
-  - pymdownx.superfences
-  
-  # Allows admonition extension to collapse the call-out boxes
-  - pymdownx.details
-  
+  - pymdownx.superfences:
+      # Allows the use of diagrams
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
   # Allows the use of tabs in the document
   - pymdownx.tabbed:
       alternate_style: true 
@@ -242,47 +244,53 @@ markdown_extensions:
   # Allows the use of Markup syntax
   - pymdownx.betterem:
       smart_enable: all
-  
+
   # Allows the use of in-text highlighting in Markdown syntax
   - pymdownx.mark
   - pymdownx.critic
-  
+
   # Allows the use of superscript/subscript formatting in Markdown syntax
   - pymdownx.caret
-  
+
   # Allows the use of strikeout formatting in Markdown syntax
   - pymdownx.tilde
-  
+
   # Allows the use of keyboard button formatting in Markdown syntax
   - pymdownx.keys
-  
+
   # Allows the use of tables in Markdown syntax
   - tables
-  
+
   # Allows the use of admonition/call-out boxes
   - admonition
-  
+
+  # Allows admonition extension to collapse the call-out boxes
+  - pymdownx.details
+
   # Allows the use of Markdown syntax in HTML elements
   - md_in_html
-  
+
   # Allows the use of HTML syntax in Markdown elements
   - attr_list
-  
+
   # Allows the use of definition list formatting in Markdown syntax
   - def_list
 
   # Allows the use of footnotes
   - footnotes
-  
-  # Allows the use of bundled and custom icons and emojis
+
+  # Allows the use of abbreviations
+  - abbr
+
+  # Allows the use of bundled and custom icons/emojis
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       options:
         custom_icons:
           - overrides/.icons
-  
-  #  Allows for the rendering of block and inline-block equations
+
+  # Allows for the rendering of block and inline-block equations
   - pymdownx.arithmatex:
       generic: true
   
@@ -291,7 +299,6 @@ markdown_extensions:
       permalink: ''
       # Link: &#x1F517; 🔗
       # Chain: &#x26D3; ⛓
-
 
 
 extra:
@@ -313,17 +320,15 @@ extra:
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/sparkfun
 
-  # Configures Google Analytics
+  # Google Analytics
   analytics:
     provider: google
     property: G-7Y7EYCZVC1
 
 
-
-# Configures styling for PDF rendering and webpage layout
+# Configures styling for the webpage
 extra_css:
   - stylesheet/extra.css
-
 
 
 # Enables support for rendering block and inline block equations through MathJax
@@ -334,14 +339,15 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
-
 # Configures webpage navigation
 nav:
   - Getting Started:
     - Introduction: introduction.md
     - Hardware Overview: hardware_overview.md
     - Hardware Assembly: hardware_assembly.md
-    - Software Setup: software_overview.md
+    - Software Overview:
+      - Arduino IDE: software_overview-arduino.md
+      # - CodeLess AT Commands:  software_overview-codeless.md
   - Resources:
     - Hardware Resources: resources.md
   - Support:
