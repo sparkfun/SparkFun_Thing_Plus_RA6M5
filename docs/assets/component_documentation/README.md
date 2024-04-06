@@ -16,3 +16,4 @@ A copy of the datasheets, user manuals, programming guides, etc. of the major el
 		* Charge Controller: [MCP73831 (PDF)](MCP73831.pdf)
 		* Fuel Gauge: [MAX17048 (PDF)](MAX17048.pdf)
 * RGB LED: [WS2812 (PDF)](WS2812C-2020.pdf)
+* QSPI FLash: [MX25L12833F (PDF)](MX25L12833F.pdf)
