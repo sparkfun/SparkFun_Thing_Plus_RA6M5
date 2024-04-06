@@ -1,5 +1,5 @@
 # Contribute: Make an Augmentation!
-Spot an improvement opportunity? Feel free to contribute to our open-source design and documentation. <a href="https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/pulls" alt="Pull Requests"><img src="https://img.shields.io/github/issues-pr/sparkfun/SparkFun_Thing_Plus_RA6M5.svg" /></a>
+Spot an improvement opportunity? Feel free to contribute to our open-source design and documentation. [![](https://img.shields.io/github/issues-pr/sparkfun/SparkFun_Thing_Plus_RA6M5.svg)](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/pulls "Pull Requests")
 
 ## :material-file-document-multiple:&nbsp;Improve our Documentation
 All of this documentation can be modified by you! Please help us make it better.
@@ -38,4 +38,4 @@ Let's provide some recognition to the contributors for this project!
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=sparkfun/SparkFun_Thing_Plus_RA6M5)
 <br>
-<a href="https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/pulls" alt="Pull Requests"><img src="https://img.shields.io/github/contributors/sparkfun/SparkFun_Thing_Plus_RA6M5.svg" /></a>
+[![](https://img.shields.io/github/contributors/sparkfun/SparkFun_Thing_Plus_RA6M5.svg)](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/pulls "Pull Requests")
