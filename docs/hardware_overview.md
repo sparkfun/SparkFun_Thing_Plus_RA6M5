@@ -22,7 +22,7 @@ The circuit board dimensions are illustrated in the drawing below; the measureme
 		Eagle is a [CAD]("computer-aided design") program for electronics that is free to use for hobbyists and students. However, it does require an account registration to utilize the software.
 
 		<center>
-		[Download from<br>:autodesk-primary:{ .autodesk }](https://www.autodesk.com/products/eagle/free-download "Go to downloads page"){ .md-button .md-button--primary width="250px" }
+		[Download from<br>:autodesk-primary:{ .autodesk }](https://www.autodesk.com/products/eagle/free-download "Go to downloads page"){ .md-button .md-button--primary width="200px" }
 		</center>
 
 	??? info ":straight_ruler: Dimensions Tool"
@@ -32,9 +32,9 @@ The circuit board dimensions are illustrated in the drawing below; the measureme
 
 		<div class="video">
 		<iframe src="https://www.youtube.com/embed/dZLNd1FtNB8" title="EAGLE Dimension Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
 
 		![QR code to instructional video](./assets/img/qr_code/dimension_tool.png){ .qr width=100 }
+		</div>
 
 		</center>
 
@@ -1108,8 +1108,11 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	</div>
 
 
-
 	??? tip "What is Qwiic?"
+
+		<div class="grid" markdown>
+
+		<div markdown>
 
 		<!-- Qwiic Banner -->
 		<center>
@@ -1119,15 +1122,24 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 		---
 
-		The [Qwiic connect system](https://www.sparkfun.com/qwiic) is a solderless, polarized connection system that allows users to seamlessly daisy chain I^2^C boards together. Play the video below to learn more about the Qwiic connect system or click on the banner above to learn more about [Qwiic products](https://www.sparkfun.com/qwiic).
+		The [Qwiic connect system](https://www.sparkfun.com/qwiic) is a solderless, polarized connection system that allows users to seamlessly daisy chain 	I^2^C boards together. Play the video below to learn more about the Qwiic connect system or click on the banner above to learn more about [Qwiic 	products](https://www.sparkfun.com/qwiic).
 
+		</div>
+
+
+		<div style="max-height=400px;" markdown>
 
 		<center>
-		<div class="video">
-		<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="video-container">
+		<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; 	encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		![QR code to instructional video](./assets/img/qr_code/qwiic_video.png){ .qr width=100 }
 		</div>
 		</center>
 
+		</div>
+
+		</div>
 
 		!!! info "Features of the Qwiic System"
 
@@ -1480,6 +1492,8 @@ A Qwiic connector is provided for users to seamlessly integrate with [SparkFun's
 	<center>
 	<div class="video-container">
 	<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	![QR code to instructional video](./assets/img/qr_code/qwiic_video.png){ .qr width=100 }
 	</div>
 	</center>
 

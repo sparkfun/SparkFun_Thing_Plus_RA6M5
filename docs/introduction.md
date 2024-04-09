@@ -19,7 +19,7 @@ icon: material/book-open-page-variant
 	<center>
 
 	<article class="video-container">
-	<iframe src="https://www.youtube.com/embed/ci_T3abVPSw" title="Product Showcase Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe src="https://www.youtube.com/embed/A9NTdowiY_o" title="Product Showcase Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	![QR code to product video](./assets/img/qr_code/product_video.png){ .qr width=100 }
 	</article>
 
@@ -355,6 +355,8 @@ To get started, users will need a few items. Some users may already have a few o
 		<center>
 		<div class="video-container">
 		<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		![QR code to instructional video](./assets/img/qr_code/qwiic_video.png){ .qr width=100 }
 		</div>
 		</center>
 

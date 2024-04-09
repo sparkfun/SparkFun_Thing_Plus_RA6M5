@@ -17,7 +17,7 @@ The SparkFun RA6M5 Thing Plus also features Bluetooth® Low Energy connectivity,
 Documentation
 --------------
 
-* **[Hookup Guide (mkdocs)](http://docs.sparkfun.com/SparkFun_Thing_Plus_RA6M5/)** - Hookup guide for the mosaic-X5 GNSS Breakout hosted by GitHub pages.<br>
+* **[Hookup Guide (mkdocs)](http://docs.sparkfun.com/SparkFun_Thing_Plus_RA6M5/)** - The hookup guide for the Thing Plus - RA6M5 hosted by GitHub pages.<br>
   [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/) [![GitHub Pages Deploy](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/actions/workflows/mkdocs.yml/badge.svg)](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/actions/workflows/mkdocs.yml)
 * [SparkFun Graphical Datasheets](https://github.com/sparkfun/Graphical_Datasheets) -Graphical Datasheets for various SparkFun products.
 

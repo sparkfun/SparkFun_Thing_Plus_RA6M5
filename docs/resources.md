@@ -13,7 +13,7 @@ icon: material/book-open-page-variant
 - :simple-arduino: Arduino Libraries:
 	- [FastLED Arduino library](https://github.com/FastLED/FastLED/)
 	- [SparkFun MAX1704x Fuel Gauge Arduino library](https://github.com/sparkfun/SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library)
-- :material-youtube: [SFE Product Showcase](https://www.youtube.com/watch?v=ci_T3abVPSw)
+- :material-youtube: [SFE Product Showcase](https://www.youtube.com/watch?v=A9NTdowiY_o)
 - :material-github: [Hardware Repo](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5)
 
 ### :sfe-logo: Additional Resources
