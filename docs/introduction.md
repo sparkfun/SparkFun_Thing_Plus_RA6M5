@@ -38,7 +38,6 @@ icon: material/book-open-page-variant
 
 </div>
 
-<!-- Draft: The SparkFun RA6M5 Thing Plus features a high-performance microcontroller from Renesas; the RA6M5 is a low-power Arm® Cortex®-M33 processor with extensive peripheral capabilities. With an available 512kB of SRAM and 2MB of Flash from the RA6M5 along with the 16MB of QSPI Flash and SD card slot included on the board, users won't have to worry about running out of memory space or data storage options. As with other Thing Plus boards, a Qwiic connector, JST LiPo battery connector, 21 GPIO pins broken out in a Feather footprint, status indicator LEDs, and SWD pins are included. -->
 
 ## :fontawesome-solid-list-check:&nbsp;Required Materials
 To get started, users will need a few items. Some users may already have a few of these items, feel free to adjust accordingly.
@@ -81,7 +80,7 @@ To get started, users will need a few items. Some users may already have a few o
 
 
 ??? note "Data Logging"
-	The Septentrio mosaic-X5 module is capable of logging data to an &micro;SD card. Please check out the [memory cards and accessories](https://www.sparkfun.com/categories/351) in our product catalog.
+	This board is capable of logging data to an &micro;SD card. Please check out the [memory cards and accessories](https://www.sparkfun.com/categories/351) in our product catalog.
 
 	<div class="grid cards col-4" markdown>
 

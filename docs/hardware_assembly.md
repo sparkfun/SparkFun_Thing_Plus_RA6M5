@@ -6,7 +6,7 @@ icon: material/tools
 The USB connection is utilized for programming and serial communication. Users only need to plug their RA6M5 Thing Plus into a computer using a USB-C cable.
 
 <figure markdown>
-[![mosaic-X5 USB connection](./assets/img/hookup_guide/assembly-usb.jpg){ width="400" }](./assets/img/hookup_guide/assembly-usb.jpg "Click to enlarge")
+[![USB connection](./assets/img/hookup_guide/assembly-usb.jpg){ width="400" }](./assets/img/hookup_guide/assembly-usb.jpg "Click to enlarge")
 <figcaption markdown>The RA6M5 Thing Plus with USB-C cable attached.</figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ The RA6M5 Thing Plus includes a &micro;SD card slot on the back of the board. Th
 </figure>
 
 !!! info "SD Card Compatibility"
-	The mosaic-X5 supports &micro;SD cards with a **FAT32** file system *(i.e. only cards **up to 32GB** in size)*.
+	The R6M5 Thing Plus supports &micro;SD cards with a **FAT32** file system *(i.e. only cards **up to 32GB** in size)*.
 
 ### Qwiic Devices
 The Qwiic system allows users to effortlessly prototype with a Qwiic compatible I^2^C device without soldering. Users can attach any Qwiic compatible [sensor or board](https://www.sparkfun.com/qwiic#sensors), with just a [Qwiic cable](https://www.sparkfun.com/products/15081). (*\*The example below, is for demonstration purposes and is not pertinent to the board functionality or this tutorial.*)
