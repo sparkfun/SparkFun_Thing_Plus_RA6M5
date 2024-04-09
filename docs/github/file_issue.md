@@ -1,6 +1,6 @@
 # Did we make a mistake?
 
-Spot something wrong? Please let us know. [![](https://img.shields.io/github/issues/sparkfun/SparkFun_Thing_Plus_RA6M5.svg)](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/issues "Issues")
+Spot something wrong? Please let us know. [![Open Issues Badge](https://img.shields.io/github/issues/sparkfun/SparkFun_Thing_Plus_RA6M5.svg)](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/issues "Issues")
 
 <!-- Technical Assistance Box -->
 !!! warning "Need Help?"
