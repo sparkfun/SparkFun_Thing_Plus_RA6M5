@@ -102,11 +102,14 @@ Below, is a summary of the power circuitry for this board:
 		* The RT9080 can source up to **600mA** of current, which is only limited by the power source from the LM66200 switch
 			* The power source from the LM66200 is automatically switched between `VUSB` or `VBAT`, based on which has the greater voltage
 	* As an input, it requires a **regulated 3.3V** to avoid contention with the LDO regulator
+
+	!!! info "<span style="font-weight: 400;">The input voltage range for the RT9080 is 1.2-5.5V</span>"
+
 === ":material-usb-port: `VUSB`"
 	* Usually powered through the USB-C connector *(**5V**)*
-	* Input voltage range:
-		* The maximum voltage is limited by the ideal diode switch at **5.5V**
-		* The minimum voltage is limited by the charge controller at **3.75V**
+	* Input voltage range: **3.75 - 5V**
+		* The maximum voltage is limited by the ideal diode switch at **5.5V** *(1.6-5.5V)*
+		* The minimum voltage is limited by the charge controller at **3.75V** *(3.75-6V)*
 	* Primary power source for the [RT9080 LDOs](./assets/component_documentation/RT9080.pdf) when `VUSB` > `VBAT`; via the LM66200 ideal diode switch
 	* Powers the [MCP73831](./assets/component_documentation/MCP73831.pdf) linear charge management controller
 		* Provides a **213mA** *(max)* rate of charge to a connected battery
@@ -118,6 +121,9 @@ Below, is a summary of the power circuitry for this board:
 === ":material-sine-wave: :material-gauge: `VREF`"
 	* The analog reference voltage for the RA6M5 module's ADC and DAC channels
 		* Provided by a [RT9080](./assets/component_documentation/RT9080.pdf) LDO regulator, separate from one providing the `3V3` power supply
+
+	!!! info "<span style="font-weight: 400;">The input voltage range for the RT9080 is 1.2-5.5V</span>"
+
 === ":material-format-line-style: `GND`"
 	* The common ground or the 0V reference for the voltage supplies
 === ":material-connection: Qwiic Connector"
@@ -129,20 +135,13 @@ Below, is a summary of the power circuitry for this board:
 <div markdown>
 
 <figure markdown>
-[![Power connections](./assets/img/hookup_guide/Power.png){ width=250 }](./assets/img/hookup_guide/Power.png "Click to enlarge")
+[![Power connections](./assets/img/hookup_guide/Power.png){ width=200 }](./assets/img/hookup_guide/Power.png "Click to enlarge")
 <figcaption markdown>Power connections on the RA6M5 Thing Plus PCB.</figcaption>
 </figure>
 
 </div>
 
 </div>
-
-
-<!--
-	* The input voltage range for the RT9080 LDO is **1.2-5.5V**.
-	* The input voltage range for the LM66200 LDO is **1.6-5.5V**.
-	* The input voltage range for the charge controller is **3.75-6V**.
--->
 
 
 ??? info "Detailed Diagram"
@@ -514,17 +513,22 @@ The brains of the board is the [RA6M5 microcontroller](https://www.renesas.com/u
 * 32-bit PWM Channels (x4)
 * 16-bit PWM Channels (x6)
 * UART (x10)
-* CAN Interface
 * I^2^C Bus (x3)
 * SPI Bus (x2)
 * QSPI (x1)
 * SD/MMC Host Interface
-* {--OSPI (x1)--}
-* {--USB 2.0 (Full/High Speed)--}
-* {--Ethernet MAC/DMA Controller--}
-* {--Serial Sound Interface Enhanced--}
-* {--Consumer Electronics Control--}
-* {--Capacitive Touch Sensing--}
+
+{--
+
+* OSPI (x1)
+* CAN Interface
+* USB 2.0 (Full/High Speed)
+* Ethernet MAC/DMA Controller
+* Serial Sound Interface Enhanced
+* Consumer Electronics Control
+* Capacitive Touch Sensing
+
+--}
 
 !!! warning "Note"
 	Users should be aware that not all of the features, listed above, will be available in the Arduino IDE.
@@ -640,7 +644,7 @@ Debug pins are available for the RA6M5, as 0.1" test points on the board. Howeve
 <div markdown>
 
 <figure markdown>
-[![RA6M5 Debug Pins](./assets/img/hookup_guide/debug-RA6M5.png){ width=250 }](./assets/img/hookup_guide/debug-RA6M5.png "Click to enlarge")
+[![RA6M5 Debug Pins](./assets/img/hookup_guide/debug-RA6M5.png){ width=200 }](./assets/img/hookup_guide/debug-RA6M5.png "Click to enlarge")
 <figcaption markdown>The debug pins for the RA6M5 microcontroller.</figcaption>
 </figure>
 
@@ -761,7 +765,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	<figure markdown>
-	[![Annotated image of PWM pins](./assets/img/hookup_guide/pins-pwm.png){ width=250 }](./assets/img/hookup_guide/pins-pwm.png "Click to enlarge")
+	[![Annotated image of PWM pins](./assets/img/hookup_guide/pins-pwm.png){ width=200 }](./assets/img/hookup_guide/pins-pwm.png "Click to enlarge")
 	<figcaption markdown>The GPIO pins that support PWM outputs on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -811,7 +815,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	<figure markdown>
-	[![Annotated image of ADC pins](./assets/img/hookup_guide/pins-adc.png){ width=250 }](./assets/img/hookup_guide/pins-adc.png "Click to enlarge")
+	[![Annotated image of ADC pins](./assets/img/hookup_guide/pins-adc.png){ width=200 }](./assets/img/hookup_guide/pins-adc.png "Click to enlarge")
 	<figcaption markdown>Analog input pins on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -864,7 +868,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 
 	<figure markdown>
-	[![Annotated image of DAC pins](./assets/img/hookup_guide/pins-dac.png){ width=250 }](./assets/img/hookup_guide/pins-dac.png "Click to enlarge")
+	[![Annotated image of DAC pins](./assets/img/hookup_guide/pins-dac.png){ width=200 }](./assets/img/hookup_guide/pins-dac.png "Click to enlarge")
 	<figcaption markdown>Analog (DAC) output pins on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -918,7 +922,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	<figure markdown>
-	[![Annotated image of UART connections](./assets/img/hookup_guide/pins-serial.png){ width=250 }](./assets/img/hookup_guide/pins-serial.png "Click to enlarge")
+	[![Annotated image of UART connections](./assets/img/hookup_guide/pins-serial.png){ width=200 }](./assets/img/hookup_guide/pins-serial.png "Click to enlarge")
 	<figcaption markdown>UART connections on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -979,18 +983,6 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 	</div>
 
-	??? info "CAN Bus Support"
-		Diving into the [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931), users may notice that there are CAN buses supported on a few of the available hardware pins. However, please refer to the [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931) for the protocol implementation. *(i.e. There could be a bus contention issues with the `CAN1` pins, which share `UART9` with the Bluetooth module.)*
-
-		<center>
-
-		| CAN Bus  | GPIO Pins                                              |
-		| :------: | :----------------------------------------------------- |
-		| **CAN0** | **RX** - `P402` *(`D05`)*<br>**TX** - `P401` *(`D15`)* |
-		| **CAN1** | **RX** - `P110` *(`D17`)*<br>**TX** - `P109` *(`D18`)* |
-
-		</center>
-
 
 
 === "SPI Pins"
@@ -1006,7 +998,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	<figure markdown>
-	[![Annotated image of SPI pins](./assets/img/hookup_guide/pins-spi.png){ width=250 }](./assets/img/hookup_guide/pins-spi.png "Click to enlarge")
+	[![Annotated image of SPI pins](./assets/img/hookup_guide/pins-spi.png){ width=200 }](./assets/img/hookup_guide/pins-spi.png "Click to enlarge")
 	<figcaption markdown>SPI pins on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -1062,7 +1054,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	<figure markdown>
-	[![Annotated image of I2C connections](./assets/img/hookup_guide/pins-i2c.png){ width=250 }](./assets/img/hookup_guide/pins-i2c.png "Click to enlarge")
+	[![Annotated image of I2C connections](./assets/img/hookup_guide/pins-i2c.png){ width=200 }](./assets/img/hookup_guide/pins-i2c.png "Click to enlarge")
 	<figcaption markdown>I^2^C connections on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -1155,9 +1147,9 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 				![polarized connector - light theme](./assets/img/polarized_connector-light.png#only-light){ align="left" width="90" }
 				![polarized connector - dark theme](./assets/img/polarized_connector-dark.png#only-dark){ align="left" width="90" }
 
-				There's no need to worry about accidentally swapping the SDA and SCL wires on your breadboard. The Qwiic connector is polarized so you know you’ll have it wired correctly every time, right from the start.
+				There's no need to worry about accidentally swapping the `SDA` and `SCL` wires on your breadboard. The Qwiic connector is polarized so you know you’ll have it wired correctly every time.
 
-				The PCB connector is part number SM04B-SRSS ([Datasheet](https://cdn.sparkfun.com/assets/parts/1/2/2/8/9/Qwiic_Connector_Datasheet.pdf)) or equivalent. The mating connector used on cables is part number SHR04V-S-B or an equivalent *(1mm pitch, 4-pin JST connector)*.
+				The part numbers for the PCB connector is `SM04B-SRSS` ([Datasheet](https://cdn.sparkfun.com/assets/parts/1/2/2/8/9/Qwiic_Connector_Datasheet.pdf)) and the mating connector on the cables is `SHR04V-S-B`; or an equivalent *1mm pitch, 4-pin JST connection*.
 
 			=== "Daisy Chain-able"
 
@@ -1165,6 +1157,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 				![daisy chainable - dark theme](./assets/img/daisy_chainable-dark.png#only-dark){ align="left" width="90" }
 
 				It’s time to leverage the power of the I^2^C bus! Most Qwiic boards will have two or more connectors on them, allowing multiple devices to be connected.
+
 
 
 === "Interrupts"
@@ -1176,7 +1169,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	<figure markdown>
-	[![Annotated image of IRQ pins](./assets/img/hookup_guide/pins-int.png){ width=250 }](./assets/img/hookup_guide/pins-int.png "Click to enlarge")
+	[![Annotated image of IRQ pins](./assets/img/hookup_guide/pins-int.png){ width=200 }](./assets/img/hookup_guide/pins-int.png "Click to enlarge")
 	<figcaption markdown>Interrupt request pins on the RA6M5 Thing Plus.</figcaption>
 	</figure>
 
@@ -1250,9 +1243,22 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 -->
 
 
+<!-- CAN Bus - not supported???
+??? info "CAN Bus Support"
+	Diving into the [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931), users may notice that there are CAN buses supported on a few of the available hardware pins. However, please refer to the [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931) for the protocol implementation. *(i.e. There could be a bus contention issues with the `CAN1` pins, which share `UART9` with the Bluetooth module.)*
+
+	<center>
+
+	| CAN Bus  | GPIO Pins                                              |
+	| :------: | :----------------------------------------------------- |
+	| **CAN0** | **RX** - `P402` *(`D05`)*<br>**TX** - `P401` *(`D15`)* |
+	| **CAN1** | **RX** - `P110` *(`D17`)*<br>**TX** - `P109` *(`D18`)* |
+
+	</center>
+-->
+
 
 ---
-
 
 
 *For more technical specifications on the **I/O** pins, please refer to the [schematic](./assets/board_files/schematic.pdf), [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931), and [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931).*
@@ -1262,7 +1268,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 
 ## :material-bluetooth:&nbsp;DA14531
-The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datasheet), from [Renesas](https://www.renesas.com/), provides the RA6M5 Thing Plus with Bluetooth connectivity. When actively transmitting, the DA14531MOD sips a mere 4mA; low enough to operate on a small coin-cell battery. The firmware provided on the module features Renesas' [SmartBond™ - CodeLess™ AT command](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html) set.
+The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datasheet), from [Renesas](https://www.renesas.com/), provides the RA6M5 Thing Plus with Bluetooth connectivity. When actively transmitting, the DA14531MOD sips a mere 4mA; low enough to operate on a small coin-cell battery. The module is programmed with a precompiled binary of the CodeLess SDK, featuring Renesas' [SmartBond™ - CodeLess™ AT command](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html) set. With the implementation of an AT command platform to configure the DA1431MOD's Bluetooth connectivity, source code is no longer required to be written for the module, to operate as a peripheral device.
 
 
 <div class="grid" markdown>
@@ -1270,7 +1276,7 @@ The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datas
 <div markdown>
 
 <figure markdown>
-[![DA14531MOD BLE Module](./assets/img/hookup_guide/DA14531MOD.png){ width=270 }](./assets/img/hookup_guide/DA14531MOD.png "Click to enlarge")
+[![DA14531MOD BLE Module](./assets/img/hookup_guide/DA14531MOD.png){ width=200 }](./assets/img/hookup_guide/DA14531MOD.png "Click to enlarge")
 <figcaption markdown>The DA14531MOD BLE module on the RA6M5 Thing Plus.</figcaption>
 </figure>
 
@@ -1295,6 +1301,7 @@ The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datas
 * Radio
 	* Transmit Power: -19 to +2.2 dBm
 	* Receiver Sensitivity: -93 dBm
+
 
 </div>
 
@@ -1353,7 +1360,9 @@ The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datas
 
 
 ??? code "CodeLess Firmware"
-	Utilizing AT commands to configure the Bluetooth connection, eliminates the necessity to program the module. The [CodeLess™ AT command](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html) allows users to easily configure the RA6M5 Thing Plus as a central or peripheral Bluetooth device. Users can also implement OTA updates with the CodeLess™ AT commands.
+	The [CodeLess™ AT command](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html) allows users to easily configure the RA6M5 Thing Plus as a central or peripheral Bluetooth device. In addition, users can also potentially implement OTA updates with the CodeLess™ AT commands.
+
+	The precompiled binary from the CodeLess SDK utilized as the firmware image, on the DA14531MOD of the RA6M5 Thing Plus, is the `codeless_531_datapump.hex` *(CodeLess for DA1453x datapump)*.
 
 
 *For more details, please refer to the [DA14531 datasheet](https://www.renesas.com/us/en/document/dst/da14531-module-datasheet), and [CodeLess user manual](ttps://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html).*
@@ -1561,7 +1570,7 @@ The [MAX17048 fuel gauge](./assets/component_documentation/MAX17048.pdf), from [
 <div markdown>
 
 <figure markdown>
-[![MAX17048 Fuel Gauge](./assets/img/hookup_guide/MAX17048.png){ width=250 }](./assets/img/hookup_guide/MAX17048.png "Click to enlarge")
+[![MAX17048 Fuel Gauge](./assets/img/hookup_guide/MAX17048.png){ width=200 }](./assets/img/hookup_guide/MAX17048.png "Click to enlarge")
 <figcaption markdown>The MAX17048 fuel gauge on the RA6M5 Thing Plus.</figcaption>
 </figure>
 
@@ -1582,15 +1591,16 @@ There are four status LEDs on the RA6M5 Thing Plus:
 
 <div markdown>
 
-* `PWR` - Power *(Red)*
-	* Illuminates once power is applied to `3V3`
-* `RGB` - WS2812 *(RGB)*
-	* An addressable [WS2812 LED](./assets/component_documentation/WS2812C-2020.pdf), connected to RA6M5 GPIO `P105` *(`D13`)*
-* `STAT` - Status *(Blue)*
-	* Connected to RA6M5 GPIO `P106` *(`D14` or `LED_BUILTIN`)*
-* `CHG` - Battery Charge *(Yellow)*
-	* **ON** - Actively charging a battery
-	* **OFF** - The charge controller is shut down or battery charging is complete
+- `PWR` - Power *(Red)*
+	- Illuminates once power is applied to `3V3`
+- `RGB` - WS2812 *(RGB)*
+	- An addressable [WS2812 LED](./assets/component_documentation/WS2812C-2020.pdf)
+	- Connected to GPIO `P105` *(`D13` or `RGB_LED`)* of the RA6M5
+- `STAT` - Status *(Blue)*
+	- Connected to the RA6M5 `P106` *(`D14`/`LED_BUILTIN`)* GPIO
+- `CHG` - Battery Charge *(Yellow)*
+	- **ON** - Actively charging a battery
+	- **OFF** - The charge controller is shut down or battery charging is complete
 
 </div>
 

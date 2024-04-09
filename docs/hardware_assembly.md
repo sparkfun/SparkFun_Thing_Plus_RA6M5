@@ -61,7 +61,7 @@ For remote IoT applications, a Li-Po battery can be connected. Additionally, use
 ## Breakout Pins
 The [PTH](https://en.wikipedia.org/wiki/Through-hole_technology "Plated Through Holes") pins on the RA6M5 Thing Plus are broken out into 0.1"-spaced pins on the edges of the board.
 
-??? note "New to soldering?"
+??? tip "New to soldering?"
 	If you have never soldered before or need a quick refresher, check out our [How to Solder: Through-Hole Soldering](https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering) guide.
 
 	<div class="grid cards col-4" markdown align="center">
@@ -90,6 +90,15 @@ Headers are versatile in their compatibility with shields, breadboards, or jumpe
 <figcaption markdown>Soldering headers to the RA6M5 Thing Plus.</figcaption>
 </figure>
 
+
+??? tip "Stackable Headers"
+	Our [Feather Stackable Header Kit](https://www.sparkfun.com/products/15187) is a great option for stacking on shields *(w/ Feather footprint)* or on a breadboard; while leaving its pins still accessible.
+
+	<figure markdown>
+	[![Stackable Headers](./assets/img/hookup_guide/assembly-stackable_headers.jpg){ width="400" }](./assets/img/hookup_guide/assembly-stackable_headers.jpg "Click to enlarge")
+	<figcaption markdown>Stackable headers on the RA6M5 Thing Plus.</figcaption>
+	</figure>
+
 </div>
 
 <div markdown>
@@ -107,13 +116,7 @@ For a more permanent connection, users can solder wires directly to the board.
 
 </div>
 
-??? tip "Stackable Headers"
-	Our [Feather Stackable Header Kit](https://www.sparkfun.com/products/15187) is a great option for stacking on shields *(w/ Feather footprint)* or on a breadboard; while leaving its pins still accessible.
 
-	<figure markdown>
-	[![Stackable Headers](./assets/img/hookup_guide/assembly-stackable_headers.jpg){ width="400" }](./assets/img/hookup_guide/assembly-stackable_headers.jpg "Click to enlarge")
-	<figcaption markdown>Stackable headers on the RA6M5 Thing Plus.</figcaption>
-	</figure>
 
 ## &micro;SD Card Slot
 The RA6M5 Thing Plus includes a &micro;SD card slot on the back of the board. The cardholder functions through a push/pull operation. *(The card slot doesn't include a spring retention mechanism; cards are held in place through friction.)*

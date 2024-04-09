@@ -491,8 +491,8 @@
   
   /* Sets maximum image size */
   .md-typeset img {
-    max-width:  200px;
-    max-height: 200px;
+    max-width:  350px;
+    max-height: 500px;
   }
 
 

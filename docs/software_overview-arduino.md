@@ -55,7 +55,7 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 
 	1. Before users can install our ported version of the Renesas-Arduino core, they should first install the [*official* Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas) in the Arduino IDE.
 		- This will ensure that any required compilation and upload tools are installed for the Arduino core.
-	2. Once installed, users will need to locate the `packages` directory for for the Arduino cores in the Arduino IDE:
+	2. Once installed, users will need to locate the `packages` directory for the Arduino cores in the Arduino IDE:
 
 		<div class="grid cards" markdown>
 
@@ -68,6 +68,10 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 			- The user's `AppData` directory:
 
 					C:\Users\{==<insert username>==}\AppData\Local\Arduino15\packages
+
+			- The user's `ArduinoData` directory:
+
+					C:\Users\{==<insert username>==}\Documents\ArduinoData
 
 			- The `Program Files` or `Program Files(x86)` directories:
 
@@ -119,18 +123,16 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 		<figcaption markdown>The files extracted from [our ported version of the Renesas-Arduino core](./assets/SFE-Renesas-Arduino_core.zip).</figcaption>
 		</figure>
 
-
-	??? warning "Bootloader - Initial Release"
-		For the initial release of the RA6M5 Thing Plus, we were unable to provide a signed USB driver for the bootloader. In the meantime, we are utilizing the `VID` and `PID` for the Arduino Portenta C33.
-
-		This is not a major issue for the board functionality. However, once the RA6M5 Thing Plus is adopted into the Renesas-Arduino core and when users begin to utilize the [*official* Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas), the board will be recognized as the `Arduino Portenta C33` in the Arduino IDE. This is based on the `VID` and `PID` in the bootloader; therefore, to update this information, users would need to update the bootloader for the RA6M5.
-
-
 	!!! info
 		This information is accurate as of April 2024; however, it may become irrelevant in the future *(once the RA6M5 Thing Plus is included in the Renesas-Arduino core)*. At which point, users may disregard this note and/or request for this information to be updated by [filing an issue](../github/file_issue).
 
+<!-- ??? warning "Bootloader - Initial Release"
+	For the initial release of the RA6M5 Thing Plus, we were unable to provide a signed USB driver for the bootloader. In the meantime, we are utilizing the `VID` and `PID` for the Arduino Portenta C33.
 
-??? failure "Invalid - Do Not Use"
+	This is not a major issue for the board functionality. However, once the RA6M5 Thing Plus is adopted into the Renesas-Arduino core and when users begin to utilize the [*official* Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas), the board will be recognized as the `Arduino Portenta C33` in the Arduino IDE. This is based on the `VID` and `PID` in the bootloader; therefore, to update this information, users would need to update the bootloader for the RA6M5. -->
+
+
+??? failure "Do Not Use - *see **Temporary Instructions** (above)*"
 	{--
 
 	In order to program the RA6M5 Thing Plus in the Arduino IDE, users will need to install the [Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas). The Arduino core can be found by searching for `Arduino Renesas Portenta Boards` in the **Board Manager** of the Arduino IDE. Once installed, the RA6M5 Thing Plus will become available in the **Board Manager**.
@@ -197,7 +199,7 @@ The [SD library for Arduino](https://github.com/arduino-libraries/SD) can be ins
 	SD library for Arduino
 
 <figure markdown>
-[![](./assets/img/hookup_guide/arduino_library-SD.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino_library-SD.png)
+[![Install the SD Arduino library](./assets/img/hookup_guide/arduino_library-SD.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino_library-SD.png)
 <figcaption markdown>SD library for Arduino in the library manager of the Arduino IDE.</figcaption>
 </figure>
 
@@ -208,48 +210,6 @@ The [SD library for Arduino](https://github.com/arduino-libraries/SD) can be ins
 	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/arduino-libraries/SD/archive/refs/heads/master.zip){ .md-button .md-button--primary }
 	</center>
  -->
-
-
-### WS2812 RGB LED
-While users are free to choose any Arduino library that provides support for WS2812 LEDs, we recommend the [FastLED Arduino library](https://github.com/FastLED/FastLED/); as it has been tested and verified to work with the RGB LED on the RA6M5 Thing Plus. The [FastLED Arduino library](https://github.com/FastLED/FastLED/) can be installed from the **Library Manager** in the Arduino IDE by searching for:
-
-	FastLED Arduino Library
-
-
-<div class="grid" markdown>
-
-<div markdown>
-
-<figure markdown>
-[![](./assets/img/hookup_guide/arduino-FastLED_library.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino-FastLED_library.png)
-<figcaption markdown>FastLED Arduino library in the library manager of the Arduino IDE.</figcaption>
-</figure>
-
-</div>
-
-<div markdown>
-
-!!! tip "Manually Downloading the Arduino Library"
-	For users who would like to manually download and install the library, the `*.zip` file can be accessed from the [GitHub repository](https://github.com/FastLED/FastLED/) or downloaded by clicking the button below.
-
-	<center>
-	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/FastLED/FastLED/archive/refs/heads/master.zip){ .md-button .md-button--primary }
-	</center>
-
-</div>
-
-</div>
-
-!!! warning "Note - Support Modification"
-	While support for the Renesas Arduino boards has been added to FastLED, it is not available in the latest release. For the meantime, users will need to follow the [porting instructions](https://github.com/FastLED/FastLED/blob/master/PORTING.md) to enable support for the RA6M5 Thing Plus, in order to utilize this library.
-
-	Below, are the modifications necessary to utilize the [FastLED Arduino library](https://github.com/FastLED/FastLED/) for the WS2812 LED on the RA6M5 Thing PLus:
-
-	- Provide a linker to `cstdint` at the beginning of the sketch: `#include <cstdint>`
-	- Followed by defining the `_FL_DEFPIN( DATA_PIN, BSP_IO_PORT_01_PIN_05, R_PORT1_BASE );`
-
-	!!! info
-		This information is accurate as of April 2024; however, it may become irrelevant in the future *(once a release is published, with support for the Renesas Arduino boards)*. At which point, users may disregard this note and/or request for this information to be removed by [filing an issue](../github/file_issue).
 
 
 ### MAX17048 Fuel Gauge
@@ -263,7 +223,7 @@ While users are free to choose any Arduino library that provides support for MAX
 <div markdown>
 
 <figure markdown>
-[![](./assets/img/hookup_guide/arduino-MAX1704x_library.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino-MAX1704x_library.png)<figcaption markdown>SparkFun MAX1704x Fuel Gauge Arduino library in the library manager of the Arduino IDE.</figcaption>
+[![Install the SparkFun MAX1704x Arduino library](./assets/img/hookup_guide/arduino-MAX1704x_library.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino-MAX1704x_library.png)<figcaption markdown>SparkFun MAX1704x Fuel Gauge Arduino library in the library manager of the Arduino IDE.</figcaption>
 </figure>
 
 </div>
@@ -276,6 +236,108 @@ While users are free to choose any Arduino library that provides support for MAX
 	<center>
 	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/sparkfun/SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library/archive/refs/heads/main.zip){ .md-button .md-button--primary }
 	</center>
+
+</div>
+
+</div>
+
+
+
+### WS2812 RGB LED
+While users are free to choose any Arduino library that provides support for WS2812 LEDs, we recommend the [FastLED Arduino library](https://github.com/FastLED/FastLED/); as it has been tested and verified to work with the RGB LED on the RA6M5 Thing Plus. {--The [FastLED Arduino library](https://github.com/FastLED/FastLED/) can be installed from the **Library Manager** in the Arduino IDE by searching for:--}
+
+	{--FastLED Arduino Library--}
+
+
+<div class="grid" markdown>
+
+<div markdown>
+
+!!! failure "Do Not Use - *Download and Install Manually*"
+	{--
+
+	<figure markdown>
+	[![Install the FastLED Arduino library](./assets/img/hookup_guide/arduino-FastLED_library.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino-FastLED_library.png)
+	<figcaption markdown>FastLED Arduino library in the library manager of the Arduino IDE.</figcaption>
+	</figure>
+
+	--}
+
+	!!! warning
+		While support for the Renesas Arduino boards has been added to FastLED; currently, it is not available in the latest release.
+
+</div>
+
+<div markdown>
+
+!!! success
+	While support for the Renesas Arduino boards has been added to FastLED, it is not available in the latest release. Users will need to manually download and install the FastLED Arduino library into the Arduino IDE:
+
+	!!! tip "Manually Downloading the Arduino Library"
+		For users who would like to manually download and install the library, the `*.zip` file can be accessed from the [GitHub repository](https://github.com/FastLED/FastLED/) or downloaded by clicking the button below.
+
+		<center>
+		[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/FastLED/FastLED/archive/refs/heads/master.zip){ .md-button .md-button--primary }
+		</center>
+
+	<div class="grid cards" markdown align="center">
+
+	-   <a href="https://learn.sparkfun.com/tutorials/15">
+		<figure markdown>
+		![Installing an Arduino Library](https://cdn.sparkfun.com/c/264-148/assets/b/e/4/b/2/50f04b99ce395fd95e000001.jpg)
+		</figure>
+
+		---
+
+		**Installing an Arduino Library**</a>
+
+	</div>
+
+</div>
+
+</div>
+
+
+!!! warning "Note - Support Modification"
+	As support for the Renesas Arduino boards has not been *officially* released for the FastLED Arduino library, users will need to follow the [porting instructions](https://github.com/FastLED/FastLED/blob/master/PORTING.md) in order to utilize this library with the RA6M5 Thing Plus.
+
+	Below, are the modifications necessary to utilize the [FastLED Arduino library](https://github.com/FastLED/FastLED/) for the WS2812 LED on the RA6M5 Thing PLus:
+
+	- Provide a linker to `cstdint` at the beginning of the sketch: `#include <cstdint>`
+	- Followed by defining the `_FL_DEFPIN( DATA_PIN, BSP_IO_PORT_01_PIN_05, R_PORT1_BASE );`
+
+	!!! info
+		This information is accurate as of April 2024; however, it may become irrelevant in the future *(once a release is published, with support for the Renesas Arduino boards)*. At which point, users may disregard this note and/or request for this information to be removed by [filing an issue](../github/file_issue).
+
+
+
+### DA14531MOD Bluetooth Module
+While an Arduino library isn't necessary to utilize the [CodeLess™ AT commands](https://www.renesas.com/us/en/software-tool/smartbond-codeless-commands) for the DA14531MOD Bluetooth module, we have created an *unofficial* Arduino library to help users get started. As an official library, users will need to manually download and install the library into the Arduino IDE; it will not be available through the **Library Manager**.
+
+
+<div class="grid" markdown>
+
+<div markdown>
+
+!!! tip "Manually Downloading the Arduino Library"
+	To manually download and install the library, the files can be accessed from our [GitHub repository](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/tree/main/Firmware/CodelessBLE) or the `*.zip` can be downloaded by clicking the button below.
+
+	<center>
+	[:octicons-download-16:{ .heart } Download the Arduino Library](./assets/CodelessBLE.zip){ .md-button .md-button--primary }
+	</center>
+
+</div>
+
+<div class="grid cards" markdown align="center">
+
+-   <a href="https://learn.sparkfun.com/tutorials/15">
+	<figure markdown>
+	![Installing an Arduino Library](https://cdn.sparkfun.com/c/264-148/assets/b/e/4/b/2/50f04b99ce395fd95e000001.jpg)
+	</figure>
+
+	---
+
+	**Installing an Arduino Library**</a>
 
 </div>
 
