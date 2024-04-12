@@ -142,27 +142,14 @@ plugins:
 
   # Allows formatting (code block, icons, etc.) in headings and titles
   - typeset
+  
+  # Enables use of Git submodules and larger code base
+  - monorepo
 
   # Redirects page navigation
   - redirects:
       redirect_maps:
         'index.md': 'introduction.md'
-
-  # Add revision date
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-
-  # Add git committers at the bottom of the page
-  - git-committers:
-      repository: sparkfun/SparkFun_Thing_Plus_RA6M5
-      branch: main
-
-  # Add git authors at the bottom of the page
-  - git-authors
-
-  # Enables use of Git submodules and larger code base
-  - monorepo
 
   # Enables improved security for external links
   - privacy:
@@ -181,6 +168,19 @@ plugins:
       links_attr_map:
         target: _blank
       links_noopener: true
+
+  # Add revision date
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+  # Add git committers at the bottom of the page
+  - git-committers:
+      repository: sparkfun/SparkFun_Thing_Plus_RA6M5
+      branch: main
+
+  # Add git authors at the bottom of the page
+  - git-authors
 
   # Optimizes media files (*.png and *.jpg)
   - optimize:

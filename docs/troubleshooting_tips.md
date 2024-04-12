@@ -47,6 +47,13 @@ If users have issues during the uploading process, they can try to manually forc
 
 
 
+## Digital I/O
+
+### Utilizing Interrupts
+When utilizing an interrupt on a digital GPIO, the attached interrupt service routine should be able to execute within the shortest, possible time frame. Otherwise, the suspended task could trigger various faults or errors.
+
+
+
 ## &micro;SD Card
 
 ### Compatibility

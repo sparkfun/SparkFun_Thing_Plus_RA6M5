@@ -40,8 +40,8 @@ The circuit board dimensions are illustrated in the drawing below; the measureme
 
 
 
-## USB-C Connector
-The USB connector is used to provide power and program the board. For most users, it will also be the primary programming interface for the RA6M5 Thing Plus.
+## USB Connector
+The USB-C connector is used to provide power and program the board. For most users, it will also be the primary programming interface for the RA6M5 Thing Plus.
 
 
 <figure markdown>
