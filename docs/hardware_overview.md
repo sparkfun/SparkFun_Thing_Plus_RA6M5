@@ -878,17 +878,15 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	<div markdown>
 
 	!!! arduino
-		To implement the [`#!cpp AnalogWave` library from the Renesas Arduino core](https://github.com/arduino/ArduinoCore-renesas/tree/main/libraries/AnalogWave), users will need to link the library at the beginning of their sketch.
+		When implementing the `AnalogWave` library, users will need to link the library and create an instance of the `analogWave` class with a DAC `pin` declared for the output.
 
 		```c++
 		#include "analogWave.h" // Include the library for analog waveform generation
+
+		analogWave wave(pin);   // Create an instance of the analogWave class, using a DAC pin
 		```
 
-		Once linked, users will need to create an instance of the `#!cpp analogWave` class and declare a DAC pin for the output.
-
-		```c++
-		analogWave wave(DAC);   // Create an instance of the analogWave class, using the DAC pin
-		```
+		*For more information, please refer to the [Analog I/O example](../example-analog/#analogwave-library) in this guide.*
 
 
 	!!! tip
@@ -989,7 +987,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	The RA6M5 supports up to two SPI buses. However, only a single SPI port is defined in the Renesas Arduino core. In the Arduino IDE, the [SPI communication class](https://www.arduino.cc/en/reference/SPI) is configured to utilize pins SCK - `P111`/`D19`, POCI - `P110`/`D17`, PICO - `P109`/`D18`, and `P112`/`D0` for its chip select.
 
 
-	??? info "New Nomenclature"
+	??? note "New Nomenclature"
 		To comply with the latest [OSHW](https://www.oshwa.org/) design practices, we have [adopted the new SPI signal nomenclature](https://www.sparkfun.com/spi_signal_names) (`SDO`/`SDI` and `PICO`/`POCI`). The terms **Master** and **Slave** are now referred to as **Controller** and **Peripheral**. The `MOSI` signal on a controller has been replaced with `SDO` or `PICO`. Please refer to this [announcement on the decision to deprecate the `MOSI`/`MISO` terminology and transition to the `SDO`/`SDI` naming convention](https://www.oshwa.org/a-resolution-to-redefine-spi-signal-names).
 
 

@@ -41,7 +41,8 @@ Renesas provides documentation for the CodeLess platform:
 
 
 ## Arduino Library
---8<-- "./docs/software_overview-arduino.md:315"
+<!-- --8<-- "./docs/software_overview-arduino.md:315" -->
+--8<-- "./docs/software_overview-arduino.md:381"
 
 
 ### Example - SerialPassThrough
