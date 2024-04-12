@@ -538,6 +538,18 @@ The brains of the board is the [RA6M5 microcontroller](https://www.renesas.com/u
 </div>
 
 
+??? success "DFU Mode"
+	If users are having issues uploading code to the board, the RA6M5 can be manually forced into DFU mode. This issue, often occurs when the USB connection is busy and a reset can't be triggered on the RA6M5, to initialize the upload process. To force the RA6M5 Thing Plus into DFU mode:
+
+	1. Double-tap the ++"RST"++ button
+		- The `STAT` LED should be fading in/out very slowly
+	1. Users should now, be able to upload a new program
+		- It shouldn't be necessary to select a COM port in the Arduino IDE; only the board needs to be selected
+	1. Once programming is complete, the MCU should reboot on its own. Otherwise:
+		- Press the ++"RST"++ button
+		- Power cycle the board
+
+
 *For more technical specifications for the RA6M5 microcontroller, please refer to the [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931) and [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931).*
 
 
@@ -1634,13 +1646,35 @@ The status indicator LEDs on the RA6M5 Thing Plus.
 ## Buttons
 There are two buttons on the RA6M5 Thing Plus: ++"RST"++ and ++"USRBTN"++
 
+
 <figure markdown>
 [![Buttons](./assets/img/hookup_guide/Buttons.png){ width=700 }](./assets/img/hookup_guide/Buttons.png "Click to enlarge")
 <figcaption markdown>Buttons on the RA6M5 Thing Plus.</figcaption>
 </figure>
 
+
+- ++"USRBTN"++ - The **user** button is provided as an available input for the RA6M5; it is connected to GPIO `P415` *(`D31`)*
 - ++"RST"++ - The **reset** button allows users to reset the firmware running on the RA6M5 without interrupting the power
-- ++"USRBTN"++ - The **user button** is provided as an available input for the RA6M5; it is connected to GPIO `P415` *(`D31`)*.
+	<!-- - DFU Mode - The RA6M5 can be manually forced into DFU mode to upload code
+		1. Double-tap the ++"RST"++ button
+			- The `STAT` LED should be fading in/out very slowly
+		1. Users should now, be able to upload a new program
+			- It shouldn't be necessary to select a COM port in the Arduino IDE; only the board needs to be selected
+		1. Once programming is complete, the MCU should reboot on its own. Otherwise:
+			- Press the ++"RST"++ button
+			- Power cycle the board -->
+
+
+??? success "DFU Mode"
+	If users are having issues uploading code to the board, the RA6M5 can be manually forced into DFU mode. This issue, often occurs when the USB connection is busy and a reset can't be triggered on the RA6M5, to initialize the upload process. To force the RA6M5 Thing Plus into DFU mode:
+
+	1. Double-tap the ++"RST"++ button
+		- The `STAT` LED should be fading in/out very slowly
+	1. Users should now, be able to upload a new program
+		- It shouldn't be necessary to select a COM port in the Arduino IDE; only the board needs to be selected
+	1. Once programming is complete, the MCU should reboot on its own. Otherwise:
+		- Press the ++"RST"++ button
+		- Power cycle the board
 
 
 *For more details, please refer to the [schematic](./assets/board_files/schematic.pdf).*

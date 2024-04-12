@@ -211,6 +211,19 @@ In order to upload a sketch from the Arduino IDE onto the RA6M5 Thing Plus, user
 Alternatively, in the Arduino IDE *(v2.`x`.`x`)*, users can also search for the board and serial port in the **Select Other Board and Port** menu. Once the appropriate board and serial port have been selected in the Arduino IDE, users can click the ++"&rarr;"++ *(upload)* button to begin the compilation and upload process.
 
 
+??? success "DFU Mode"
+	If users are having issues uploading code to the board, the RA6M5 can be manually forced into DFU mode. This issue, often occurs when the USB connection is busy and a reset can't be triggered on the RA6M5, to initialize the upload process. To force the RA6M5 Thing Plus into DFU mode:
+
+	1. Double-tap the ++"RST"++ button
+		- The `STAT` LED should be fading in/out very slowly
+	1. Users should now, be able to upload a new program
+		- It shouldn't be necessary to select a COM port in the Arduino IDE; only the board needs to be selected
+	1. Once programming is complete, the MCU should reboot on its own. Otherwise:
+		- Press the ++"RST"++ button
+		- Power cycle the board
+
+
+
 ## Arduino Libraries
 In order to utilize some of the peripherals of the RA6M5 Thing Plus with the Arduino IDE, users will need to [install Arduino libraries](https://learn.sparkfun.com/tutorials/15) for the peripheral devices/interfaces. For users who are unfamiliar with this process, please check out our tutorial below:
 

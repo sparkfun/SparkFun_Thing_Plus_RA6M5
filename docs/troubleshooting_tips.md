@@ -15,6 +15,38 @@ icon: sfe-logo
 		If this is your first visit to our forum, you'll need to create a [Forum Account](https://forum.sparkfun.com/ucp.php?mode=register) to post questions.
 
 
+## Upload Issues
+If users have issues during the uploading process, they can try to manually force the board into DFU mode with the reset button. Double-tapping the ++"RST"++ button will force the MCU to into the Device Firmware Update mode. The board will remain in this mode, until it power cycles *(which happens automatically, after uploading new firmware)* or the reset button is pressed.
+
+
+<div class="grid" markdown>
+
+<div markdown>
+
+1. Double-tap the ++"RST"++ button
+	- The `STAT` LED should be fading in/out very slowly
+1. Users should now, be able to upload a new program
+	- It shouldn't be necessary to select a COM port in the Arduino IDE; only the board needs to be selected
+1. Once programming is complete, the MCU should reboot on its own. Otherwise:
+	- Press the ++"RST"++ button
+	- Power cycle the board
+
+</div>
+
+
+<div markdown>
+
+<figure markdown>
+[![Reset Button](./assets/img/hookup_guide/Button-rst.png){ width=700 }](./assets/img/hookup_guide/Button-rst.png "Click to enlarge")
+<figcaption markdown>++"RST"++ button on the RA6M5 Thing Plus.</figcaption>
+</figure>
+
+</div>
+
+</div>
+
+
+
 ## &micro;SD Card
 
 ### Compatibility

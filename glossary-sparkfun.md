@@ -14,6 +14,7 @@
 *[CS]: Chip Select
 *[CTS]: Clear-to-Send
 *[DAC]: Digital-to-Analog Converter
+*[DFU]: Device Firmware Update
 *[DGPS]: Differential Global Positioning System
 *[ECC]: Error Correction Code
 *[exFAT]: Extensible File Allocation Table
