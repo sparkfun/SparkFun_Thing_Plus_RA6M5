@@ -95,15 +95,15 @@ The **WS2812** is an addressable RGB LED that operates with a digital signal tha
 		// GPIO pins connected to the LED
 		#define LED_PIN      LED_RGB // (1)!
 		// #define CLOCK_PIN      13 (2)
-		
+
 		// Information about the LED (strip)
 		#define NUM_LEDS    1        // (3)!
 		#define CHIPSET     WS2812   // (4)!
 		#define COLOR_ORDER GRB      // (5)!
-		
+
 		// Define the array of leds
 		CRGB leds[NUM_LEDS];
-		
+
 		// 
 		#define BRIGHTNESS  40       // (6)!
 		```
