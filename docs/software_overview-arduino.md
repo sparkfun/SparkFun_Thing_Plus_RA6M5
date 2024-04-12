@@ -377,7 +377,7 @@ While users are free to choose any Arduino library that provides support for WS2
 
 
 
-### DA14531MOD Bluetooth Module
+### DA14531MOD BLE Module
 While an Arduino library isn't necessary to utilize the [CodeLess™ AT commands](https://www.renesas.com/us/en/software-tool/smartbond-codeless-commands) for the DA14531MOD Bluetooth module, we have created an *unofficial* Arduino library to help users get started. As an official library, users will need to manually download and install the library into the Arduino IDE; it will not be available through the **Library Manager**.
 
 

@@ -462,7 +462,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 
 
 
-## :fontawesome-solid-microchip:&nbsp;RA6M5
+## :fontawesome-solid-microchip:&nbsp;RA6M5 Microcontroller
 The brains of the board is the [RA6M5 microcontroller](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931) from [Renesas](https://www.renesas.com/), a low-power Arm^®^ Cortex^®^-M33 processor with a clock speed up to 200Mhz, 512kB of SRAM, and 2MB of flash memory. This high-performance microcontroller features an extensive list of peripheral capabilities and is perfect for real-time applications.
 
 
@@ -1265,7 +1265,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 
 
-## :material-bluetooth:&nbsp;DA14531
+## :material-bluetooth:&nbsp;DA14531MOD BLE Module
 The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datasheet), from [Renesas](https://www.renesas.com/), provides the RA6M5 Thing Plus with Bluetooth connectivity. When actively transmitting, the DA14531MOD sips a mere 4mA; low enough to operate on a small coin-cell battery. The module is programmed with a precompiled binary of the CodeLess SDK, featuring Renesas' [SmartBond™ - CodeLess™ AT command](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html) set. With the implementation of an AT command platform to configure the DA1431MOD's Bluetooth connectivity, source code is no longer required to be written for the module, to operate as a peripheral device.
 
 
@@ -1407,7 +1407,7 @@ The Flash memory is connected to the following GPIO:
 
 
 
-### &micro;SD Card Socket
+### SD Card Socket
 The &micro;SD card socket is connected to the SD host interface for fast data logging. This feature is useful for data collection over extended periods and for simplifying data retrieval.
 
 

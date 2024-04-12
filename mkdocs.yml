@@ -224,7 +224,7 @@ markdown_extensions:
       auto_append:
         - glossary-sparkfun.md
         # - https://raw.githubusercontent.com/santaimpersonator/git-test/main/glossary-sparkfun.md
-        # - glossary-local.md
+        - glossary-local.md
 
   # Allows embedding of code blocks in other elements
   - pymdownx.superfences:

@@ -1,11 +1,7 @@
-<!-- Links the localized glossary -->
---8<-- "glossary-local.md"
-
-
 *[µSD]: micro SD
 
 *[ADC]: Analog-to-Digital Converter
-*[ASK]:Amplitude-Shift Keying
+*[ASK]: Amplitude-Shift Keying
 *[AREF]: Analog Reference Voltage
 *[BDS]: 北斗卫星导航系统 (Chinese - BeiDou Navigation Satellite System)
 *[BPSK]: Binary Phase-Shift Keying
@@ -20,13 +16,11 @@
 *[DAC]: Digital-to-Analog Converter
 *[DGPS]: Differential Global Positioning System
 *[ECC]: Error Correction Code
-*[EN]: Enable
 *[exFAT]: Extensible File Allocation Table
 *[FAT]: File Allocation Table
 <!-- *[FAT16]: File Allocation Table-16 -->
 <!-- *[FAT32]: File Allocation Table-32 -->
 *[FSK]: Frequency-Shift Keying
-*[FSP]: Flexible Software Package
 <!-- *[GEO]: Geostationary Orbit or Geosynchronous Equatorial Orbit (see glossary-alt.md) -->
 *[GFSK]: Gaussian Frequency Shift Keying
 *[GLONASS]: Глобальная Навигационная Спутниковая Система (Russian - Global Navigation Satellite System)
@@ -37,12 +31,12 @@
 *[GSO]: Geosynchronous Orbit
 *[HAL]: Hardware Abstraction Layer
 <!-- *[I2C] or [I<sup>2</sup>C]: Inter-Integrated Circuit (see glossary-alt.md) -->
-*[ITM]:Instrumentation Trace Macrocell
+*[ITM]: Instrumentation Trace Macrocell
 *[IoT]: Internet of Things
 *[JST]: Japan Solderless Terminal (Manufacturing)
 *[JTAG]: Joint Test Action Group
 *[LDO]: Low Dropout (Regulator)
-<!-- *[LED]: Light Emitting Diode (Disabled for header issue) -->
+*[LED]: Light Emitting Diode
 *[LEO]:  Low Earth Orbit
 <!-- *[LiPo]: Lithium-Ion Polymer or Lithium-Polymer (see glossary-alt.md) -->
 *[LoRa]: Long Range
@@ -63,11 +57,11 @@
 *[POCI]: Peripheral Out; Controller In
 *[PSK]: Phase-Shift Keying
 *[PWM]: Pulse Width Modulation
-<!-- *[QSPI]: Quad-SPI (Disabled for header issue) -->
+*[QSPI]: Quad-SPI
 *[QPSK]: Quadrature Phase-Shift Keying
 *[QZSS]: Quasi-Zenith Satellite System
 *[RAM]: Random-Access Memory
-<!-- *[RGB]: Red, Green, Blue (Disabled for header issue) -->
+*[RGB]: Red, Green, Blue
 *[RINEX]: Receiver Independent Exchange (Format)
 *[RST]: Reset
 *[RTC]: Realtime Clock
@@ -78,7 +72,7 @@
 *[SBAS]: Satellite-Based Augmentation System
 *[SCK]: Serial Clock
 *[SCL]: Serial Clock
-<!-- *[SD]: Secure Digital (Disabled for header issue) -->
+*[SD]: Secure Digital
 *[SDA]: Serial Data
 *[SDHC]: Secure Digital High Capacity
 *[SDI]: Serial Data In

@@ -2,7 +2,7 @@
 icon: material/tools
 ---
 
-## USB-C Connector
+## USB Connector
 The USB connection is utilized for programming and serial communication. Users only need to plug their RA6M5 Thing Plus into a computer using a USB-C cable.
 
 <figure markdown>
@@ -11,8 +11,8 @@ The USB connection is utilized for programming and serial communication. Users o
 </figure>
 
 
-## Battery
-For remote IoT applications, a Li-Po battery can be connected. Additionally, users may be interested in utilizing a [solar panel](https://www.sparkfun.com/products/16835) and [USB-C cable](https://www.sparkfun.com/products/14743) to recharge their battery.
+## LiPo Battery
+For remote IoT applications, a LiPo battery can be connected. Additionally, users may be interested in utilizing a [solar panel](https://www.sparkfun.com/products/16835) and [USB-C cable](https://www.sparkfun.com/products/14743) to recharge their battery.
 
 
 <div class="grid cards" markdown>
@@ -118,7 +118,7 @@ For a more permanent connection, users can solder wires directly to the board.
 
 
 
-## &micro;SD Card Slot
+## SD Card Slot
 The RA6M5 Thing Plus includes a &micro;SD card slot on the back of the board. The cardholder functions through a push/pull operation. *(The card slot doesn't include a spring retention mechanism; cards are held in place through friction.)*
 
 <figure markdown>
