@@ -50,6 +50,8 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 
 
 ## Arduino Core
+
+### Installation
 !!! success "Installing the *Ported* Renesas-Arduino Core"
 	In order to program the RA6M5 Thing Plus in the Arduino IDE, users will need to install the **Renesas-Arduino core**. However, until the [RA6M5 Thing Plus is officially adopted into the Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas/pull/290), users need to utilize [our port of the **Renesas-Arduino core**](./assets/SFE-Renesas-Arduino_core.zip).
 
@@ -177,6 +179,36 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 	--}
 
 
+
+### Programming a Board
+In order to upload a sketch from the Arduino IDE onto the RA6M5 Thing Plus, users will need to select the `SparkFun Thing Plus RA6M5` from the **Tools** > **Board** > **Arduino Renesas Portenta Boards** > **SparkFun Thing Plus RA6M5** drop-down menu. Users will also need to select the serial port from the **Tools** > **Port** drop-down menu; the port should be automatically labeled, based upon the PID/VID of board in the USB driver.
+
+
+<div class="grid" markdown>
+
+<div markdown>
+
+<figure markdown>
+[![Select the RA6M5 Thing Plus](./assets/img/hookup_guide/arduino-select_board.png){ width="400" }](./assets/img/hookup_guide/arduino-select_board.png "Click to enlarge")
+<figcaption markdown>Selecting the `SparkFun Thing Plus RA6M5` from the **Tools** drop-down menu in the Arduino IDE.</figcaption>
+</figure>
+
+</div>
+
+
+<div markdown>
+
+<figure markdown>
+[![Select the RA6M5 Thing Plus](./assets/img/hookup_guide/arduino-select_board_alt.png){ width="400" }](./assets/img/hookup_guide/arduino-select_board_alt.png "Click to enlarge")
+<figcaption markdown>Searching for the `SparkFun Thing Plus RA6M5` in the **Select Other Board and Port** menu in the Arduino IDE.</figcaption>
+</figure>
+
+</div>
+
+</div>
+
+
+Alternatively, in the Arduino IDE *(v2.`x`.`x`)*, users can also search for the board and serial port in the **Select Other Board and Port** menu. Once the appropriate board and serial port have been selected in the Arduino IDE, users can click the ++"&rarr;"++ *(upload)* button to begin the compilation and upload process.
 
 
 ## Arduino Libraries
@@ -360,39 +392,4 @@ While users are free to choose any Arduino library that provides support for WS2
 
 
 ### DA14531MOD BLE Module
-While an Arduino library isn't necessary to utilize the [CodeLess™ AT commands](https://www.renesas.com/us/en/software-tool/smartbond-codeless-commands) for the DA14531MOD Bluetooth module, we have created an *unofficial* Arduino library to help users get started. As an official library, users will need to manually download and install the library into the Arduino IDE; it will not be available through the **Library Manager**.
-
-
-<div class="grid" markdown>
-
-<div markdown>
-
-!!! tip "Manually Download the Arduino Library"
-	To manually download and install the library, the files can be accessed from our [GitHub repository](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/tree/main/Firmware/CodelessBLE) or the `*.zip` can be downloaded by clicking the button below.
-
-	<center>
-	[:octicons-download-16:{ .heart } Download the Arduino Library](./assets/CodelessBLE.zip){ .md-button .md-button--primary }
-	</center>
-
-</div>
-
-<div class="grid cards" markdown align="center">
-
--   <a href="https://learn.sparkfun.com/tutorials/15">
-	<figure markdown>
-	![Installing an Arduino Library](https://cdn.sparkfun.com/c/264-148/assets/b/e/4/b/2/50f04b99ce395fd95e000001.jpg)
-	</figure>
-
-	---
-
-	**Installing an Arduino Library**</a>
-
-</div>
-
-</div>
-
-
-!!! tip
-	In this Arduino library, there are several examples for configuring the Bluetooth connectivity of the DA14531MOD.
-
-	However, we also include a `SerialPassThrough` example. Once programmed on the RA6M5 Thing Plus, it allows users to directly interface with the DA14531MOD's UART port through the board's USB connection using a [serial terminal](https://learn.sparkfun.com/tutorials/112). Therefore, enabling users to experiment with the CodeLess AT commands and develop their own BLE connectivity solution.
+--8<-- "./software-DA14531MOD.md"

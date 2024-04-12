@@ -13,12 +13,10 @@ icon: material/printer
 # Hardware Assembly
 --8<-- "./hardware_assembly.md:5"
 
-# Software Overview
-
-## Arduino IDE
+# Software Overview - Arduino IDE
 --8<-- "./software_overview-arduino.md:5"
 
-## CodeLess AT Commands
+# Software Overview - CodeLess AT Commands
 --8<-- "./software_overview-codeless.md:5"
 
 # Examples

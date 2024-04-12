@@ -1363,6 +1363,17 @@ The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datas
 	The precompiled binary from the CodeLess SDK utilized as the firmware image, on the DA14531MOD of the RA6M5 Thing Plus, is the `codeless_531_datapump.hex` *(CodeLess for DA1453x datapump)*.
 
 
+	!!! info "Serial Port Setting"
+		The default settings of the serial port on the DA14531MOD, for AT commands:
+
+		- BaudRate : 57600
+		- DataBits : 8
+		- StopBits : 1
+		- Parity : None
+		- Flow Control : None
+		- Transmit Text: Append CR
+
+
 *For more details, please refer to the [DA14531 datasheet](https://www.renesas.com/us/en/document/dst/da14531-module-datasheet), and [CodeLess user manual](ttps://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html).*
 
 
