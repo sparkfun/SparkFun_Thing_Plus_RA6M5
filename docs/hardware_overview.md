@@ -1190,7 +1190,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 	!!! arduino
 		In the Arduino IDE, interrupt requests are configured using the [`#!cpp attachInterrupt(digitalPinToInterrupt(pin), ISR, mode)` function](https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/), where:
-		
+
 		- `pin` - The GPIO pin
 		- `ISR` -	The interrupt service routine to call/execute when the interrupt occurs
 		- `mode` - Defines how the interrupt should be triggered:
