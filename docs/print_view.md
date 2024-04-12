@@ -19,8 +19,12 @@ icon: material/printer
 # Software Overview - CodeLess AT Commands
 --8<-- "./software_overview-codeless.md:5"
 
-# Examples
---8<-- "./examples-QSPI.md:5"
+# Examples - Digital I/O
+--8<-- "./example-digital.md:5"
+
+# Examples - Analog I/O
+--8<-- "./example-analog.md:5"
+
 
 # Resources
 --8<-- "./resources.md:5"

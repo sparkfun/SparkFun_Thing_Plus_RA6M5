@@ -348,6 +348,9 @@ nav:
     - Software Overview:
       - Arduino IDE: software_overview-arduino.md
       - CodeLess AT Commands:  software_overview-codeless.md
+    - Arduino Examples:
+      - Digital I/O: example-digital.md
+      - Analog I/O: example-analog.md
   - Resources:
     - Hardware Resources: resources.md
   - Support:
