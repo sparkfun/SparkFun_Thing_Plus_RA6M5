@@ -319,9 +319,7 @@ Users are free to choose any Arduino library that provides support for WS2812 LE
 
 		<div class="language-cpp highlight" markdown>
 
-			// A0-A5
-			_FL_DEFPIN(14, BSP_IO_PORT_00_PIN_14, R_PORT0_BASE ); _FL_DEFPIN(15, BSP_IO_PORT_00_PIN_00, R_PORT0_BASE ); _FL_DEFPIN(16, BSP_IO_PORT_00_PIN_01, R_PORT0_BASE );
-			_FL_DEFPIN(17, BSP_IO_PORT_00_PIN_02, R_PORT0_BASE ); _FL_DEFPIN(18, BSP_IO_PORT_01_PIN_01, R_PORT1_BASE ); _FL_DEFPIN(19, BSP_IO_PORT_01_PIN_00, R_PORT1_BASE );
+			--8<-- "https://raw.githubusercontent.com/FastLED/FastLED/master/src/platforms/arm/renesas/fastpin_arm_renesas.h:90:92"
 			{++
 			#elif defined(ARDUINO_THINGPLUS_RA6M5)
 
@@ -345,9 +343,8 @@ Users are free to choose any Arduino library that provides support for WS2812 LE
 			++}
 			{==#elif defined(ARDUINO_ARCH_RENESAS_PORTENTA)==}
 
-			#define MAX_PIN 22
-			// D0-D14
-			_FL_DEFPIN( 0, BSP_IO_PORT_01_PIN_05, R_PORT1_BASE ); _FL_DEFPIN( 1, BSP_IO_PORT_01_PIN_06, R_PORT1_BASE ); _FL_DEFPIN( 2, BSP_IO_PORT_01_PIN_01, R_PORT1_BASE );
+			--8<-- "https://raw.githubusercontent.com/FastLED/FastLED/master/src/platforms/arm/renesas/fastpin_arm_renesas.h:96:99"
+
 
 		</div>
 
