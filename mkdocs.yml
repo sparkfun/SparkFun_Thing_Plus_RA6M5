@@ -351,6 +351,8 @@ nav:
     - Arduino Examples:
       - Digital I/O: example-digital.md
       - Analog I/O: example-analog.md
+      - Serial: example-serial.md
+      - SPI: example-SPI.md
   - Resources:
     - Hardware Resources: resources.md
   - Support:

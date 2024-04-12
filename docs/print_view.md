@@ -25,6 +25,12 @@ icon: material/printer
 # Examples - Analog I/O
 --8<-- "./example-analog.md:5"
 
+# Examples - Serial Port
+--8<-- "./example-serial.md:5"
+
+# Examples - SPI Bus
+--8<-- "./example-SPI.md:5"
+
 
 # Resources
 --8<-- "./resources.md:5"
