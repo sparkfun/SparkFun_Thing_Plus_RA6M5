@@ -8,6 +8,7 @@ icon: material/book-open-page-variant
 - :material-folder-cog: Design Files:
 	- :fontawesome-solid-file-pdf: [Schematic](./assets/board_files/schematic.pdf)
 	- :fontawesome-solid-file-pdf: [Board Dimensions](./assets/board_files/dimensions.pdf)
+	- :material-folder-zip: [Eagle Files](./assets/board_files/eagle_files.zip)
 - :fontawesome-solid-file-pdf: [Graphical Datasheet](./assets/board_files/graphical_datasheet.pdf)
 - :simple-arduino: [Renesas Arduino Core](https://github.com/arduino/ArduinoCore-renesas)
 - :simple-arduino: Arduino Libraries:
