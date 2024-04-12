@@ -1441,7 +1441,9 @@ The &micro;SD card slot is connected to the following GPIO:
 !!! warning "Data Corruption"
 	To avoid corrupting an SD card, users should disable all activity with the SD card before removing it from the RA6M5 Thing Plus.
 
-	The R6M5 supports &micro;SD cards with a **FAT32** file system *(i.e. only cards **up to 32GB** in size)*.
+	The [FATFileSystem library](https://github.com/arduino/ArduinoCore-renesas/tree/main/libraries/FATFilesystem) built into the Renesas-Arduino core, supports &micro;SD cards with a **FAT32** file system *(i.e. SD cards **up to 32GB** in size)*.
+
+	- While users may be able to use cards with a higher storage capacity, we highly advise against it. As users may experience data loss due to a corrupt file system *(i.e. SD cards with a storage capacity greater than 32GB are not meant to be formatted with a FAT32 file system)*.
 
 
 !!! note

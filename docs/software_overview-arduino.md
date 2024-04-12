@@ -195,24 +195,6 @@ In order to utilize some of the peripherals of the RA6M5 Thing Plus with the Ard
 
 </div>
 
-<!-- 
-### SD Card
-The [SD library for Arduino](https://github.com/arduino-libraries/SD) can be installed from the library manager in the Arduino IDE by searching for:
-
-	SD library for Arduino
-
-<figure markdown>
-[![Install the SD Arduino library](./assets/img/hookup_guide/arduino_library-SD.png "Click to enlarge"){ width="400" }](./assets/img/hookup_guide/arduino_library-SD.png)
-<figcaption markdown>SD library for Arduino in the library manager of the Arduino IDE.</figcaption>
-</figure>
-
-??? tip "Manually Download the Arduino Library"
-	For users who would like to manually download and install the library, the `*.zip` file can be accessed from the [GitHub repository](https://github.com/arduino-libraries/SD) or downloaded by clicking the button below.
-
-	<center>
-	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/arduino-libraries/SD/archive/refs/heads/master.zip){ .md-button .md-button--primary }
-	</center>
- -->
 
 
 ### MAX17048 Fuel Gauge

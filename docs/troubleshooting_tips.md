@@ -15,5 +15,13 @@ icon: sfe-logo
 		If this is your first visit to our forum, you'll need to create a [Forum Account](https://forum.sparkfun.com/ucp.php?mode=register) to post questions.
 
 
-### &micro;SD Card
-Make sure that the &micro;SD card is compatible with the Arduino library being used for it.   For example, the default [SD Arduino library](https://www.arduino.cc/reference/en/libraries/sd/) is only compatible with `FAT16` or `FAT32` file systems; therefore, the card capacity is limited to **16GB** or **32GB** and smaller. Another consideration is that the library was also written to only handle [short 8.3 names for files](https://en.wikipedia.org/wiki/8.3_filename).
+## &micro;SD Card
+
+### Compatibility
+The [FATFileSystem library](https://github.com/arduino/ArduinoCore-renesas/tree/main/libraries/FATFilesystem) built into the Renesas-Arduino core, supports &micro;SD cards with a **FAT32** file system *(i.e. SD cards **up to 32GB** in size)*.
+
+- While users may be able to use cards with a higher storage capacity, we highly advise against it. As users may experience data loss due to a corrupt file system *(i.e. SD cards with a storage capacity greater than 32GB are not meant to be formatted with a FAT32 file system)*.
+
+### Hot Swapping
+To avoid corrupting an SD card, users should disable all activity with the SD card and disconnect power before removing it from the RA6M5 Thing Plus.
+
