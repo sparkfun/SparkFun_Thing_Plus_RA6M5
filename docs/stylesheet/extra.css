@@ -288,23 +288,21 @@
 	background-color: var(--md-accent-fg-color) !important;
 }
 
-/* Breaks Abbreviations */
-@media screen and (min-width: 76.25em) {
+/* Abbreviations - Still causes issues */
+/* @media screen and (min-width: 76.25em) {
 	h1, h2, h3, h4, h5, h6 {
 		display: flex;
 		align-items: center;
 		flex-direction: row;
+
+		Fixes word spacing of an abbreviation
 		column-gap: 0.2em;
+
+		Fixes vertical line spacing on an abbreviation
 		position: relative;
 		padding-bottom: 0.3em;
 	}
-
-  /* Sets icon location to left of header */
-	/* .headerlink {
-		order: -1;
-		margin-left: calc(var(--permalink-size) * -1 - var(--permalink-spacing)) !important;
-	} */
-}
+} */
 
 
 
