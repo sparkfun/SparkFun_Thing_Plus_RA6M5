@@ -31,6 +31,15 @@ icon: material/printer
 # Examples - SPI Bus
 --8<-- "./example-SPI.md:5"
 
+# Examples - I^2^C Bus
+--8<-- "./example-I2C.md:5"
+
+# Examples - Memory/Storage
+--8<-- "./example-SD_card.md:5"
+--8<-- "./example-QSPI.md:5"
+
+# Examples - :material-bluetooth: CodeLess
+--8<-- "./example-codeless.md:5"
 
 # Resources
 --8<-- "./resources.md:5"
