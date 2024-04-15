@@ -75,7 +75,10 @@ The simplest way to test the SPI interface is with just a jumper *(wire)* and lo
 
 
 ## Peripheral Device
-A more direct method for testing the SPI interface is with an actual SPI device. Users are free to utilize any hardware they already have; however, we recommend the [BME68x environmental sensor](https://www.sparkfun.com/products/19096), below. Its SPI pins are broken out on the edge of the board and can be easily connected to the RA6M5 Thing Plus. In addition, a [hookup guide](https://learn.sparkfun.com/tutorials/1168) and [Arduino library](https://github.com/BoschSensortec/Bosch-BME68x-Library) for the sensor are available.
+A more direct method for testing the SPI interface is with an actual SPI device.
+
+### BME688 Environmental Sensor
+Users are free to utilize any hardware they already have; however, we recommend the [BME688 environmental sensor](https://www.sparkfun.com/products/19096), below. Its SPI pins are broken out on the edge of the board and can be easily connected to the RA6M5 Thing Plus. In addition, a [hookup guide](https://learn.sparkfun.com/tutorials/1168) and [Arduino library](https://github.com/BoschSensortec/Bosch-BME68x-Library) for the sensor are available.
 
 
 ??? note "Optional Hardware"
@@ -149,8 +152,14 @@ A more direct method for testing the SPI interface is with an actual SPI device.
 	</div>
 
 
+??? arduino "Install Arduino Library"
+	Users will need to install the [Bosch BME68x Arduino library](https://github.com/BoschSensortec/Bosch-BME68x-Library) for the sensor. In the Arduino IDE, users can install it by searching for `BME68x Sensor Library`, in the **Library Manager**:
 
-Users can find this sketch in the **File** > **Examples** > **Bosch BME68x Sensor** > **forced_mode** drop-down menu. *For more details on utilizing the BME68x breakout board, please refer to our [hookup guide](https://learn.sparkfun.com/tutorials/1168) for the sensor.*
+		BME68x Sensor Library
+
+
+
+Users can find this sketch in the **File** > **Examples** > **BME68x Sensor library** > **forced_mode** drop-down menu. *For more details on utilizing the BME68x breakout board, please refer to our [hookup guide](https://learn.sparkfun.com/tutorials/1168) for the sensor.*
 
 
 

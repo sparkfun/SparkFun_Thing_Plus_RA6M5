@@ -78,10 +78,139 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 === "`codelessBLE_peripheral.ino`"
 	This sketch requires a [Qwiic BME280 sensor](https://www.sparkfun.com/products/15440), connected by a [Qwiic cable](https://www.sparkfun.com/products/17260), to be connected the RA6M5 Thing Plus. The sketch demonstrates a basic BLE solution, by transmitting data from the BME280 to another BLE device. Users can find this sketch in the **File** > **Examples** > **SparkFun Renesas Codeless BLE** > **codelessBLE_peripheral** drop-down menu.
 
+
+	??? arduino "Install Arduino Library"
+		For this example, the [SparkFun BME280 Arduino Library](https://github.com/sparkfun/SparkFun_BME280_Arduino_Library) will need to be installed. In the Arduino IDE, users can install it by searching for `SparkFun BME280 Arduino Library`, in the **Library Manager**:
+
+			SparkFun BME280 Arduino Library
+
+
 	??? code "`codelessBLE_peripheral.ino`"
 		```cpp
 		--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_Thing_Plus_RA6M5/main/Firmware/CodelessBLE/examples/codelessBLE_peripheral/codelessBLE_peripheral.ino"
 		```
+
+
+	!!! tip "BME688 Replacement"
+		Users can also modify this example to utilize the [Qwiic BME688 sensor](https://www.sparkfun.com/products/19096) that is mentioned in some of the other examples. *For more details on utilizing the BME68x breakout board, please refer to our [hookup guide](https://learn.sparkfun.com/tutorials/1168) for the sensor.*
+
+
+		<div class="grid cards" markdown>
+
+		-   <a href="https://www.sparkfun.com/products/19096">
+			<figure markdown>
+			![Product Thumbnail](https://cdn.sparkfun.com/assets/parts/1/8/6/9/6/19096-SparkFun_Environmental_Sensor_Breakout_-_BME688__Qwiic_-01.jpg)
+			</figure>
+
+			---
+
+			**SparkFun Environmental Sensor - BME688 (Qwiic)**<br>
+			SEN-19096</a>
+
+
+		-   <a href="https://www.sparkfun.com/products/17260">
+			<figure markdown>
+			![Product Thumbnail](https://cdn.sparkfun.com/assets/parts/1/6/2/4/7/17260-Flexible_Qwiic_Cable_-_50mm-01.jpg)
+			</figure>
+
+			---
+
+			**Flexible Qwiic Cable - 50mm**<br>
+			PRT-17260</a>
+
+		</div>
+
+
+		??? arduino "Install Arduino Library"
+			Users will need to install the [Bosch BME68x Arduino library](https://github.com/BoschSensortec/Bosch-BME68x-Library) for the sensor. In the Arduino IDE, users can install it by searching for `BME68x Sensor Library`, in the **Library Manager**:
+
+				BME68x Sensor Library
+
+
+		??? code "Modifications"
+			- Link the BME68x Arduino library:
+
+					{--#include "SparkFunBME280.h"--}
+					{++#include "bme68xLibrary.h"++}
+
+			- Create an instance of the `Bme68x` class:
+
+					{--BME280 myBME280;--}
+					{++Bme68x bme;++}
+
+			- Initialize and configure the sensor:
+
+					{--
+					if(!myBME280.beginI2C())
+					{
+						Serial.println("Sensor didn't respond. Check wiring!");
+						while(1);
+					}
+
+					Serial.println("Connected to BME280.");
+					--}
+					{++
+					bme.begin(BME68X_I2C_ADDR_LOW, Wire)
+
+					if(bme.checkStatus())
+					{
+						if (bme.checkStatus() == BME68X_ERROR)
+						{
+							Serial.println("Sensor error:" + bme.statusString());
+							return;
+						}
+						else if (bme.checkStatus() == BME68X_WARNING)
+						{
+							Serial.println("Sensor Warning:" + bme.statusString());
+						}
+					}
+					
+					/* Set the default configuration for temperature, pressure and humidity */
+					bme.setTPH();
+
+					/* Configure the sensor to forced mode */
+					bme.setOpMode(BME68X_FORCED_MODE);
+					++}
+
+			- Update the `loop()` to retrieve data from the BME688
+
+					{--
+					if((loop_start_time - millis()) > 100) // If it's been more than 100ms
+					{
+						reset_loop = true;
+						if(bleConnected)
+						{
+							digitalWrite(LED_BUILTIN, HIGH);
+							printstring = "|"+String(myBME280.readTempC())+","+String(myBME280.readFloatHumidity())+","+String(myBME280.readFloatPressure());
+							Serial.print(myBLEPeripheral.sendCommand(printstring));
+							digitalWrite(LED_BUILTIN, LOW);
+						}
+					--}
+					{++
+
+					bme68xData data;
+
+					if((loop_start_time - millis()) > 100)    // If it's been more than 100ms
+					{
+						reset_loop = true;
+						if(bleConnected)
+						{
+							digitalWrite(LED_BUILTIN, HIGH);
+
+							delayMicroseconds(bme.getMeasDur());  // Wait for measurement data
+
+							/* Retrieve data from BME688 sensor*/
+							if (bme.fetchData())
+							{
+								bme.getData(data);
+								printstring = "|"+String(data.temperature)+","+String(data.humidity)+","+String(data.pressure);
+							}
+
+							Serial.print(myBLEPeripheral.sendCommand(printstring));
+							digitalWrite(LED_BUILTIN, LOW);
+						}
+					++}
+
 
 
 === "`codelessBLE_central.ino`"

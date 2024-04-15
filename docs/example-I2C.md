@@ -17,8 +17,10 @@ This sketch allows users to scan for devices connected to the primary I^2^C bus 
 </center>
 
 
+
 ## Peripheral Devices
 The RA6M5 Thing Plus features a Qwiic connector to seamlessly integrate with devices from [SparkFun's Qwiic Ecosystem](https://www.sparkfun.com/qwiic). While users are free to utilize any I^2^C device, we recommend the [Qwiic devices](https://www.sparkfun.com/categories/399) from our catalog.
+
 
 ??? note "Optional Hardware"
 	<div class="grid cards" markdown>
@@ -113,11 +115,14 @@ The RA6M5 Thing Plus features a Qwiic connector to seamlessly integrate with dev
 	</div>
 
 
+
 ### MAX17048 Fuel Gauge
 The MAX17048 fuel gauge measures the approximate charge/discharge rate, state of charge, and voltage of a connected LiPo battery. We recommend the [SparkFun MAX1704x Arduino library](https://github.com/sparkfun/SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library) be utilized in the Arduino IDE, to connect to the MAX17048 on the RA6M5 Thing Plus. Once the [library is installed in the Arduino IDE](../software_overview-arduino/#max17048-fuel-gauge), users will find several example sketches listed in the **File** > **Examples** > **SparkFun MAX1704x Fuel Gauge Arduino Library** > drop-down menu. We recommend the following examples for users:
 
+
 - `Example1_Simple.ino`
 - `Example4_MAX17048_KitchenSink.ino`
+
 
 ??? note "Optional Hardware"
 	<div class="grid cards" markdown>
@@ -168,6 +173,7 @@ The MAX17048 fuel gauge measures the approximate charge/discharge rate, state of
 	</div>
 
 
+
 === "`Example1_Simple.ino`"
 	Users can find this sketch in the **File** > **Examples** > **SparkFun MAX1704x Fuel Gauge Arduino Library** > **Example1_Simple** drop-down menu.
 
@@ -184,3 +190,75 @@ The MAX17048 fuel gauge measures the approximate charge/discharge rate, state of
 		```cpp
 		--8<-- "https://raw.githubusercontent.com/sparkfun/SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library/main/examples/Example4_MAX17048_KitchenSink/Example4_MAX17048_KitchenSink.ino"
 		```
+
+
+
+### BME688 Environmental Sensor
+Users are free to utilize any hardware they already have; however, we recommend the [BME688 environmental sensor](https://www.sparkfun.com/products/19096). The board includes a Qwiic connector on the edge of the board and can be easily attached to the RA6M5 Thing Plus with a [Qwiic cable](https://www.sparkfun.com/products/17260). In addition, a [hookup guide](https://learn.sparkfun.com/tutorials/1168) and [Arduino library](https://github.com/BoschSensortec/Bosch-BME68x-Library) for the sensor are available.
+
+
+??? note "Optional Hardware"
+	<div class="grid cards" markdown>
+
+	-   <a href="https://www.sparkfun.com/products/19096">
+		<figure markdown>
+		![Product Thumbnail](https://cdn.sparkfun.com/assets/parts/1/8/6/9/6/19096-SparkFun_Environmental_Sensor_Breakout_-_BME688__Qwiic_-01.jpg)
+		</figure>
+
+		---
+
+		**SparkFun Environmental Sensor - BME688 (Qwiic)**<br>
+		SEN-19096</a>
+
+
+	-   <a href="https://www.sparkfun.com/products/17260">
+		<figure markdown>
+		![Product Thumbnail](https://cdn.sparkfun.com/assets/parts/1/6/2/4/7/17260-Flexible_Qwiic_Cable_-_50mm-01.jpg)
+		</figure>
+
+		---
+
+		**Flexible Qwiic Cable - 50mm**<br>
+		PRT-17260</a>
+
+	</div>
+
+
+??? arduino "Install Arduino Library"
+	Users will need to install the [Bosch BME68x Arduino library](https://github.com/BoschSensortec/Bosch-BME68x-Library) for the sensor. In the Arduino IDE, users can install it by searching for `BME68x Sensor Library`, in the **Library Manager**:
+
+		BME68x Sensor Library
+
+
+
+Users can find this sketch in the **File** > **Examples** > **BME68x Sensor library** > **forced_mode** drop-down menu. *For more details on utilizing the BME68x breakout board, please refer to our [hookup guide](https://learn.sparkfun.com/tutorials/1168) for the sensor.*
+
+
+
+??? code "`forced_mode.ino`"
+	!!! warning "I^2^C Modifications"
+		By default, this example utilizes the SPI bus; therefore, some modifications must be made:
+
+		- The chip select pin no longer needs to be defined:
+
+				{--
+				#ifndef PIN_CS
+				#define PIN_CS SS
+				#endif
+				--}
+
+		- The I^2^C bus must be initialized, instead of the SPI bus:
+
+				{--SPI.begin();--}
+				{++Wire.begin();++}
+
+		- The sensor must be initialized with the Wire class, instead of the SPI class:
+
+				/* initializes the sensor based on {--SPI--}{++Wire++} library */
+				{--bme.begin(PIN_CS, SPI);--}
+				{++bme.begin(BME68X_I2C_ADDR_LOW, Wire)++}
+
+
+	```cpp
+	--8<-- "https://raw.githubusercontent.com/boschsensortec/Bosch-BME68x-Library/master/examples/forced_mode/forced_mode.ino"
+	```
