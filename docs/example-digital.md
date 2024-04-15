@@ -34,10 +34,8 @@ On the RA6M5 Thing Plus, the GPIO pin connected to the `STAT` LED is also capabl
 	<div markdown>
 
 	!!! code "`Fade.ino`"
-				{--int led = 9;         // the PWM pin the LED is attached to--}
-				{++int led = LED_BUILTIN; // the PWM pin the LED is attached to++}
-				int brightness = 0;    // how bright the LED is
-				int fadeAmount = 5;    // how many points to fade the LED by
+				int led = {--9;         // the PWM pin the LED is attached to--}
+				int led = {++LED_BUILTIN; // the PWM pin the LED is attached to++}
 
 	</div>
 
@@ -45,8 +43,8 @@ On the RA6M5 Thing Plus, the GPIO pin connected to the `STAT` LED is also capabl
 	<div markdown>
 
 	!!! code "`Fading.ino`"
-				{--int ledPin = 9;  // LED connected to digital pin 9--}
-				{++int ledPin = LED_BUILTIN;  // LED connected to digital pin 14++}
+				int ledPin = {--9;  // LED connected to digital pin 9--}
+				int ledPin = {++LED_BUILTIN;  // LED connected to digital pin 14++}
 
 	</div>
 
@@ -251,25 +249,25 @@ On the RA6M5 Thing Plus, the ++"USRBTN"++ button is the perfect component for op
 
 		---
 
-				int pushButton = {--2--};
-				int pushButton = {++31++};
+			int pushButton = {--2--};
+			int pushButton = {++31++};
 
 		`Button.ino` and `Debounce.ino`
 
 		---
 
-				const int buttonPin = {--2--};  // the number of the pushbutton pin
-				const int buttonPin = {++31++};  // the number of the pushbutton pin
+			const int buttonPin = {--2--};  // the number of the pushbutton pin
+			const int buttonPin = {++31++};  // the number of the pushbutton pin
 
 		`InputPullupSerial.ino`
 
 		---
 
-				pinMode({--2--}, INPUT_PULLUP);
-				pinMode({++31++}, INPUT_PULLUP);
+			pinMode({--2--}, INPUT_PULLUP);
+			pinMode({++31++}, INPUT_PULLUP);
 
-				int sensorVal = digitalRead({--2--});
-				int sensorVal = digitalRead({++31++});
+			int sensorVal = digitalRead({--2--});
+			int sensorVal = digitalRead({++31++});
 
 	</div>
 
@@ -281,18 +279,18 @@ On the RA6M5 Thing Plus, the ++"USRBTN"++ button is the perfect component for op
 
 		---
 
-				const int ledPin = {--13--};    // the number of the LED pin
-				const int ledPin = {++LED_BUILTIN++};    // the number of the LED pin
+			const int ledPin = {--13--};    // the number of the LED pin
+			const int ledPin = {++LED_BUILTIN++};    // the number of the LED pin
 
 		`InputPullupSerial.ino`
 
 		---
 
-				pinMode({--13--}, OUTPUT);
-				digitalWrite({--13--}, value);
+			pinMode({--13--}, OUTPUT);
+			digitalWrite({--13--}, value);
 
-				pinMode({++LED_BUILTIN++}, OUTPUT);
-				digitalWrite({++LED_BUILTIN++}, value);
+			pinMode({++LED_BUILTIN++}, OUTPUT);
+			digitalWrite({++LED_BUILTIN++}, value);
 
 	</div>
 

@@ -138,19 +138,17 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 					{--BME280 myBME280;--}
 					{++Bme68x bme;++}
 
-			- Initialize and configure the sensor:
+			- Initialize and configure the sensor in the `setup()`:
 
-					{--
-					if(!myBME280.beginI2C())
+					{--if(!myBME280.beginI2C())
 					{
 						Serial.println("Sensor didn't respond. Check wiring!");
 						while(1);
 					}
 
-					Serial.println("Connected to BME280.");
-					--}
-					{++
-					bme.begin(BME68X_I2C_ADDR_LOW, Wire)
+					Serial.println("Connected to BME280.");--}
+
+					{++bme.begin(BME68X_I2C_ADDR_LOW, Wire)
 
 					if(bme.checkStatus())
 					{
@@ -169,13 +167,11 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 					bme.setTPH();
 
 					/* Configure the sensor to forced mode */
-					bme.setOpMode(BME68X_FORCED_MODE);
-					++}
+					bme.setOpMode(BME68X_FORCED_MODE);++}
 
 			- Update the `loop()` to retrieve data from the BME688
 
-					{--
-					if((loop_start_time - millis()) > 100) // If it's been more than 100ms
+					{--if((loop_start_time - millis()) > 100) // If it's been more than 100ms
 					{
 						reset_loop = true;
 						if(bleConnected)
@@ -184,11 +180,9 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 							printstring = "|"+String(myBME280.readTempC())+","+String(myBME280.readFloatHumidity())+","+String(myBME280.readFloatPressure());
 							Serial.print(myBLEPeripheral.sendCommand(printstring));
 							digitalWrite(LED_BUILTIN, LOW);
-						}
-					--}
-					{++
+						}--}
 
-					bme68xData data;
+					{++bme68xData data;
 
 					if((loop_start_time - millis()) > 100)    // If it's been more than 100ms
 					{
@@ -208,8 +202,7 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 
 							Serial.print(myBLEPeripheral.sendCommand(printstring));
 							digitalWrite(LED_BUILTIN, LOW);
-						}
-					++}
+						}++}
 
 
 

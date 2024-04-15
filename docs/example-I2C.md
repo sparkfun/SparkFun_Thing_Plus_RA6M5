@@ -241,11 +241,9 @@ Users can find this sketch in the **File** > **Examples** > **BME68x Sensor libr
 
 		- The chip select pin no longer needs to be defined:
 
-				{--
-				#ifndef PIN_CS
+				{--#ifndef PIN_CS
 				#define PIN_CS SS
-				#endif
-				--}
+				#endif--}
 
 		- The I^2^C bus must be initialized, instead of the SPI bus:
 
