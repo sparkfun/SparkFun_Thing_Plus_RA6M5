@@ -1124,7 +1124,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 		---
 
-		The [Qwiic connect system](https://www.sparkfun.com/qwiic) is a solderless, polarized connection system that allows users to seamlessly daisy chain 	I^2^C boards together. Play the video below to learn more about the Qwiic connect system or click on the banner above to learn more about [Qwiic 	products](https://www.sparkfun.com/qwiic).
+		The [Qwiic connect system](https://www.sparkfun.com/qwiic) is a solderless, polarized connection system that allows users to seamlessly daisy chain 	I^2^C boards together. Play the video, to learn more about the Qwiic connect system or click on the banner above to learn more about [Qwiic 	products](https://www.sparkfun.com/qwiic).
 
 		</div>
 
@@ -1430,7 +1430,7 @@ The Flash memory is connected to the following GPIO:
 
 
 
-### SD Card Socket
+### &micro;SD Card Socket
 The &micro;SD card socket is connected to the SD host interface for fast data logging. This feature is useful for data collection over extended periods and for simplifying data retrieval.
 
 
@@ -1488,7 +1488,7 @@ The &micro;SD card slot is connected to the following GPIO:
 
 
 
-## I^2^C Devices
+## I<sup>2</sup>C Bus
 
 ### Qwiic Connector
 A Qwiic connector is provided for users to seamlessly integrate with [SparkFun's Qwiic Ecosystem](https://www.sparkfun.com/qwiic). Otherwise, users can also access the [I^2^C bus](#i2c-pins) through the PTH pins broken out on the board.
@@ -1514,7 +1514,7 @@ A Qwiic connector is provided for users to seamlessly integrate with [SparkFun's
 
 	---
 
-	The [Qwiic connect system](https://www.sparkfun.com/qwiic) is a solderless, polarized connection system that allows users to seamlessly daisy chain I^2^C boards together. Play the video below to learn more about the Qwiic connect system or click on the banner above to learn more about [Qwiic products](https://www.sparkfun.com/qwiic).
+	The [Qwiic connect system](https://www.sparkfun.com/qwiic) is a solderless, polarized connection system that allows users to seamlessly daisy chain I^2^C boards together. Play the video, to learn more about the Qwiic connect system or click on the banner above to learn more about [Qwiic products](https://www.sparkfun.com/qwiic).
 
 	</div>
 

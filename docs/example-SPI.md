@@ -67,7 +67,7 @@ The simplest way to test the SPI interface is with just a jumper *(wire)* and lo
 
 
 
-??? code
+??? code "`SPI_Loopback.ino`"
 	```cpp
 	--8<-- "./Firmware/Tests/SPI_Loopback/SPI_Loopback.ino"
 	```

@@ -72,14 +72,14 @@ Below, are some basic example sketches for capturing analog data from generic de
 === "`AnalogReadSerial.ino`"
 	Users can find this sketch in the **File** > **Examples** > **01.basics** > **AnalogReadSerial** drop-down menu.
 
-	??? code "`InputPullupSerial.ino`"
+	??? code "`AnalogReadSerial.ino`"
 		--8<-- "https://raw.githubusercontent.com/arduino/docs-content/main/content/built-in-examples/01.basics/AnalogReadSerial/AnalogReadSerial.md:57:57"
 
 
 === "`ReadAnalogVoltage.ino`"
 	Users can find this sketch in the **File** > **Examples** > **01.basics** > **ReadAnalogVoltage** drop-down menu.
 
-	??? code "`Debounce.ino`"
+	??? code "`ReadAnalogVoltage.ino`"
 		--8<-- "https://raw.githubusercontent.com/arduino/docs-content/main/content/built-in-examples/01.basics/ReadAnalogVoltage/ReadAnalogVoltage.md:57:57"
 
 
@@ -299,7 +299,7 @@ After users have jumpered the GPIO pins and uploaded the example code, they will
 
 
 
-??? abstrat "Other Waveforms"
+??? abstract "Other Waveforms"
 	Users can modify this example to generate other types of waveforms, as shown in the examples below.
 
 

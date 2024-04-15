@@ -22,7 +22,7 @@ theme:
   custom_dir: overrides # Personalized changes to the theme
 
   # Icon in Browser Tab (must be a square image - i.e. 32x32 pixels)
-  favicon: img/sfe_logo_sq.png
+  favicon: assets/img/sfe_logo_sq.png
 
   # Page Font
   font:
@@ -148,22 +148,6 @@ plugins:
       redirect_maps:
         'index.md': 'introduction.md'
 
-  # Add revision date
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: timeago
-
-  # Add git committers at the bottom of the page
-  - git-committers:
-      repository: sparkfun/SparkFun_Thing_Plus_RA6M5
-      branch: main
-
-  # Add git authors at the bottom of the page
-  - git-authors
-
-  # Enables use of Git submodules and larger code base
-  - monorepo
-
   # Enables improved security for external links
   - privacy:
       # Disables cache mechanism, so that external assets can be updated during rebuilds
@@ -200,6 +184,23 @@ plugins:
       # optimize_jpg_progressive: true
       # print_gain: true
       # print_gain_summary: true
+
+
+  # Add revision date
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+  # Add git committers at the bottom of the page
+  - git-committers:
+      repository: sparkfun/SparkFun_Thing_Plus_RA6M5
+      branch: main
+
+  # Add git authors at the bottom of the page
+  - git-authors
+
+  # Enables use of Git submodules and larger code base
+  - monorepo
 
 
 # Included Markdown extensions

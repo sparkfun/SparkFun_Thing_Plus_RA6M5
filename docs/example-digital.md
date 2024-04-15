@@ -191,6 +191,7 @@ The **WS2812** is an addressable RGB LED that operates with a digital signal tha
 			**Flexible Qwiic Cable - 50mm**<br>
 			PRT-17260</a>
 
+
 		-   <a href="https://www.sparkfun.com/products/24606">
 			<figure markdown>
 			![Product Thumbnail](https://cdn.sparkfun.com/assets/parts/2/4/9/6/3/LCD-24606-Qwiic-OLED-Display-Feature-Screen.jpg)

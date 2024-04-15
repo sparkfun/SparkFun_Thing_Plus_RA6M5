@@ -129,7 +129,7 @@ The RA6M5 Thing Plus includes a &micro;SD card slot on the back of the board. Th
 !!! info "SD Card Compatibility"
 	The R6M5 Thing Plus supports &micro;SD cards with a **FAT32** file system *(i.e. only cards **up to 32GB** in size)*.
 
-### Qwiic Devices
+## Qwiic Devices
 The Qwiic system allows users to effortlessly prototype with a Qwiic compatible I^2^C device without soldering. Users can attach any Qwiic compatible [sensor or board](https://www.sparkfun.com/qwiic#sensors), with just a [Qwiic cable](https://www.sparkfun.com/products/15081). (*\*The example below, is for demonstration purposes and is not pertinent to the board functionality or this tutorial.*)
 
 <figure markdown>
