@@ -341,6 +341,17 @@ extra_javascript:
 
 
 # Configures webpage navigation
+
+# Excludes README.md files from being built as webpages
+exclude_docs: |
+  README.md
+
+# Pages that are built, but not in the navigation tabs
+not_in_nav: |
+  index.md
+  print_view.md
+
+# Webpage navigation tabs
 nav:
   - Getting Started:
     - Introduction: introduction.md
