@@ -12,4 +12,4 @@ If you are adding a feature to this library, please create a PR and follow these
 
 ## Style guide
 
-Please read and follow the [Arduino API style guide](https://www.arduino.cc/en/Reference/APIStyleGuide). Also read and consider the [Arduino style guide](https://www.arduino.cc/en/Reference/StyleGuide).
+Please read and follow the [Arduino API style guide](https://www.arduino.cc/en/Reference/APIStyleGuide). Also, read and consider the [Arduino style guide](https://www.arduino.cc/en/Reference/StyleGuide).
