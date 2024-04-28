@@ -91,3 +91,8 @@ Renesas also provides great resources for the RA6M5 and DA14531MOD:
 		- :material-github: [SDK 6.0.`x` BLE Examples](https://github.com/dialog-semiconductor/BLE_SDK6_examples)
 
 </div>
+
+
+<center>
+![QR code to the hookup guide](./assets/img/qr_code/hookup_guide.png){ .qr }
+</center>
