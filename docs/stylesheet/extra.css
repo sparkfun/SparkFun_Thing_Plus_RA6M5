@@ -366,6 +366,22 @@
   overflow: hidden;
 }
 
+.video-500px {
+  position: relative;
+  padding-bottom: min(281.25px, 56.25%); /* 16:9 */
+  height: 0;
+	max-width: 500px;
+	max-height: 281.25px;
+}
+.video-500px iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+	overflow: hidden;
+}
+
 /* Add compatibility for mobile devices */
 /* ================================================================================== */
 /* ================================================================================== */
