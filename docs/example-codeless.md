@@ -3,7 +3,7 @@ icon: material/bluetooth
 ---
 
 ## AT Commands
-To help users get started with the [CodeLess™ AT commands](https://www.renesas.com/us/en/software-tool/smartbond-codeless-commands) for the DA14531MOD Bluetooth module, we have provided an `SerialPassthrough` example in our [*unofficial* Arduino library](../software_overview-arduino/#da14531mod-ble-module). Once programmed on the RA6M5 Thing Plus, the example allows users to directly interface with the DA14531MOD's UART port through the board's USB connection using a [serial terminal](https://learn.sparkfun.com/tutorials/112). Thereby, enabling users to experiment with the CodeLess AT commands and develop their own BLE connectivity solution. Users can find this sketch in the **File** > **Examples** > **SparkFun Renesas Codeless BLE** > **SerialPassthrough** drop-down menu.
+To help users get started with the [CodeLess™ AT commands](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/atcommands.html) for the DA14531MOD Bluetooth module, we have provided an `SerialPassthrough` example in our [*unofficial* Arduino library](../software_overview-arduino/#da14531mod-ble-module). Once programmed on the RA6M5 Thing Plus, the example allows users to directly interface with the DA14531MOD's UART port through the board's USB connection using a [serial terminal](https://learn.sparkfun.com/tutorials/112). Thereby, enabling users to experiment with the CodeLess AT commands and develop their own BLE connectivity solution. Users can find this sketch in the **File** > **Examples** > **SparkFun Renesas Codeless BLE** > **SerialPassthrough** drop-down menu.
 
 
 ??? code "`SerialPassthrough.ino`"
@@ -18,7 +18,7 @@ To help users get started with the [CodeLess™ AT commands](https://www.renesas
 
 
 ## Demo - BLE Solution
-While an Arduino library isn't necessary to utilize the [CodeLess™ AT commands](https://www.renesas.com/us/en/software-tool/smartbond-codeless-commands) for the DA14531MOD Bluetooth module, we have created an [*unofficial* Arduino library](./Firmware/CodelessBLE) to help users get started. Once the [library is installed in the Arduino IDE](../software_overview-arduino/#da14531mod-ble-module), users will find several example sketches listed in the **File** > **Examples** > **SparkFun Renesas Codeless BLE** drop-down menu. We recommend users check out the following examples that demonstrate a basic BLE connectivity solution:
+While an Arduino library isn't necessary to utilize the [CodeLess™ AT commands](https://lpccs-docs.renesas.com/UM-140-DA145x-CodeLess/index.html) for the DA14531MOD Bluetooth module, we have created an [*unofficial* Arduino library](./Firmware/CodelessBLE) to help users get started. Once the [library is installed in the Arduino IDE](../software_overview-arduino/#da14531mod-ble-module), users will find several example sketches listed in the **File** > **Examples** > **SparkFun Renesas Codeless BLE** drop-down menu. We recommend users check out the following examples that demonstrate a basic BLE connectivity solution:
 
 
 - `codelessBLE_peripheral.ino`
