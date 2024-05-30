@@ -55,7 +55,17 @@ The USB-C connector is used to provide power and program the board. For most use
 The RA6M5 Thing Plus only requires **3.3V** to power the board. However, the simplest method to power the board is through the USB-C connector. Alternatively, the `3V3`, `VBAT`, and `VUSB` pins can also be used to supply power to the board.
 
 
-<div class="grid" style="grid-template-columns: 65% 35%;" markdown>
+<div class="grid cards desc" markdown>
+
+<div markdown>
+
+<figure markdown>
+[![Power connections](./assets/img/hookup_guide/Power.png){ width=200 }](./assets/img/hookup_guide/Power.png "Click to enlarge")
+<figcaption markdown>Power connections on the RA6M5 Thing Plus PCB.</figcaption>
+</figure>
+
+</div>
+
 
 <div markdown>
 
@@ -131,15 +141,6 @@ Below, is a summary of the power circuitry for this board:
 
 </div>
 
-
-<div markdown>
-
-<figure markdown>
-[![Power connections](./assets/img/hookup_guide/Power.png){ width=200 }](./assets/img/hookup_guide/Power.png "Click to enlarge")
-<figcaption markdown>Power connections on the RA6M5 Thing Plus PCB.</figcaption>
-</figure>
-
-</div>
 
 </div>
 
@@ -466,7 +467,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 The brains of the board is the [RA6M5 microcontroller](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931) from [Renesas](https://www.renesas.com/), a low-power Arm^®^ Cortex^®^-M33 processor with a clock speed up to 200Mhz, 512kB of SRAM, and 2MB of flash memory. This high-performance microcontroller features an extensive list of peripheral capabilities and is perfect for real-time applications.
 
 
-<div class="grid" markdown>
+<div class="grid cards col-3" markdown>
 
 <div markdown>
 
