@@ -148,7 +148,7 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 
 					Serial.println("Connected to BME280.");--}
 
-					{++bme.begin(BME68X_I2C_ADDR_LOW, Wire)
+					{++bme.begin(BME68X_I2C_ADDR_LOW, Wire);
 
 					if(bme.checkStatus())
 					{
@@ -178,7 +178,7 @@ In order to operate the `codelessBLE_peripheral.ino` and `codelessBLE_central.in
 						{
 							digitalWrite(LED_BUILTIN, HIGH);
 							printstring = "|"+String(myBME280.readTempC())+","+String(myBME280.readFloatHumidity())+","+String(myBME280.readFloatPressure());
-							Serial.print(myBLEPeripheral.sendCommand(printstring));
+							Serial.println(myBLEPeripheral.sendCommand(printstring));
 							digitalWrite(LED_BUILTIN, LOW);
 						}--}
 
