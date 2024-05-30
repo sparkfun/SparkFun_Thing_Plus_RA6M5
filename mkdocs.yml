@@ -236,8 +236,8 @@ markdown_extensions:
 
       # Adds support for glossary of abbreviations
       auto_append:
-        - glossary-sparkfun.md
         # - https://raw.githubusercontent.com/santaimpersonator/git-test/main/glossary-sparkfun.md
+        - glossary-sparkfun.md
         - glossary-local.md
 
   # Allows embedding of code blocks in other elements
@@ -363,6 +363,8 @@ exclude_docs: |
 not_in_nav: |
   index.md
   print_view.md
+  software-DA14531MOD.md
+  favicon.ico
 
 # Webpage navigation tabs
 nav:
