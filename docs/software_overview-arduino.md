@@ -53,10 +53,15 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 
 ### Installation
 !!! success "Installing the *Ported* Renesas-Arduino Core"
-	In order to program the RA6M5 Thing Plus in the Arduino IDE, users will need to install the **Renesas-Arduino core**. However, until the [RA6M5 Thing Plus is officially adopted into the Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas/pull/290), users need to utilize [our port of the **Renesas-Arduino core**](./assets/SFE-Renesas-Arduino_core.zip).
+	In order to program the RA6M5 Thing Plus in the Arduino IDE, users will need to install the **Arduino Renesas Portenta board** definitions from the Renesas-Arduino core. However, until the [RA6M5 Thing Plus is officially adopted into the Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas/pull/290), users need to utilize [our port of the **Renesas-Arduino core**](./assets/SFE-Renesas-Arduino_core.zip).
 
-	1. Before users can install our ported version of the Renesas-Arduino core, they should first install the [*official* Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas) in the Arduino IDE.
+	1. Before users can install our ported version of the Renesas-Arduino core, they should first install the **Arduino Renesas Portenta board** definitions of the [*official* Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas) in the Arduino IDE.
 		- This will ensure that any required compilation and upload tools are installed for the Arduino core.
+		- In the Board Manager of the Arduino IDE, select and install the **Arduino Renesas Portenta board** definitions from the [Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas).
+			<figure markdown>
+			[![Install the Renesas-Arduino Core](./assets/img/hookup_guide/arduino-renesas_core.png){ width="400" }](./assets/img/hookup_guide/arduino-renesas_core.png "Click to enlarge")
+			<figcaption markdown>Installing the [Renesas-Arduino core](https://github.com/arduino/ArduinoCore-renesas) in the Arduino IDE.</figcaption>
+			</figure>
 	2. Once installed, users will need to locate the `packages` directory for the Arduino cores in the Arduino IDE:
 
 		<div class="grid cards" markdown>
@@ -67,13 +72,13 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 
 			On Windows, the directory location may vary based on whether the Arduino IDE was installed for an individual user or all users:
 
-			- The user's `AppData` directory *(hidden folder)*:
+			- The user's `AppData` directory *(hidden folder - primary)*:
 
 					C:\Users\{==<insert username>==}\AppData\Local\Arduino15\packages
 
-			- The user's `ArduinoData` directory:
+			- The user's `ArduinoData` directory (*local*):
 
-					C:\Users\{==<insert username>==}\Documents\ArduinoData
+					C:\Users\{==<insert username>==}\Documents\Arduino\hardware
 
 			- The `Program Files` or `Program Files(x86)` directories:
 
@@ -86,13 +91,13 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 
 			With Mac OS, users should check the `Applications` and `Library` directories:
 
-			- `Applications` directory:
-
-					/Applications/Arduino.app/
-
-			- `Library` directory:
+			- `Library` directory (primary):
 
 					~/Library/Arduino15/packages/
+
+			- `Applications` directory (*local*):
+
+					/Applications/Arduino.app/hardware
 
 
 		-   **Linux**
@@ -101,14 +106,31 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 
 			For Linux, this may be located in the following directories:
 
-			- Local:
-
-					/home/$USER/Arduino
-
-			- Downloaded:
+			- Primary:
 
 					/home/$USER/.arduino15/packages
 
+			- Local:
+
+					/home/$USER/Arduino/hardware
+
+			??? tip
+				As mentioned in [Arduino's guide for installing the Arduino IDE on Linux](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing/#linux), users may need to run the following commands in the terminal:
+
+				```bash
+				sudo add-apt-repository universe
+				sudo apt install libfuse2
+				```
+
+				In order to utilize the serial terminal or recognize the board in DFU mode, users may also need to run the following commands in the terminal:
+
+				```bash
+				usermod -a -G dialout $USERNAME
+				usermod -a -G plugdev $USERNAME
+				```
+
+				- `$USERNAME` is the login username
+				- After, a restart or logout is required
 
 		</div>
 
