@@ -168,6 +168,9 @@ plugins:
 
   # Optimizes media files (*.png and *.jpg)
   - optimize:
+      # Disables plugin on local builds
+      enabled: !ENV [CI, false]
+
       # Specify directory; otherwise, multiple instances are created (.cache/plugins and .cache/plugin)
       cache_dir: .cache/plugins/optimize
 
@@ -188,19 +191,29 @@ plugins:
 
   # Add revision date
   - git-revision-date-localized:
+      # Disables plugin on local builds
+      enabled: !ENV [CI, false]
+
       enable_creation_date: true
       type: timeago
 
   # Add git committers at the bottom of the page
   - git-committers:
+        # Disables plugin on local builds
+      enabled: !ENV [CI, false]
+
       repository: sparkfun/SparkFun_Thing_Plus_RA6M5
       branch: main
 
   # Add git authors at the bottom of the page
-  - git-authors
+  - git-authors:
+      # Disables plugin on local builds
+      enabled: !ENV [CI, false]
 
   # Enables use of Git submodules and larger code base
-  - monorepo
+  - monorepo:
+      # Disables plugin on local builds
+      enabled: !ENV [CI, false]
 
 
 # Included Markdown extensions
