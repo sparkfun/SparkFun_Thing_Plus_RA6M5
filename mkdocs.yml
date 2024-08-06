@@ -199,7 +199,7 @@ plugins:
 
   # Add git committers at the bottom of the page
   - git-committers:
-        # Disables plugin on local builds
+      # Disables plugin on local builds
       enabled: !ENV [CI, false]
 
       repository: sparkfun/SparkFun_Thing_Plus_RA6M5
