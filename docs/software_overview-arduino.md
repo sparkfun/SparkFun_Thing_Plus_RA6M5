@@ -296,101 +296,6 @@ While users are free to choose any Arduino library that provides support for MAX
 
 
 ### WS2812 RGB LED
-Users are free to choose any Arduino library that provides support for WS2812 LEDs. However, we recommend the [FastLED Arduino library](https://github.com/FastLED/FastLED/); as it has been tested and verified to work with the RGB LED on the RA6M5 Thing Plus.
-
-
-!!! warning
-	While support for the new Renesas Arduino boards has not been officially released for the FastLED Arduino library, the hardware modifications have been integrated into the GitHub repository. Therefore, users can manually download and install the FastLED Arduino library for *unofficial* support of the Renesas Arduino boards.
-
-
-<div class="grid" markdown>
-
-<div markdown>
-
-!!! tip "Manually Download the Arduino Library"
-	For users who would like to manually download and install the library, the `*.zip` file can be accessed from the [GitHub repository](https://github.com/FastLED/FastLED/) or downloaded by clicking the button below.
-
-	<center>
-	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/FastLED/FastLED/archive/refs/heads/master.zip){ .md-button .md-button--primary }
-	</center>
-
-</div>
-
-
-<div class="grid cards" markdown align="center">
-
--   <a href="https://learn.sparkfun.com/tutorials/15">
-	<figure markdown>
-	![Installing an Arduino Library](https://cdn.sparkfun.com/c/264-148/assets/b/e/4/b/2/50f04b99ce395fd95e000001.jpg)
-	</figure>
-
-	---
-
-	**Installing an Arduino Library**</a>
-
-</div>
-
-</div>
-
-
-!!! abstract "Add Support for the RA6M5 Thing Plus"
-	In addition to manually installing the Arduino library, users will also need to integrate the RA6M5 Thing Plus into the FastLED Arduino library with the [porting instructions](https://github.com/FastLED/FastLED/blob/master/PORTING.md). This requires users to include the {++highlighted lines++} before {==line 94==} in the [`fastpin_arm_renesas.h`](https://github.com/FastLED/FastLED/blob/master/src/platforms/arm/renesas/fastpin_arm_renesas.h#L94) file of the FastLED Arduino library:
-
-
-	??? code "Code Modification"
-
-		<div class="language-cpp highlight" markdown>
-
-			--8<-- "https://raw.githubusercontent.com/FastLED/FastLED/master/src/platforms/arm/renesas/fastpin_arm_renesas.h:90:92"
-			{++
-			#elif defined(ARDUINO_THINGPLUS_RA6M5)
-
-			#define MAX_PIN 24
-			// D0-D06
-			_FL_DEFPIN( 0, BSP_IO_PORT_01_PIN_12, R_PORT1_BASE ); _FL_DEFPIN( 1, BSP_IO_PORT_04_PIN_06, R_PORT4_BASE ); _FL_DEFPIN( 2, BSP_IO_PORT_04_PIN_05, R_PORT4_BASE );
-			_FL_DEFPIN( 3, BSP_IO_PORT_04_PIN_04, R_PORT4_BASE ); _FL_DEFPIN( 4, BSP_IO_PORT_04_PIN_03, R_PORT4_BASE ); _FL_DEFPIN( 5, BSP_IO_PORT_04_PIN_02, R_PORT4_BASE );
-			_FL_DEFPIN( 6, BSP_IO_PORT_02_PIN_07, R_PORT2_BASE );
-
-			// D07-D12 (A0-A5)
-			_FL_DEFPIN( 7, BSP_IO_PORT_00_PIN_14, R_PORT0_BASE ); _FL_DEFPIN( 8, BSP_IO_PORT_00_PIN_15, R_PORT0_BASE ); _FL_DEFPIN( 9, BSP_IO_PORT_05_PIN_05, R_PORT5_BASE );
-			_FL_DEFPIN(10, BSP_IO_PORT_05_PIN_04, R_PORT5_BASE ); _FL_DEFPIN(11, BSP_IO_PORT_05_PIN_03, R_PORT5_BASE ); _FL_DEFPIN(12, BSP_IO_PORT_05_PIN_02, R_PORT5_BASE );
-
-			// D13-D21
-			_FL_DEFPIN(13, BSP_IO_PORT_01_PIN_05, R_PORT1_BASE ); _FL_DEFPIN(14, BSP_IO_PORT_01_PIN_06, R_PORT1_BASE ); _FL_DEFPIN(15, BSP_IO_PORT_04_PIN_01, R_PORT4_BASE );
-			_FL_DEFPIN(16, BSP_IO_PORT_04_PIN_00, R_PORT4_BASE ); _FL_DEFPIN(17, BSP_IO_PORT_01_PIN_10, R_PORT1_BASE ); _FL_DEFPIN(18, BSP_IO_PORT_01_PIN_09, R_PORT1_BASE );
-			_FL_DEFPIN(19, BSP_IO_PORT_01_PIN_11, R_PORT1_BASE ); _FL_DEFPIN(20, BSP_IO_PORT_04_PIN_09, R_PORT4_BASE ); _FL_DEFPIN(21, BSP_IO_PORT_04_PIN_08, R_PORT4_BASE );
-
-			// D30-31
-			_FL_DEFPIN(30, BSP_IO_PORT_03_PIN_04, R_PORT3_BASE ); _FL_DEFPIN(31, BSP_IO_PORT_04_PIN_15, R_PORT4_BASE );
-			++}
-			{==#elif defined(ARDUINO_ARCH_RENESAS_PORTENTA)==}
-
-			--8<-- "https://raw.githubusercontent.com/FastLED/FastLED/master/src/platforms/arm/renesas/fastpin_arm_renesas.h:96:99"
-
-
-		</div>
-
-
-	!!! info
-		This information is accurate as of April 2024; however, it may become irrelevant in the future *(once a release is published, with support for the Renesas Arduino boards and RA6M5 Thing Plus)*. At which point, users may disregard this note and/or request for this information to be removed by [filing an issue](../github/file_issue).
-
-
-
-!!! tip "How to Define Parameters"
-	While using the FastLED Arduino library, users need to define the following parameters to the **WS2812 RGB LED** included on the board. However, if additional LEDs are connected externally to the board, then the appropriate values should be provided for the Arduino library.
-
-	**`#define NUM_LEDS 1`**
-	:	There is only one WS2812 LED on the board
-
-	**`#define DATA_PIN LED_RGB`**
-	:	Declare which pin is connected to the WS2812 LED. On the RA6M5 Thing Plus, it is defined as `D13` or `RGB_LED` in the Arduino core for GPIO `P105`.
-
-	**`#define LED_TYPE WS2812`**
-	:	Declare the LED type for the library; the RA6M5 Thing Plus only includes `WS2812` RGB LED on the board.
-
-
-<!-- Original Instructions (adjust snippet in "software_overview-codeless" when restoring)
-### WS2812 RGB LED
 While users are free to choose any Arduino library that provides support for WS2812 LEDs, we recommend the [FastLED Arduino library](https://github.com/FastLED/FastLED/). It has been tested and verified to work with the RGB LED on the RA6M5 Thing Plus. The [FastLED Arduino library](https://github.com/FastLED/FastLED/) can be installed from the **Library Manager** in the Arduino IDE by searching for:
 
 	FastLED Arduino Library
@@ -419,8 +324,19 @@ While users are free to choose any Arduino library that provides support for WS2
 </div>
 
 </div>
--->
 
+
+??? tip "How to Define Parameters"
+	While using the FastLED Arduino library, users need to define the following parameters to the **WS2812 RGB LED** included on the board. However, if additional LEDs are connected externally to the board, then the appropriate values should be provided for the Arduino library.
+
+	**`#define NUM_LEDS 1`**
+	:	There is only one WS2812 LED on the board
+
+	**`#define DATA_PIN LED_RGB`**
+	:	Declare which pin is connected to the WS2812 LED. On the RA6M5 Thing Plus, it is defined as `D13` or `RGB_LED` in the Arduino core for GPIO `P105`.
+
+	**`#define LED_TYPE WS2812`**
+	:	Declare the LED type for the library; the RA6M5 Thing Plus only includes `WS2812` RGB LED on the board.
 
 
 ### DA14531MOD BLE Module
