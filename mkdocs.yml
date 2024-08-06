@@ -35,6 +35,9 @@ theme:
     # Enable the copy button on code blocks
     - content.code.copy
 
+    # Enables code selection button to link a specific section of a code block
+    - content.code.select
+
     # Enable annotations in code blocks
     - content.code.annotate
 
