@@ -164,6 +164,8 @@
     
       <link rel="stylesheet" href="../stylesheet/extra.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -2106,19 +2108,19 @@
 <details class="info">
 <summary><span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"/><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06z"/></svg></span> Eagle - Free Download!</summary>
 <p>Eagle is a <a href="" title="computer-aided design">CAD</a> program for electronics that is free to use for hobbyists and students. However, it does require an account registration to utilize the software.</p>
-<p><center>
+<p><article style="text-align: center;" markdown>
 <a class="md-button md-button--primary" href="https://www.autodesk.com/products/eagle/free-download" title="Go to downloads page" width="200px" target="_blank" rel="noopener">Download from<br><span class="twemoji autodesk"><svg role="img" viewbox=" 0 0 335 34.397" xmlns="http://www.w3.org/2000/svg"><title>Autodesk primary logo</title><path d="M 0.253,33.578 29.488,15.376 H 44.66 c 0.468,0 0.896,0.37 0.896,0.897 0,0.428 -0.195,0.604 -0.428,0.74 l -14.355,8.614 c -0.935,0.565 -1.266,1.676 -1.266,2.514 l -0.019,5.437 h 18.25 V 2.026 c 0,-0.604 -0.468,-1.13 -1.169,-1.13 H 29.157 L 0,19.02 v 14.558 z m 239.72,10e-4 h 26.294 V 26.504 H 248.309 V 20.58 h 14.452 V 13.486 H 248.309 V 7.971 h 17.958 V 0.896 H 239.973 Z M 74.752,0.896 62.228,33.579 h 8.609 l 2.181,-6.12 h 13.985 l 2.142,6.12 h 8.901 L 85.367,0.896 Z m 0.74,19.606 4.577,-12.804 4.499,12.804 z M 133.766,7.971 h 10.537 v 25.608 h 8.317 V 7.971 h 10.498 V 0.896 h -29.352 z m -12.114,13.018 c 0,4.249 -2.61,5.964 -7.07,5.964 -4.324,0 -7.148,-1.793 -7.148,-5.964 V 0.779 h -8.336 v 21.165 c 0,9.432 8.414,12.375 15.464,12.375 7.012,0 15.387,-2.943 15.387,-12.375 V 0.779 h -8.336 v 20.21 z M 335,0.896 h -9.914 l -11.88,13.272 V 0.896 h -8.337 l 0.039,32.683 h 8.298 V 21.165 l 11.257,12.414 H 335 L 319.808,17.442 Z m -114.621,0 h -15.27 v 32.683 h 15.27 c 11.706,0 14.939,-4.366 14.939,-16.585 0,-11.479 -3.097,-16.098 -14.939,-16.098 z m -0.331,25.608 h -6.622 V 7.971 h 6.622 c 5.22,0 6.778,1.422 6.778,9.023 0,6.938 -1.753,9.51 -6.778,9.51 z m 71.402,-12.16 -7.596,-0.858 c -4.441,-0.487 -5.551,-1.598 -5.551,-3.099 0,-1.676 2.279,-3.176 6.739,-3.176 4.285,0 6.525,1.598 6.934,3.995 h 8.161 C 299.727,4.287 293.943,0 285.49,0 c -10.05,0 -15.094,3.995 -15.094,11.07 0,5.749 3.35,8.458 10.283,9.198 l 7.713,0.819 c 2.941,0.331 4.285,1.461 4.285,2.942 0,1.676 -1.967,3.177 -6.7,3.177 -5.473,0 -7.674,-1.384 -8.044,-4.171 h -8.005 c 0.37,7.523 5.259,11.362 15.757,11.362 9.582,0 14.938,-4.209 14.938,-10.543 0,-5.515 -3.174,-8.828 -9.173,-9.51 z M 182.497,0 c -11.881,0 -18.035,7.308 -18.035,17.15 0,9.881 6.154,17.228 18.035,17.228 11.92,0 18.075,-7.347 18.075,-17.228 C 200.591,7.308 194.417,0 182.497,0 Z m 0,27.031 c -6.155,0 -9.543,-3.762 -9.543,-9.881 0,-6.003 3.388,-9.803 9.543,-9.803 6.213,0 9.544,3.8 9.544,9.803 0.019,6.139 -3.331,9.881 -9.544,9.881 z"/></svg></span></a>
-</center></p>
+</article></p>
 </details>
 <details class="info">
 <summary><img alt="📏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4cf.svg" title=":straight_ruler:"> Dimensions Tool</summary>
 <p>This video from Autodesk demonstrates how to utilize the dimensions tool in Eagle, to include additional measurements:</p>
-<center>
+<article style="text-align: center;" markdown>
 <p><div class="video">
 <iframe src="https://www.youtube.com/embed/dZLNd1FtNB8" title="EAGLE Dimension Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <p><img alt="QR code to instructional video" class="qr" src="../assets/img/qr_code/dimension_tool.png" width="100" />
 </div></p>
-</center>
+</article>
 </details>
 </details>
 <h2 id="usb-connector"><abbr title="Universal Serial Bus">USB</abbr> Connector<a class="headerlink" href="#usb-connector" title="Permanent link"></a></h2>
@@ -2141,8 +2143,7 @@
 </figure>
 </div>
 <div>
-<center>
-
+<article style="text-align: center;">
 <pre class="mermaid"><code>
 flowchart LR
     A[USB-C] === B(("`**VUSB**`")) ===&gt; |VUSB &gt; VBAT| Switch;
@@ -2168,8 +2169,7 @@ flowchart LR
     click F "#power-control"
     click J "#vref"
     click I "#3v3"</code></pre>
-
-</center>
+</article>
 <p>Below, is a summary of the power circuitry for this board:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="3v3" name="__tabbed_1" type="radio" /><input id="vusb" name="__tabbed_1" type="radio" /><input id="vbat" name="__tabbed_1" type="radio" /><input id="vref" name="__tabbed_1" type="radio" /><input id="gnd" name="__tabbed_1" type="radio" /><input id="qwiic-connector_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="3v3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16.56 5.44-1.45 1.45A5.97 5.97 0 0 1 18 12a6 6 0 0 1-6 6 6 6 0 0 1-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.44A7.96 7.96 0 0 0 4 12a8 8 0 0 0 8 8 8 8 0 0 0 8-8c0-2.72-1.36-5.12-3.44-6.56M13 3h-2v10h2"/></svg></span> <code>3V3</code></label><label for="vusb"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 2c-1.1 0-2 .9-2 2v8H5v4l4 4v2h6v-2l4-4v-4h-1V4a2 2 0 0 0-2-2M8 4h8v8H8m1-5v2h2V7m2 0v2h2V7Z"/></svg></span> <code>VUSB</code></label><label for="vbat"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.67 4H15V2H9v2H7.33A1.33 1.33 0 0 0 6 5.33v15.33C6 21.4 6.6 22 7.33 22h9.33c.74 0 1.34-.6 1.34-1.33V5.33C18 4.6 17.4 4 16.67 4M11 20v-5.5H9L13 7v5.5h2"/></svg></span> <code>VBAT</code></label><label for="vref"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 21c-3 0-4.19-4.24-5.45-8.72C10.14 9.04 9 5 7.5 5 4.11 5 4 11.93 4 12H2c0-.37.06-9 5.5-9 3 0 4.21 4.25 5.47 8.74C13.83 14.8 15 19 16.5 19c3.44 0 3.53-6.93 3.53-7h2c0 .37-.06 9-5.53 9"/></svg></span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8c0 2.4-1 4.5-2.7 6-1.4-1.3-3.3-2-5.3-2s-3.8.7-5.3 2C5 16.5 4 14.4 4 12a8 8 0 0 1 8-8m2 1.89c-.38.01-.74.26-.9.65l-1.29 3.23-.1.23c-.71.13-1.3.6-1.57 1.26-.41 1.03.09 2.19 1.12 2.6s2.19-.09 2.6-1.12c.26-.66.14-1.42-.29-1.98l.1-.26 1.29-3.21.01-.03c.2-.51-.05-1.09-.56-1.3-.13-.05-.26-.07-.41-.07M10 6a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1M7 9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m10 0a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg></span> <code>VREF</code></label><label for="gnd"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 16h5v-2H3zm6.5 0h5v-2h-5zm6.5 0h5v-2h-5zM3 20h2v-2H3zm4 0h2v-2H7zm4 0h2v-2h-2zm4 0h2v-2h-2zm4 0h2v-2h-2zM3 12h8v-2H3zm10 0h8v-2h-8zM3 4v4h18V4z"/></svg></span> <code>GND</code></label><label for="qwiic-connector_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.4 7.5c.8.8.8 2.1 0 2.8l-2.8 2.8-7.8-7.8 2.8-2.8c.8-.8 2.1-.8 2.8 0l1.8 1.8 3-3 1.4 1.4-3 3zm-5.8 5.8-1.4-1.4-2.8 2.8-2.1-2.1 2.8-2.8-1.4-1.4-2.8 2.8-1.5-1.4-2.8 2.8c-.8.8-.8 2.1 0 2.8l1.8 1.8-4 4 1.4 1.4 4-4 1.8 1.8c.8.8 2.1.8 2.8 0l2.8-2.8-1.4-1.4z"/></svg></span> Qwiic Connector</label></div>
 <div class="tabbed-content">
@@ -2245,7 +2245,7 @@ flowchart LR
 </div>
 <details class="info">
 <summary>Detailed Diagram</summary>
-<center>
+<article style="text-align: center;" markdown>
 <pre class="mermaid"><code>
 flowchart LR
     D === E(("`**VBAT**`")) == VBAT &gt; VUSB ==&gt; Switch;
@@ -2282,7 +2282,7 @@ subgraph Battery Charger
     H --- W(("`**D37**`")) --- M;
     D ------ F;
     Switch --- V(("`**D38**`")) --- M;</code></pre>
-</center>
+</article>
 </details>
 <p><em>For more details, users can reference the <a href="../assets/board_files/schematic.pdf">schematic</a> and the datasheets of the individual components in the power circuitry.</em></p>
 <h3 id="power-status-led">Power Status&nbsp; <abbr title="Light Emitting Diode">LED</abbr><a class="headerlink" href="#power-status-led" title="Permanent link"></a></h3>
@@ -2295,8 +2295,7 @@ subgraph Battery Charger
 </figure>
 <h3 id="charging-circuit">Charging Circuit<a class="headerlink" href="#charging-circuit" title="Permanent link"></a></h3>
 <p>The charging circuit utilizes the <a href="../assets/component_documentation/MCP73831.pdf">MCP73831 linear charge management controller</a> from <a href="https://www.microchip.com/" target="_blank" rel="noopener">Microchip Technologies</a>, which is powered by the <abbr title="Universal Serial Bus">USB</abbr>-C connector or <code>VUSB</code>. The controller provides a <strong>213mA</strong> charge rate for a <abbr title="Lithium-Ion Polymer">LiPo</abbr> battery connected to the <abbr title="Japan Solderless Terminal (Manufacturing)">JST</abbr> connector. Active charging is indicated by the yellow, <code>CHG</code> <abbr title="Light Emitting Diode">LED</abbr>. If the charge controller is shut down or charging is complete, the <code>CHG</code> <abbr title="Light Emitting Diode">LED</abbr> will turn off. The board also includes a <a href="../assets/component_documentation/MAX17048.pdf">MAX17048 fuel gauge</a> from <a href="https://www.analog.com/" target="_blank" rel="noopener">Analog Devices</a> to monitor the charge left on the battery.</p>
-<center>
-
+<article style="text-align: center;">
 <pre class="mermaid"><code>
 flowchart LR
     A[USB-C] === B(("`**VUSB**`")) ==&gt; C &amp; G;
@@ -2307,9 +2306,7 @@ flowchart LR
     subgraph Battery Charger
         C -.-&gt; |213mA| D[LiPo&lt;br&gt;3.5-4.2V];
     end</code></pre>
-
-</center>
-
+</article>
 <figure>
 <p><a href="../assets/img/hookup_guide/power-charging.png" title="Click to enlarge"><img alt="Battery connection and charge indicator" src="../assets/img/hookup_guide/power-charging.png" width="750" /></a></p>
 <figcaption>
@@ -2319,8 +2316,7 @@ flowchart LR
 <p><em>For more details, please refer to the <a href="../assets/component_documentation/MCP73831.pdf">MCP73831</a> and <a href="../assets/component_documentation/MAX17048.pdf">MAX17048</a> datasheets, <a href="../assets/board_files/schematic.pdf">schematic</a>, and the <a href="#status-leds"><strong>Status LEDs</strong></a> and <a href="#battery-fuel-gauge"><strong>Battery Fuel Gauge</strong></a> sections below.</em></p>
 <h3 id="power-control">Power Control<a class="headerlink" href="#power-control" title="Permanent link"></a></h3>
 <p>The primary power source for the <a href="../assets/component_documentation/RT9080.pdf">RT9080 <abbr title="Low Dropout (Regulator)">LDO</abbr> regulators</a> is automatically switched between <code>VUSB</code> and <code>VBAT</code> by the <a href="../assets/component_documentation/LM66200.pdf">LM66200 ideal diode switch</a>; based on their voltage levels. This will be indicated by the <code>ST</code> pin of the LM66200, which is connected to the <code>P001</code> <abbr title="General Purpose Input and Output">GPIO</abbr> <em>(<code>D38</code>)</em> of the RA6M5. A <strong><code>LOW</code></strong> state will indicate that power is being supplied from <code>VUSB</code> <em>(or the <abbr title="Universal Serial Bus">USB</abbr>-C connector)</em>; while a <strong><code>HIGH</code></strong> state will indicate power is being drawn from <code>VBAT</code> <em>(or the battery <abbr title="Japan Solderless Terminal (Manufacturing)">JST</abbr> connector)</em>.</p>
-<center>
-
+<article style="text-align: center;">
 <pre class="mermaid"><code>
 flowchart LR
     A[USB-C] === B(("`**VUSB**`")) == VUSB &gt; VBAT ==&gt; Switch;
@@ -2335,9 +2331,7 @@ flowchart LR
     H --- T(("`**EN**`"));
     I --- V(("`**D37**`"));
     S === I[RT9080] ===&gt; K(("`**VREF**`"));</code></pre>
-
-</center>
-
+</article>
 <p>The <strong>3.3V</strong> regulated output from the primary RT9080 is enabled by default and controlled by the <code>EN</code> pin on the board. Meanwhile, the voltage output from the RT9080 for the analog reference voltage <em>(<code>VREF</code>)</em> of the RA6M5 is controlled by its <code>P500</code> <abbr title="General Purpose Input and Output">GPIO</abbr> <em>(<code>D37</code>)</em>. Users can disable the 3.3V power output of either of the RT9080 <abbr title="Low Dropout (Regulator)">LDO</abbr> regulators, by setting the associated control pin <strong>LOW</strong>.</p>
 <figure>
 <p><a href="../assets/img/hookup_guide/power_control.png" title="Click to enlarge"><img alt="Power control" src="../assets/img/hookup_guide/power_control.png" width="750" /></a></p>
@@ -2350,8 +2344,8 @@ flowchart LR
 ### Current Consumption
 According to the specifications, the RA6M5 draws about **### mA** on average. With the BLE example in this tutorial, have measured it to average around **### mA** and peak at *### mA* while active. The table below summarizes the approximate current draw of the [RA6M5 Thing Plus](https://www.sparkfun.com/products/24243) for various cases and conditions. *(All current measurements were profiled with the [Nordic Power Profiler Kit II](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2).)*
 
-<center>
-<table>
+
+<table style="text-align: center;" markdown>
 <tbody>
     <tr>
         <th rowspan="2" style="vertical-align:middle; text-align:center">Operation</th>
@@ -2518,7 +2512,7 @@ According to the specifications, the RA6M5 draws about **### mA** on average. Wi
     </tr>
 </tbody>
 </table>
-</center>
+
 
 It is possible for users to reach sub-mA power consumption levels with the deep sleep power modes. Using the [`TimerWakeUp` Deep Sleep example code](https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/DeepSleep/TimerWakeUp/TimerWakeUp.ino), the LED jumpers cut, and powering the board through the LiPo battery connection we measured a power consumption of **845 &micro;A** *(990 &micro;A peak)* @ **3.7V** while the MCU was inactive.
 
@@ -2630,76 +2624,72 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="swd" name="__tabbed_2" type="radio" /><input id="jtag" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="swd"><abbr title="Serial Wire Debug">SWD</abbr></label><label for="jtag"><abbr title="Joint Test Action Group">JTAG</abbr></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<!-- <center>
-    <table border="1" markdown>
-        <tr markdown>
-            <td style="text-align:center" markdown>---</td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown>**3.3V**</td>
-            <td style="text-align:center" markdown>**SWDIO**</td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown>**SWCLK**</td>
-            <td style="text-align:center" markdown>**SWO**</td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown>**GND**</td>
-            <td style="text-align:center" markdown>**RST**</td>
-        </tr>
-    </table>
-</center> -->
-<p><center>
-    <table border="1" markdown>
-        <tr markdown>
-            <td style="text-align:center" markdown><strong><abbr title="Ground">GND</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Serial Wire Clock">SWCLK</abbr></strong></td>
-            <td style="text-align:center" markdown><strong>3.3V</strong></td>
-            <td style="text-align:center" markdown><strong>|</strong></td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown><strong><abbr title="Reset">RST</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Serial Wire Output">SWO</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Serial Wire Data Input/Output">SWDIO</abbr></strong></td>
-        </tr>
-    </table>
-</center></p>
+<!--
+<table border="1" style="text-align: center;" markdown>
+    <tr markdown>
+        <td style="text-align:center" markdown>---</td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown>**3.3V**</td>
+        <td style="text-align:center" markdown>**SWDIO**</td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown>**SWCLK**</td>
+        <td style="text-align:center" markdown>**SWO**</td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown>**GND**</td>
+        <td style="text-align:center" markdown>**RST**</td>
+    </tr>
+</table>
+-->
+<p><table border="1" style="text-align: center;" markdown>
+    <tr markdown>
+        <td style="text-align:center" markdown><strong><abbr title="Ground">GND</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Serial Wire Clock">SWCLK</abbr></strong></td>
+        <td style="text-align:center" markdown><strong>3.3V</strong></td>
+        <td style="text-align:center" markdown><strong>|</strong></td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown><strong><abbr title="Reset">RST</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Serial Wire Output">SWO</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Serial Wire Data Input/Output">SWDIO</abbr></strong></td>
+    </tr>
+</table></p>
 </div>
 <div class="tabbed-block">
-<!-- <center>
-    <table border="1" markdown>
-        <tr markdown>
-            <td style="text-align:center" markdown>---</td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown>**3.3V**</td>
-            <td style="text-align:center" markdown>**TMS**</td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown>**TCK**</td>
-            <td style="text-align:center" markdown>**TDO**</td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown>**GND**</td>
-            <td style="text-align:center" markdown>**RST**</td>
-        </tr>
-    </table>
-</center> -->
-<p><center>
-    <table border="1" markdown>
-        <tr markdown>
-            <td style="text-align:center" markdown><strong><abbr title="Ground">GND</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Test Clock">TCK</abbr></strong></td>
-            <td style="text-align:center" markdown><strong>3.3V</strong></td>
-            <td style="text-align:center" markdown><strong>|</strong></td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown><strong><abbr title="Reset">RST</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Test Data Out">TDO</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Test Mode Select">TMS</abbr></strong></td>
-        </tr>
-    </table>
-</center></p>
+<!--
+<table border="1" style="text-align: center;" markdown>
+    <tr markdown>
+        <td style="text-align:center" markdown>---</td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown>**3.3V**</td>
+        <td style="text-align:center" markdown>**TMS**</td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown>**TCK**</td>
+        <td style="text-align:center" markdown>**TDO**</td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown>**GND**</td>
+        <td style="text-align:center" markdown>**RST**</td>
+    </tr>
+</table>
+-->
+<p><table border="1" style="text-align: center;" markdown>
+    <tr markdown>
+        <td style="text-align:center" markdown><strong><abbr title="Ground">GND</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Test Clock">TCK</abbr></strong></td>
+        <td style="text-align:center" markdown><strong>3.3V</strong></td>
+        <td style="text-align:center" markdown><strong>|</strong></td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown><strong><abbr title="Reset">RST</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Test Data Out">TDO</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Test Mode Select">TMS</abbr></strong></td>
+    </tr>
+</table></p>
 </div>
 </div>
 </div>
@@ -2731,10 +2721,9 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <h3 id="pin-functions">Pin Functions<a class="headerlink" href="#pin-functions" title="Permanent link"></a></h3>
 <p>While there are <strong>75 <abbr title="General Purpose Input and Output">GPIO</abbr> pins</strong> that are available on the RA6M5, only <strong>44 <abbr title="General Purpose Input and Output">GPIO</abbr> pins are utilized</strong> with the RA6M5 Thing Plus. Additionally, of those 44 <abbr title="General Purpose Input and Output">GPIO</abbr>, only <strong>21 <abbr title="General Purpose Input and Output">GPIO</abbr> pins</strong> are broken out into the PTH breakout pins. The breakout pins are in a Feather form-factor layout with a 0.1" pitch spacing to make them compatible with <a href="https://www.sparkfun.com/categories/381" target="_blank" rel="noopener">standard headers</a> and <a href="https://www.sparkfun.com/categories/tags/feather" target="_blank" rel="noopener">Feather shields/<em>wings</em></a>.</p>
 <p>Some of the RA6M5's peripheral capabilities may be inaccessible to users with the <strong>available 44 <abbr title="General Purpose Input and Output">GPIO</abbr></strong>. However, any of the available <abbr title="General Purpose Input and Output">GPIO</abbr> pins can operate as <strong>digital I/O</strong>; with several of these pins featuring additional peripheral support. The pins utilized by the RA6M5 Thing Plus, along with their capabilities, are summarized in our <a href="../assets/board_files/graphical_datasheet.pdf">graphical datasheet</a> and detailed in the sections below.</p>
-<center>
-[:material-download:{ .heart }&nbsp;&nbsp;Download the Graphical Datasheet<br>![QR code to product page](./assets/img/qr_code/product-low.png){ .tinyqr }](./assets/board_files/graphical_datasheet.pdf "Click to download the graphical datasheet"){ .md-button .md-button--primary }
-</center>
-
+<article style="text-align: center;">
+<p><a class="md-button md-button--primary" href="../assets/board_files/graphical_datasheet.pdf" title="Click to download the graphical datasheet"><span class="twemoji heart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span>&nbsp;&nbsp;Download the Graphical Datasheet<br><img alt="QR code to product page" class="tinyqr" src="../assets/img/qr_code/product-low.png" /></a></p>
+</article>
 <div class="grid">
 <div>
 <figure>
@@ -2884,7 +2873,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <p>The RA6M5 has two <strong>12-bit <abbr title="Digital-to-Analog Converter">DAC</abbr></strong> channels on its <abbr title="General Purpose Input and Output">GPIO</abbr> pins to output analog signals. This feature is accessed in the Arduino IDE using the <a href="https://github.com/arduino/ArduinoCore-renesas/tree/main/libraries/AnalogWave" target="_blank" rel="noopener"><code class="highlight"><span class="n">AnalogWave</span></code> library from the Renesas Arduino core</a>. <em>The available <abbr title="Digital-to-Analog Converter">DAC</abbr> pins are highlighted in the image below.</em></p>
 <div class="grid" markdown>
 <div markdown>
-<center>
+<article style="text-align: center;" markdown>
 <table>
 <thead>
 <tr>
@@ -2903,7 +2892,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 </tr>
 </tbody>
 </table>
-</center>
+</article>
 <p><figure markdown>
 <a href="../assets/img/hookup_guide/pins-dac.png" title="Click to enlarge"><img alt="Annotated image of DAC pins" src="../assets/img/hookup_guide/pins-dac.png" width="200" /></a>
 <figcaption markdown>Analog (<abbr title="Digital-to-Analog Converter">DAC</abbr>) output pins on the RA6M5 Thing Plus.</figcaption>
@@ -2951,7 +2940,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="admonition arduino">
 <p class="admonition-title">Arduino</p>
 <p>By default, in the Arduino IDE, the RA6M5 Thing Plus board definition supports:</p>
-<center>
+<article style="text-align: center;" markdown>
 <table>
 <thead>
 <tr>
@@ -2978,12 +2967,12 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 </tr>
 </tbody>
 </table>
-</center>
+</article>
 <p>To utilize serial communication on other pins, users will need to create a custom serial port object and declare which pins to access.</p>
 <details class="warning">
 <summary>Shared <abbr title="Universal Asynchronous Receiver-Transmitter">UART</abbr> Port</summary>
 <p>Users should be aware that the <abbr title="Universal Asynchronous Receiver-Transmitter">UART</abbr> port for pins <code>D17</code>/<code>D18</code>, <strong>UART9</strong>, is also utilized for communication with the DA14531MOD Bluetooth module. Therefore, if <strong>UART9</strong> is already being utilized for the DA14531MOD; the <abbr title="Universal Asynchronous Receiver-Transmitter">UART</abbr> port will be unavailable on pins <code>D17</code>/<code>D18</code>.</p>
-<center>
+<article style="text-align: center;" markdown>
 <table>
 <thead>
 <tr>
@@ -3026,7 +3015,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 </tr>
 </tbody>
 </table>
-</center>
+</article>
 </details>
 </div>
 <div class="admonition tip">
@@ -3065,7 +3054,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="admonition arduino">
 <p class="admonition-title">Arduino</p>
 <p>By default, in the Arduino IDE, the RA6M5 Thing Plus board definition supports:</p>
-<center>
+<article style="text-align: center;" markdown>
 <table>
 <thead>
 <tr>
@@ -3092,7 +3081,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 </tr>
 </tbody>
 </table>
-</center>
+</article>
 <p>To utilize <abbr title="Serial Peripheral Interface">SPI</abbr> communication on other pins, users will need to create a custom <abbr title="Serial Peripheral Interface">SPI</abbr> object and declare which pins to access.</p>
 </div>
 <div class="admonition tip">
@@ -3127,7 +3116,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="admonition arduino">
 <p class="admonition-title">Arduino</p>
 <p>By default, in the Arduino IDE, the RA6M5 Thing Plus board definition supports:</p>
-<center>
+<article style="text-align: center;" markdown>
 <table>
 <thead>
 <tr>
@@ -3146,7 +3135,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 </tr>
 </tbody>
 </table>
-</center>
+</article>
 <p>To utilize the I<sup>2</sup>C ports on other pins, users will need to create a custom Wire object and declare which pins to access.</p>
 </div>
 <div class="admonition tip">
@@ -3172,20 +3161,20 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="grid" markdown>
 <div markdown>
 <p><!-- Qwiic Banner -->
-<center>
+<article style="text-align: center;" markdown>
 <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener"><img alt="Qwiic Logo - light theme" src="../assets/img/qwiic_logo-light.png#only-light" width="400" /></a>
 <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener"><img alt="Qwiic Logo - dark theme" src="../assets/img/qwiic_logo-dark.png#only-dark" width="400" /></a>
-</center></p>
+</article></p>
 <hr />
 <p>The <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener">Qwiic connect system</a> is a solderless, polarized connection system that allows users to seamlessly daisy chain     I<sup>2</sup>C boards together. Play the video, to learn more about the Qwiic connect system or click on the banner above to learn more about <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener">Qwiic     products</a>.</p>
 </div>
 <div style="max-height=400px;" markdown>
-<p><center>
+<p><article style="text-align: center;" markdown>
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer;   encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <p><img alt="QR code to instructional video" class="qr" src="../assets/img/qr_code/qwiic_video.png" width="100" />
 </div>
-</center></p>
+</article></p>
 </div>
 </div>
 <div class="admonition info">
@@ -3294,14 +3283,14 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 ??? info "CAN Bus Support"
     Diving into the [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931), users may notice that there are CAN buses supported on a few of the available hardware pins. However, please refer to the [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931) for the protocol implementation. *(i.e. There could be a bus contention issues with the `CAN1` pins, which share `UART9` with the Bluetooth module.)*
 
-    <center>
+    <article style="text-align: center;" markdown>
 
     | CAN Bus  | GPIO Pins                                              |
     | :------: | :----------------------------------------------------- |
     | **CAN0** | **RX** - `P402` *(`D05`)*<br>**TX** - `P401` *(`D15`)* |
     | **CAN1** | **RX** - `P110` *(`D17`)*<br>**TX** - `P109` *(`D18`)* |
 
-    </center>
+    </article>
 -->
 
 <hr />
@@ -3353,22 +3342,20 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <p>The <abbr title="Serial Wire Debug">SWD</abbr> pins for the DA14531MOD are available as 0.1" test points on the board. However, users are unlikely to utilize these pins unless they wish to modify the pre-existing firmware on the DA14531MOD.</p>
 <div class="grid" markdown>
 <div markdown>
-<p><center>
-    <table border="1" markdown>
-        <tr markdown>
-            <td style="text-align:center" markdown><strong><abbr title="Ground">GND</abbr></strong></td>
-            <td style="text-align:center" markdown><strong><abbr title="Serial Wire Clock">SWCLK</abbr></strong></td>
-            <td style="text-align:center" markdown><strong>3.3V</strong></td>
-            <td style="text-align:center" markdown><strong>|</strong></td>
-        </tr>
-        <tr markdown>
-            <td style="text-align:center" markdown><strong><abbr title="Reset">RST</abbr></strong></td>
-            <td></td>
-            <td style="text-align:center" markdown><strong><abbr title="Serial Wire Data Input/Output">SWDIO</abbr></strong></td>
-            <td></td>
-        </tr>
-    </table>
-</center></p>
+<p><table border="1" style="text-align: center;" markdown>
+    <tr markdown>
+        <td style="text-align:center" markdown><strong><abbr title="Ground">GND</abbr></strong></td>
+        <td style="text-align:center" markdown><strong><abbr title="Serial Wire Clock">SWCLK</abbr></strong></td>
+        <td style="text-align:center" markdown><strong>3.3V</strong></td>
+        <td style="text-align:center" markdown><strong>|</strong></td>
+    </tr>
+    <tr markdown>
+        <td style="text-align:center" markdown><strong><abbr title="Reset">RST</abbr></strong></td>
+        <td></td>
+        <td style="text-align:center" markdown><strong><abbr title="Serial Wire Data Input/Output">SWDIO</abbr></strong></td>
+        <td></td>
+    </tr>
+</table></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>In case users are interested, these are the pin connections of the <abbr title="Serial Wire Debug">SWD</abbr> test points to the DA14531MOD. For more details, please reference the <a href="../assets/board_files/schematic.pdf">schematic</a>.</p>
@@ -3466,7 +3453,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The RA6M5 Thing Plus, offers users additional control of the <abbr title="Secure Digital">SD</abbr> card slot with the following pin connections:</p>
-<center>
+<article style="text-align: center;" markdown>
 <table>
 <thead>
 <tr>
@@ -3497,7 +3484,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 </tr>
 </tbody>
 </table>
-</center>
+</article>
 </div>
 <p><em>For more details, please refer to the <a href="../assets/board_files/schematic.pdf">schematic</a>, <a href="https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931" target="_blank" rel="noopener">RA6M5 datasheet</a>, and <a href="https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931" target="_blank" rel="noopener">RA6M5 user manual</a>.</em></p>
 <h2 id="i2c-bus">I<sup>2</sup>C Bus<a class="headerlink" href="#i2c-bus" title="Permanent link"></a></h2>
@@ -3514,20 +3501,20 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <div class="grid" markdown>
 <div markdown>
 <p><!-- Qwiic Banner -->
-<center>
+<article style="text-align: center;" markdown>
 <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener"><img alt="Qwiic Logo - light theme" src="../assets/img/qwiic_logo-light.png#only-light" width="400" /></a>
 <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener"><img alt="Qwiic Logo - dark theme" src="../assets/img/qwiic_logo-dark.png#only-dark" width="400" /></a>
-</center></p>
+</article></p>
 <hr />
 <p>The <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener">Qwiic connect system</a> is a solderless, polarized connection system that allows users to seamlessly daisy chain I<sup>2</sup>C boards together. Play the video, to learn more about the Qwiic connect system or click on the banner above to learn more about <a href="https://www.sparkfun.com/qwiic" target="_blank" rel="noopener">Qwiic products</a>.</p>
 </div>
 <div style="max-height=400px;" markdown>
-<p><center>
+<p><article style="text-align: center;" markdown>
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <p><img alt="QR code to instructional video" class="qr" src="../assets/img/qr_code/qwiic_video.png" width="100" />
 </div>
-</center></p>
+</article></p>
 </div>
 </div>
 <div class="admonition info">
@@ -3558,14 +3545,26 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
 <p>The <a href="../assets/component_documentation/MAX17048.pdf">MAX17048 fuel gauge</a>, from <a href="https://www.analog.com/" target="_blank" rel="noopener">Analog Devices</a>, measures the approximate charge/discharge rate, state of charge (SOC) (based on <em>ModelGauge</em> algorithm), and voltage of a connected battery. The sensor is also powered directly from a connected <abbr title="Lithium-Ion Polymer">LiPo</abbr> battery <em>(<code>VBAT</code>)</em>.</p>
 <div class="grid">
 <div>
-<center>
-
-| I^2^C Address | **0x36** (7-bit)<br>**0x6C** (write)/**0x6D** (read) |
-| :-- | :-- |
-| Voltage Measurement | Range: 2.5 - 5 V<br>Precision: &PlusMinus;7.5 mV/Cell<br>Resolution 1.25 mV/Cell
-| Current Consumption | Sleep: .5 - 2 µA<br>Hibernate: 3 - 5 µA<br>Active: 23 - 40 µA |
-
-</center>
+<article style="text-align: center;">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">I<sup>2</sup>C Address</th>
+<th style="text-align: left;"><strong>0x36</strong> (7-bit)<br><strong>0x6C</strong> (write)/<strong>0x6D</strong> (read)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Voltage Measurement</td>
+<td style="text-align: left;">Range: 2.5 - 5 V<br>Precision: &PlusMinus;7.5 mV/Cell<br>Resolution 1.25 mV/Cell</td>
+</tr>
+<tr>
+<td style="text-align: left;">Current Consumption</td>
+<td style="text-align: left;">Sleep: .5 - 2 µA<br>Hibernate: 3 - 5 µA<br>Active: 23 - 40 µA</td>
+</tr>
+</tbody>
+</table>
+</article>
 <div class="admonition info">
 <p class="admonition-title">Alert Pin</p>
 <p>The fuel gauge features an <code>Alert</code> pin, which can be configured to trigger an interrupt <em>(active <strong>LOW</strong>)</em> on <abbr title="General Purpose Input and Output">GPIO</abbr> <code>P000</code> <em>(<code>D39</code>)</em> of the RA6M5 for:</p>
@@ -3773,7 +3772,7 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="June 3, 2026 15:52:51 UTC"><span class="timeago" datetime="2026-06-03T15:52:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 3, 2026 15:52:51 UTC">2026-06-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="June 3, 2026 21:35:33 UTC"><span class="timeago" datetime="2026-06-03T21:35:33+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 3, 2026 21:35:33 UTC">2026-06-03</span>
   </span>
 
     
@@ -3783,25 +3782,10 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="June 3, 2026 15:52:51 UTC"><span class="timeago" datetime="2026-06-03T15:52:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="June 3, 2026 15:52:51 UTC">2026-06-03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 6, 2024 02:59:45 UTC"><span class="timeago" datetime="2024-04-06T02:59:45+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 6, 2024 02:59:45 UTC">2024-04-06</span>
   </span>
 
     
-    
-      
-  
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Contributors">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
-      
-    </span>
-    <nav>
-      
-        <a href="mailto:13841301+gigapod@users.noreply.github.com">Kirk D. Benell</a>
-    </nav>
-  </span>
-
     
     
       
@@ -4002,6 +3986,16 @@ It is possible for users to reach sub-mA power consumption levels with the deep 
         <script src="../js/timeago.min.js"></script>
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
