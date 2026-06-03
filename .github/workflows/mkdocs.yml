@@ -25,7 +25,7 @@ jobs:
         run: pip install mkdocs-monorepo-plugin mkdocs-redirects mkdocs-git-authors-plugin mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2 Pillow 'mkdocs-material[imaging]'
 
       - name: Set up build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           key: ${{ github.ref }}
           path: .cache
@@ -33,5 +33,5 @@ jobs:
       - name: Install Insiders build
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }} 
-        run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+        run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
