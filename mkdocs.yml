@@ -208,11 +208,6 @@ plugins:
       repository: sparkfun/SparkFun_Thing_Plus_RA6M5
       branch: main
 
-  # Add git authors at the bottom of the page
-  - git-authors:
-      # Disables plugin on local builds
-      enabled: !ENV [CI, false]
-
   # Enables use of Git submodules and larger code base
   - monorepo:
       # Disables plugin on local builds
