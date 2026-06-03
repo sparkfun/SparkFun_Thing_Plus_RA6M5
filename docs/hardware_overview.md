@@ -21,14 +21,14 @@ The circuit board dimensions are illustrated in the drawing below; the measureme
 	??? info ":octicons-download-16:{ .heart } Eagle - Free Download!"
 		Eagle is a [CAD]("computer-aided design") program for electronics that is free to use for hobbyists and students. However, it does require an account registration to utilize the software.
 
-		<center>
+		<article style="text-align: center;" markdown>
 		[Download from<br>:autodesk-primary:{ .autodesk }](https://www.autodesk.com/products/eagle/free-download "Go to downloads page"){ .md-button .md-button--primary width="200px" }
-		</center>
+		</article>
 
 	??? info ":straight_ruler: Dimensions Tool"
 		This video from Autodesk demonstrates how to utilize the dimensions tool in Eagle, to include additional measurements:
 
-		<center>
+		<article style="text-align: center;" markdown>
 
 		<div class="video">
 		<iframe src="https://www.youtube.com/embed/dZLNd1FtNB8" title="EAGLE Dimension Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -36,7 +36,7 @@ The circuit board dimensions are illustrated in the drawing below; the measureme
 		![QR code to instructional video](./assets/img/qr_code/dimension_tool.png){ .qr width=100 }
 		</div>
 
-		</center>
+		</article>
 
 
 
@@ -69,7 +69,7 @@ The RA6M5 Thing Plus only requires **3.3V** to power the board. However, the sim
 
 <div markdown>
 
-<center>
+<article style="text-align: center;" markdown>
 
 ```mermaid
 
@@ -99,7 +99,7 @@ flowchart LR
 	click I "#3v3"
 ```
 
-</center>
+</article>
 
 
 Below, is a summary of the power circuitry for this board:
@@ -147,7 +147,7 @@ Below, is a summary of the power circuitry for this board:
 
 ??? info "Detailed Diagram"
 
-	<center>
+	<article style="text-align: center;" markdown>
 	
 	```mermaid
 	
@@ -188,7 +188,7 @@ Below, is a summary of the power circuitry for this board:
 		Switch --- V(("`**D38**`")) --- M;
 	```
 
-	</center>
+	</article>
 
 
 *For more details, users can reference the [schematic](./assets/board_files/schematic.pdf) and the datasheets of the individual components in the power circuitry.*
@@ -210,7 +210,7 @@ The red, `PWR` LED will light up once **3.3V** is supplied to the board; however
 The charging circuit utilizes the [MCP73831 linear charge management controller](./assets/component_documentation/MCP73831.pdf) from [Microchip Technologies](https://www.microchip.com/), which is powered by the USB-C connector or `VUSB`. The controller provides a **213mA** charge rate for a LiPo battery connected to the JST connector. Active charging is indicated by the yellow, `CHG` LED. If the charge controller is shut down or charging is complete, the `CHG` LED will turn off. The board also includes a [MAX17048 fuel gauge](./assets/component_documentation/MAX17048.pdf) from [Analog Devices](https://www.analog.com/) to monitor the charge left on the battery.
 
 
-<center>
+<article style="text-align: center;" markdown>
 
 ```mermaid
 
@@ -225,7 +225,7 @@ flowchart LR
 	end
 ```
 
-</center>
+</article>
 
 
 <figure markdown>
@@ -242,7 +242,7 @@ flowchart LR
 The primary power source for the [RT9080 LDO regulators](./assets/component_documentation/RT9080.pdf) is automatically switched between `VUSB` and `VBAT` by the [LM66200 ideal diode switch](./assets/component_documentation/LM66200.pdf); based on their voltage levels. This will be indicated by the `ST` pin of the LM66200, which is connected to the `P001` GPIO *(`D38`)* of the RA6M5. A **`LOW`** state will indicate that power is being supplied from `VUSB` *(or the USB-C connector)*; while a **`HIGH`** state will indicate power is being drawn from `VBAT` *(or the battery JST connector)*.
 
 
-<center>
+<article style="text-align: center;" markdown>
 
 ```mermaid
 
@@ -261,7 +261,7 @@ flowchart LR
 	S === I[RT9080] ===> K(("`**VREF**`"));
 ```
 
-</center>
+</article>
 
 
 The **3.3V** regulated output from the primary RT9080 is enabled by default and controlled by the `EN` pin on the board. Meanwhile, the voltage output from the RT9080 for the analog reference voltage *(`VREF`)* of the RA6M5 is controlled by its `P500` GPIO *(`D37`)*. Users can disable the 3.3V power output of either of the RT9080 LDO regulators, by setting the associated control pin **LOW**.
@@ -281,8 +281,8 @@ The **3.3V** regulated output from the primary RT9080 is enabled by default and 
 ### Current Consumption
 According to the specifications, the RA6M5 draws about **### mA** on average. With the BLE example in this tutorial, have measured it to average around **### mA** and peak at *### mA* while active. The table below summarizes the approximate current draw of the [RA6M5 Thing Plus](https://www.sparkfun.com/products/24243) for various cases and conditions. *(All current measurements were profiled with the [Nordic Power Profiler Kit II](https://www.nordicsemi.com/Products/Development-hardware/Power-Profiler-Kit-2).)*
 
-<center>
-<table>
+
+<table style="text-align: center;" markdown>
 <tbody>
 	<tr>
 		<th rowspan="2" style="vertical-align:middle; text-align:center">Operation</th>
@@ -449,7 +449,7 @@ According to the specifications, the RA6M5 draws about **### mA** on average. Wi
 	</tr>
 </tbody>
 </table>
-</center>
+
 
 It is possible for users to reach sub-mA power consumption levels with the deep sleep power modes. Using the [`TimerWakeUp` Deep Sleep example code](https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/DeepSleep/TimerWakeUp/TimerWakeUp.ino), the LED jumpers cut, and powering the board through the LiPo battery connection we measured a power consumption of **845 &micro;A** *(990 &micro;A peak)* @ **3.7V** while the MCU was inactive.
 
@@ -565,78 +565,74 @@ Debug pins are available for the RA6M5, as 0.1" test points on the board. Howeve
 <div markdown>
 
 === "SWD"
-	<!-- <center>
-		<table border="1" markdown>
-			<tr markdown>
-				<td style="text-align:center" markdown>---</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**3.3V**</td>
-				<td style="text-align:center" markdown>**SWDIO**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**SWCLK**</td>
-				<td style="text-align:center" markdown>**SWO**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**GND**</td>
-				<td style="text-align:center" markdown>**RST**</td>
-			</tr>
-		</table>
-	</center> -->
+	<!--
+    <table border="1" style="text-align: center;" markdown>
+        <tr markdown>
+            <td style="text-align:center" markdown>---</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**3.3V**</td>
+            <td style="text-align:center" markdown>**SWDIO**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**SWCLK**</td>
+            <td style="text-align:center" markdown>**SWO**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**GND**</td>
+            <td style="text-align:center" markdown>**RST**</td>
+        </tr>
+    </table>
+	-->
 
-	<center>
-		<table border="1" markdown>
-			<tr markdown>
-				<td style="text-align:center" markdown>**GND**</td>
-				<td style="text-align:center" markdown>**SWCLK**</td>
-				<td style="text-align:center" markdown>**3.3V**</td>
-				<td style="text-align:center" markdown>**|**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**RST**</td>
-				<td style="text-align:center" markdown>**SWO**</td>
-				<td style="text-align:center" markdown>**SWDIO**</td>
-			</tr>
-		</table>
-	</center>
+    <table border="1" style="text-align: center;" markdown>
+        <tr markdown>
+            <td style="text-align:center" markdown>**GND**</td>
+            <td style="text-align:center" markdown>**SWCLK**</td>
+            <td style="text-align:center" markdown>**3.3V**</td>
+            <td style="text-align:center" markdown>**|**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**RST**</td>
+            <td style="text-align:center" markdown>**SWO**</td>
+            <td style="text-align:center" markdown>**SWDIO**</td>
+        </tr>
+    </table>
 
 === "JTAG"
-	<!-- <center>
-		<table border="1" markdown>
-			<tr markdown>
-				<td style="text-align:center" markdown>---</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**3.3V**</td>
-				<td style="text-align:center" markdown>**TMS**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**TCK**</td>
-				<td style="text-align:center" markdown>**TDO**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**GND**</td>
-				<td style="text-align:center" markdown>**RST**</td>
-			</tr>
-		</table>
-	</center> -->
+	<!--
+    <table border="1" style="text-align: center;" markdown>
+        <tr markdown>
+            <td style="text-align:center" markdown>---</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**3.3V**</td>
+            <td style="text-align:center" markdown>**TMS**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**TCK**</td>
+            <td style="text-align:center" markdown>**TDO**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**GND**</td>
+            <td style="text-align:center" markdown>**RST**</td>
+        </tr>
+    </table>
+	-->
 
-	<center>
-		<table border="1" markdown>
-			<tr markdown>
-				<td style="text-align:center" markdown>**GND**</td>
-				<td style="text-align:center" markdown>**TCK**</td>
-				<td style="text-align:center" markdown>**3.3V**</td>
-				<td style="text-align:center" markdown>**|**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**RST**</td>
-				<td style="text-align:center" markdown>**TDO**</td>
-				<td style="text-align:center" markdown>**TMS**</td>
-			</tr>
-		</table>
-	</center>
+    <table border="1" style="text-align: center;" markdown>
+        <tr markdown>
+            <td style="text-align:center" markdown>**GND**</td>
+            <td style="text-align:center" markdown>**TCK**</td>
+            <td style="text-align:center" markdown>**3.3V**</td>
+            <td style="text-align:center" markdown>**|**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**RST**</td>
+            <td style="text-align:center" markdown>**TDO**</td>
+            <td style="text-align:center" markdown>**TMS**</td>
+        </tr>
+    </table>
 
 
 !!! info "Pin Connections"
@@ -678,9 +674,9 @@ While there are **75 GPIO pins** that are available on the RA6M5, only **44 GPIO
 Some of the RA6M5's peripheral capabilities may be inaccessible to users with the **available 44 GPIO**. However, any of the available GPIO pins can operate as **digital I/O**; with several of these pins featuring additional peripheral support. The pins utilized by the RA6M5 Thing Plus, along with their capabilities, are summarized in our [graphical datasheet](./assets/board_files/graphical_datasheet.pdf) and detailed in the sections below.
 
 
-<center>
+<article style="text-align: center;" markdown>
 [:material-download:{ .heart }&nbsp;&nbsp;Download the Graphical Datasheet<br>![QR code to product page](./assets/img/qr_code/product-low.png){ .tinyqr }](./assets/board_files/graphical_datasheet.pdf "Click to download the graphical datasheet"){ .md-button .md-button--primary }
-</center>
+</article>
 
 
 <div class="grid" markdown>
@@ -870,14 +866,14 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 	<div markdown>
 
-	<center>
+	<article style="text-align: center;" markdown>
 
 	| GPIO Pin | DAC Channel |
 	| :------: | :---------- |
 	| `A0`     | `DAC`       |
 	| `A1`     | `DAC1`      |
 
-	</center>
+	</article>
 
 
 	<figure markdown>
@@ -945,7 +941,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	!!! arduino
 		By default, in the Arduino IDE, the RA6M5 Thing Plus board definition supports:
 
-		<center>
+		<article style="text-align: center;" markdown>
 
 		| Arduino Object | GPIO Pins   | Connection |
 		| :------------- | :---------- | :--------: |
@@ -953,7 +949,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 		| `Serial1`      | **RX** - `P408` *(`D21`)*<br>**TX** - `P409` *(`D20`)* | PTH Pins |
 		| `Serial2`      | **RX** - `P601` *(`D32`)*<br>**TX** - `P602` *(`D31`)*<br>**RTS** - `P301` *(`D33`)*<br>**CTS** - `P303` *(`D34`)* | **DA14531MOD**<br>*Bluetooth Module* |
 
-		</center>
+		</article>
 
 		To utilize serial communication on other pins, users will need to create a custom serial port object and declare which pins to access.
 
@@ -961,7 +957,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 		??? warning "Shared UART Port"
 			Users should be aware that the UART port for pins `D17`/`D18`, **UART9**, is also utilized for communication with the DA14531MOD Bluetooth module. Therefore, if **UART9** is already being utilized for the DA14531MOD; the UART port will be unavailable on pins `D17`/`D18`.
 
-			<center>
+			<article style="text-align: center;" markdown>
 
 			| UART Port | Arduino Object | GPIO Pins   | Connection |
 			| :-------: | :------------- | :---------- | :--------: |
@@ -971,7 +967,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 			| **UART9** |                | **RX** - `P110` *(`D17`)*<br>**TX** - `P109` *(`D18`)* | PTH Pins |
 			| **UART7** |                | **RX** - `P402` *(`D05`)*<br>**TX** - `P401` *(`D15`)*<br>**RTS** - `P403` *(`D04`)*<br>**CTS** - `P404` *(`D03`)*  | PTH Pins |
 
-			</center>
+			</article>
 
 
 	!!! tip
@@ -1021,7 +1017,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	!!! arduino
 		By default, in the Arduino IDE, the RA6M5 Thing Plus board definition supports:
 
-		<center>
+		<article style="text-align: center;" markdown>
 
 		| SPI Pin | GPIO             |
 		| :-----: | :--------------- |
@@ -1030,7 +1026,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 		| SCK     | `P111` *(`D19`)* |
 		| CS      | `P112` *(`D0`)*  |
 
-		</center>
+		</article>
 
 		To utilize SPI communication on other pins, users will need to create a custom SPI object and declare which pins to access.
 
@@ -1077,7 +1073,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 	!!! arduino
 		By default, in the Arduino IDE, the RA6M5 Thing Plus board definition supports:
 
-		<center>
+		<article style="text-align: center;" markdown>
 
 		| I^2^C Pin | GPIO             |
 		| :-------: | :--------------- |
@@ -1085,7 +1081,7 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 		| SDA       | `P401` *(`D15`)* |
 
 
-		</center>
+		</article>
 
 		To utilize the I^2^C ports on other pins, users will need to create a custom Wire object and declare which pins to access.
 
@@ -1118,10 +1114,10 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 		<div markdown>
 
 		<!-- Qwiic Banner -->
-		<center>
+		<article style="text-align: center;" markdown>
 		[![Qwiic Logo - light theme](./assets/img/qwiic_logo-light.png#only-light){ width=400 }](https://www.sparkfun.com/qwiic)
 		[![Qwiic Logo - dark theme](./assets/img/qwiic_logo-dark.png#only-dark){ width=400 }](https://www.sparkfun.com/qwiic)
-		</center>
+		</article>
 
 		---
 
@@ -1132,13 +1128,13 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 
 		<div style="max-height=400px;" markdown>
 
-		<center>
+		<article style="text-align: center;" markdown>
 		<div class="video-container">
 		<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; 	encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		![QR code to instructional video](./assets/img/qr_code/qwiic_video.png){ .qr width=100 }
 		</div>
-		</center>
+		</article>
 
 		</div>
 
@@ -1258,14 +1254,14 @@ Some of the RA6M5's peripheral capabilities may be inaccessible to users with th
 ??? info "CAN Bus Support"
 	Diving into the [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931), users may notice that there are CAN buses supported on a few of the available hardware pins. However, please refer to the [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931) for the protocol implementation. *(i.e. There could be a bus contention issues with the `CAN1` pins, which share `UART9` with the Bluetooth module.)*
 
-	<center>
+	<article style="text-align: center;" markdown>
 
 	| CAN Bus  | GPIO Pins                                              |
 	| :------: | :----------------------------------------------------- |
 	| **CAN0** | **RX** - `P402` *(`D05`)*<br>**TX** - `P401` *(`D15`)* |
 	| **CAN1** | **RX** - `P110` *(`D17`)*<br>**TX** - `P109` *(`D18`)* |
 
-	</center>
+	</article>
 -->
 
 
@@ -1328,22 +1324,20 @@ The [DA14531MOD](https://www.renesas.com/us/en/document/dst/da14531-module-datas
 
 	<div markdown>
 
-	<center>
-		<table border="1" markdown>
-			<tr markdown>
-				<td style="text-align:center" markdown>**GND**</td>
-				<td style="text-align:center" markdown>**SWCLK**</td>
-				<td style="text-align:center" markdown>**3.3V**</td>
-				<td style="text-align:center" markdown>**|**</td>
-			</tr>
-			<tr markdown>
-				<td style="text-align:center" markdown>**RST**</td>
-				<td></td>
-				<td style="text-align:center" markdown>**SWDIO**</td>
-				<td></td>
-			</tr>
-		</table>
-	</center>
+    <table border="1" style="text-align: center;" markdown>
+        <tr markdown>
+            <td style="text-align:center" markdown>**GND**</td>
+            <td style="text-align:center" markdown>**SWCLK**</td>
+            <td style="text-align:center" markdown>**3.3V**</td>
+            <td style="text-align:center" markdown>**|**</td>
+        </tr>
+        <tr markdown>
+            <td style="text-align:center" markdown>**RST**</td>
+            <td></td>
+            <td style="text-align:center" markdown>**SWDIO**</td>
+            <td></td>
+        </tr>
+    </table>
 
 
 	!!! info
@@ -1473,7 +1467,7 @@ The &micro;SD card slot is connected to the following GPIO:
 !!! note
 	The RA6M5 Thing Plus, offers users additional control of the SD card slot with the following pin connections:
 
-	<center>
+	<article style="text-align: center;" markdown>
 
 	| Pin Name | Connection to RA6M5   | Operation | Function |
 	| :------: | :-------------------: | :-------: | :------- |
@@ -1481,7 +1475,7 @@ The &micro;SD card slot is connected to the following GPIO:
 	| **CD**   | GPIO `P210` *(`D28`)* | Active **LOW** | Read the pin latch, to determine if an SD card is inserted<br>- A **LOW** signal will indicate an SD card is present |
 	| **WP**   | GPIO `P414` *(`D29`)* | Active **LOW** | Read if the write protection is engaged on the SD card<br>- A **LOW** signal will indicate write protection is enabled on the SD card |
 
-	</center>
+	</article>
 
 
 *For more details, please refer to the [schematic](./assets/board_files/schematic.pdf), [RA6M5 datasheet](https://www.renesas.com/us/en/document/dst/ra6m5-group-datasheet?r=1493931), and [RA6M5 user manual](https://www.renesas.com/us/en/document/man/ra6m5-group-users-manual-hardware?r=1493931).*
@@ -1508,10 +1502,10 @@ A Qwiic connector is provided for users to seamlessly integrate with [SparkFun's
 	<div markdown>
 
 	<!-- Qwiic Banner -->
-	<center>
+	<article style="text-align: center;" markdown>
 	[![Qwiic Logo - light theme](./assets/img/qwiic_logo-light.png#only-light){ width=400 }](https://www.sparkfun.com/qwiic)
 	[![Qwiic Logo - dark theme](./assets/img/qwiic_logo-dark.png#only-dark){ width=400 }](https://www.sparkfun.com/qwiic)
-	</center>
+	</article>
 
 	---
 
@@ -1522,13 +1516,13 @@ A Qwiic connector is provided for users to seamlessly integrate with [SparkFun's
 
 	<div style="max-height=400px;" markdown>
 
-	<center>
+	<article style="text-align: center;" markdown>
 	<div class="video-container">
 	<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	![QR code to instructional video](./assets/img/qr_code/qwiic_video.png){ .qr width=100 }
 	</div>
-	</center>
+	</article>
 
 	</div>
 
@@ -1570,14 +1564,14 @@ The [MAX17048 fuel gauge](./assets/component_documentation/MAX17048.pdf), from [
 
 <div markdown>
 
-<center>
+<article style="text-align: center;" markdown>
 
 | I^2^C Address | **0x36** (7-bit)<br>**0x6C** (write)/**0x6D** (read) |
 | :-- | :-- |
 | Voltage Measurement | Range: 2.5 - 5 V<br>Precision: &PlusMinus;7.5 mV/Cell<br>Resolution 1.25 mV/Cell
 | Current Consumption | Sleep: .5 - 2 µA<br>Hibernate: 3 - 5 µA<br>Active: 23 - 40 µA |
 
-</center>
+</article>
 
 !!! info "Alert Pin"
 	The fuel gauge features an `Alert` pin, which can be configured to trigger an interrupt *(active **LOW**)* on GPIO `P000` *(`D39`)* of the RA6M5 for:

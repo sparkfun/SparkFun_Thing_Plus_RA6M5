@@ -8,9 +8,9 @@ While an Arduino library isn't necessary to utilize the [CodeLess™ AT commands
 !!! tip "Manually Download the Arduino Library"
 	To manually download and install the library, the files can be accessed from our [GitHub repository](https://github.com/sparkfun/SparkFun_Thing_Plus_RA6M5/tree/main/Firmware/CodelessBLE) or the `*.zip` can be downloaded by clicking the button below.
 
-	<center>
+	<article style="text-align: center;" markdown>
 	[:octicons-download-16:{ .heart } Download the Arduino Library](./assets/CodelessBLE.zip){ .md-button .md-button--primary }
-	</center>
+	</article>
 
 </div>
 

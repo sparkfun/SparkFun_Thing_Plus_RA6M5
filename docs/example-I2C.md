@@ -12,9 +12,9 @@ This sketch allows users to scan for devices connected to the primary I^2^C bus 
 	```
 
 
-<center>
+<article style="text-align: center;" markdown>
 [:octicons-download-16:{ .heart } Download the Example Sketch](./assets/arduino_examples/i2c_scanner/i2c_scanner.ino){ .md-button .md-button--primary }
-</center>
+</article>
 
 
 

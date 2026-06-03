@@ -16,7 +16,7 @@ icon: material/book-open-page-variant
 	</figure></a>
 
 
-	<center>
+	<article style="text-align: center;" markdown>
 
 	<article class="video-500px">
 	<iframe src="https://www.youtube.com/embed/A9NTdowiY_o" title="Product Showcase Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -24,7 +24,7 @@ icon: material/book-open-page-variant
 	</article>
 
 	[&nbsp;![QR code to product page](./assets/img/qr_code/product-low.png){ .tinyqr }&nbsp;&nbsp;Purchase from SparkFun :fontawesome-solid-cart-plus:{ .heart }&nbsp;&nbsp;&nbsp;](https://www.sparkfun.com/products/24243){ .md-button .md-button--primary }
-	</center>
+	</article>
 
 
 -	Clocking in at 200MHz, the RA6M5 is a high-performance microcontroller from [Renesas](https://www.renesas.com/) that is perfect for real-time applications. The [SparkFun Thing Plus - RA6M5](https://www.sparkfun.com/products/24243), is our latest [Thing Plus board](https://www.sparkfun.com/thing_plus) featuring the standard Qwiic connector, JST LiPo battery connector, 21 GPIO pins broken out in a Feather footprint, and status indicator LEDs. At the core is the RA6M5 microcontroller, a low-power Arm^®^ Cortex^®^-M33 processor with an available 512kB of SRAM and 2MB of Flash and an extensive list of peripheral capabilities. Additionally, we have included 16MB of QSPI Flash and an SD card slot on the board, so users won't have to worry about running out of memory space or data storage options.
@@ -338,10 +338,10 @@ To get started, users will need a few items. Some users may already have a few o
 		<div markdown>
 
 		<!-- Qwiic Banner -->
-		<center>
+		<article style="text-align: center;" markdown>
 		[![Qwiic Logo - light theme](./assets/img/qwiic_logo-light.png#only-light){ width=400 }](https://www.sparkfun.com/qwiic)
 		[![Qwiic Logo - dark theme](./assets/img/qwiic_logo-dark.png#only-dark){ width=400 }](https://www.sparkfun.com/qwiic)
-		</center>
+		</article>
 
 		---
 
@@ -351,13 +351,13 @@ To get started, users will need a few items. Some users may already have a few o
 
 		<div style="max-height=400px;" markdown>
 
-		<center>
+		<article style="text-align: center;" markdown>
 		<div class="video-500px">
 		<iframe src="https://www.youtube.com/embed/x0RDEHqFIF8" title="SparkFun's Qwiic Connect System" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		![QR code to instructional video](./assets/img/qr_code/qwiic_video.png){ .qr width=100 }
 		</div>
-		</center>
+		</article>
 
 		</div>
 

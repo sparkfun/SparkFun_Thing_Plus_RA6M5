@@ -138,9 +138,9 @@ Most users should already be familiar with the Arduino IDE and its use. However,
 	4. The Arduino core is followed by a directory, named after the Arduino core's release `{++<version number>++}`. From there, users will need to create a new directory/folder in the `renesas_portenta` directory with the `version number` bumped up.
 		- *For example, if the current version is `1.1.0`, users can name the new directory `1.2.0`.*
 	4. Next, users will need to download and extract the files from [our ported version of the Renesas-Arduino core](./assets/SFE-Renesas-Arduino_core.zip):
-		<center>
+		<article style="text-align: center;" markdown>
 		[:material-download:{ .heart }&nbsp;&nbsp;Download our Renesas-Arduino Core *(Ported)*](./assets/SFE-Renesas-Arduino_core.zip "Click to download the ported Arduino core"){ .md-button .md-button--primary }
-		</center>
+		</article>
 	4. Once extracted, users will need to copy over the files from [our ported version of the Renesas-Arduino core](./assets/SFE-Renesas-Arduino_core.zip)into the new directory that was created earlier:
 		<figure markdown>
 		[![Extracted files](./assets/img/hookup_guide/arduino-extracted_files.png){ width=500 }](./assets/img/hookup_guide/arduino-extracted_files.png "Click to enlarge")
@@ -285,9 +285,9 @@ While users are free to choose any Arduino library that provides support for MAX
 !!! tip "Manually Download the Arduino Library"
 	For users who would like to manually download and install the library, the `*.zip` file can be accessed from the [GitHub repository](https://github.com/sparkfun/MAX1704x_Fuel_Gauge_Arduino_Library) or downloaded by clicking the button below.
 
-	<center>
+	<article style="text-align: center;" markdown>
 	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/sparkfun/SparkFun_MAX1704x_Fuel_Gauge_Arduino_Library/archive/refs/heads/main.zip){ .md-button .md-button--primary }
-	</center>
+	</article>
 
 </div>
 
@@ -317,9 +317,9 @@ While users are free to choose any Arduino library that provides support for WS2
 !!! tip "Manually Download the Arduino Library"
 	For users who would like to manually download and install the library, the `*.zip` file can be accessed from the [GitHub repository](https://github.com/FastLED/FastLED/) or downloaded by clicking the button below.
 
-	<center>
+	<article style="text-align: center;" markdown>
 	[:octicons-download-16:{ .heart } Download the Arduino Library](https://github.com/FastLED/FastLED/archive/refs/heads/master.zip){ .md-button .md-button--primary }
-	</center>
+	</article>
 
 </div>
 

@@ -212,9 +212,9 @@ The **WS2812** is an addressable RGB LED that operates with a digital signal tha
 		```
 
 
-	<center>
+	<article style="text-align: center;" markdown>
 	[:octicons-download-16:{ .heart } Download the Example Sketch](./assets/arduino_examples/RGB_sunlight/RGB_sunlight.ino){ .md-button .md-button--primary }
-	</center>
+	</article>
 
 
 *For more information, please refer to the [WS2812 datasheet](./assets/component_documentation/WS2812C-2020.pdf) and [FastLED Arduino library](https://github.com/FastLED/FastLED/).*

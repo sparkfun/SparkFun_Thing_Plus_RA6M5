@@ -93,6 +93,6 @@ Renesas also provides great resources for the RA6M5 and DA14531MOD:
 </div>
 
 
-<center>
+<article style="text-align: center;" markdown>
 ![QR code to the hookup guide](./assets/img/qr_code/hookup_guide.png){ .qr }
-</center>
+</article>

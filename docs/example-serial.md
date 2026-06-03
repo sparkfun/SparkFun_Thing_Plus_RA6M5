@@ -170,7 +170,7 @@ For GNSS receivers, we recommend that the [TinyGPSPlus Arduino library](https://
 	??? abstract "Hardware Assembly"
 		Connecting a GNSS receiver to a microcontroller is relatively straight forward. Users must provide power to the module through the `PWR`/`VCC` and `GND` pins on the board. Additionally, the `TX` pin from the GNSS receiver, should be connected to the `RX` pin of the microcontroller. This will allow the module to transmit the NMEA sentences to the microcontroller.
 
-		<center>
+		<article style="text-align: center;" markdown>
 
 		| Thing Plus | GPS Module |
 		| :---: | :-------------: |
@@ -179,7 +179,7 @@ For GNSS receivers, we recommend that the [TinyGPSPlus Arduino library](https://
 		| `RX` (`D21`)  | `TX`    |
 		| `TX` (`D20`)  | ---     |
 
-		</center>
+		</article>
 
 
 	??? question "Satellite Fix"
